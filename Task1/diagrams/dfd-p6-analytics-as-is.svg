@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" width="920" height="520" style="background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <marker id="arrow-default" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+    </marker>
+    <marker id="arrow-vulnerable" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+    <marker id="arrow-secure" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="920" height="60" fill="#1e293b"/>
+  <text x="25" y="32" font-size="18" font-weight="bold" fill="#ffffff">DFD Процесс 6 (As-Is): Сбор аналитики, управленческая отчетность и бизнес-анализ</text>
+  <text x="25" y="50" font-size="12" fill="#94a3b8">Текущее состояние: прямой сбор неанонимизированных Excel файлов на ноутбук аналитика через SMB, Jupyter Notebook</text>
+
+  <!-- External Entity: Бизнес-аналитик (BA) -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="100" width="180" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect x="40" y="100" width="180" height="24" rx="4" fill="#0284c7"/>
+    <text x="130.0" y="116" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
+    <text x="130.0" y="145" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Бизнес-аналитик (BA)</text>
+    <text x="130.0" y="163" font-size="10" fill="#64748b" text-anchor="middle">Сотрудник IT-отдела
+Рабочий ноутбук</text>
+  </g>
+  <!-- External Entity: Руководство клиники -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="280" width="180" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect x="40" y="280" width="180" height="24" rx="4" fill="#0284c7"/>
+    <text x="130.0" y="296" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
+    <text x="130.0" y="325" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Руководство клиники</text>
+    <text x="130.0" y="343" font-size="10" fill="#64748b" text-anchor="middle">Генеральный директор,
+Главный врач</text>
+  </g>
+  <!-- Process 6.1: Прямое копирование файлов -->
+  <g filter="url(#shadow)">
+    <rect x="290" y="95" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <path d="M 290 119 L 510 119" stroke="#dc2626" stroke-width="1"/>
+    <rect x="291" y="96" width="218" height="23" rx="11" fill="#fee2e2"/>
+    <text x="302" y="111" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 6.1</text>
+    <text x="498" y="111" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Shadow Analytics</text>
+    <text x="400.0" y="141" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Прямое копирование файлов</text>
+    <text x="400.0" y="159" font-size="10" fill="#475569" text-anchor="middle">Копирование Excel баз пациентов,</text>
+    <text x="400.0" y="173" font-size="10" fill="#475569" text-anchor="middle">журналов и реестров анализов</text>
+    <text x="400.0" y="187" font-size="10" fill="#475569" text-anchor="middle">по SMB на личный ноутбук</text>
+  </g>
+  <!-- Process 6.2: Расчеты в Jupyter Notebook -->
+  <g filter="url(#shadow)">
+    <rect x="290" y="240" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <path d="M 290 264 L 510 264" stroke="#dc2626" stroke-width="1"/>
+    <rect x="291" y="241" width="218" height="23" rx="11" fill="#fee2e2"/>
+    <text x="302" y="256" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 6.2</text>
+    <text x="498" y="256" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Сырые ПДн в скриптах</text>
+    <text x="400.0" y="286" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Расчеты в Jupyter Notebook</text>
+    <text x="400.0" y="304" font-size="10" fill="#475569" text-anchor="middle">Запуск локальных Python скриптов</text>
+    <text x="400.0" y="318" font-size="10" fill="#475569" text-anchor="middle">обработки сырых данных (ФИО, суммы,</text>
+    <text x="400.0" y="332" font-size="10" fill="#475569" text-anchor="middle">диагнозы) БЕЗ обезличивания</text>
+  </g>
+  <!-- Process 6.3: Отправка отчетов по почте -->
+  <g filter="url(#shadow)">
+    <rect x="290" y="385" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <path d="M 290 409 L 510 409" stroke="#dc2626" stroke-width="1"/>
+    <rect x="291" y="386" width="218" height="23" rx="11" fill="#fee2e2"/>
+    <text x="302" y="401" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 6.3</text>
+    <text x="498" y="401" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Почтовая утечка</text>
+    <text x="400.0" y="431" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Отправка отчетов по почте</text>
+    <text x="400.0" y="449" font-size="10" fill="#475569" text-anchor="middle">P&L, ABC-анализ в Excel</text>
+    <text x="400.0" y="463" font-size="10" fill="#475569" text-anchor="middle">рассылаются через незащищенный</text>
+    <text x="400.0" y="477" font-size="10" fill="#475569" text-anchor="middle">Exchange Mail Server</text>
+  </g>
+  <!-- Data Store D1: Файловый сервер клиники -->
+  <g filter="url(#shadow)">
+    <rect x="590" y="120" width="290" height="110" fill="#fff1f2" stroke="none"/>
+    <line x1="590" y1="120" x2="880" y2="120" stroke="#dc2626" stroke-width="2"/>
+    <line x1="590" y1="230" x2="880" y2="230" stroke="#dc2626" stroke-width="2"/>
+    <line x1="590" y1="120" x2="590" y2="230" stroke="#dc2626" stroke-width="2"/>
+    <line x1="626" y1="120" x2="626" y2="230" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="608" y="179.0" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">D1</text>
+    <text x="636" y="140" font-size="12" font-weight="bold" fill="#0f172a">Файловый сервер клиники</text>
+    <text x="636" y="156" font-size="10" fill="#64748b">Папки: Pacients, Journals, Registry</text>
+    <text x="636" y="169" font-size="10" fill="#64748b">Сырые файлы клиники за все годы</text>
+    <text x="636" y="182" font-size="10" fill="#64748b">Доступны аналитику без ограничений</text>
+    <rect x="810" y="124" width="65" height="18" rx="3" fill="#dc2626" fill-opacity="0.1"/>
+    <text x="843" y="137" font-size="9" font-weight="bold" fill="#dc2626" text-anchor="middle">Нет Data Lineage</text>
+  </g>
+  <!-- Data Store D2: Локальный диск ноутбука аналитика -->
+  <g filter="url(#shadow)">
+    <rect x="590" y="290" width="290" height="110" fill="#fff1f2" stroke="none"/>
+    <line x1="590" y1="290" x2="880" y2="290" stroke="#dc2626" stroke-width="2"/>
+    <line x1="590" y1="400" x2="880" y2="400" stroke="#dc2626" stroke-width="2"/>
+    <line x1="590" y1="290" x2="590" y2="400" stroke="#dc2626" stroke-width="2"/>
+    <line x1="626" y1="290" x2="626" y2="400" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="608" y="349.0" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">D2</text>
+    <text x="636" y="310" font-size="12" font-weight="bold" fill="#0f172a">Локальный диск ноутбука аналитика</text>
+    <text x="636" y="326" font-size="10" fill="#64748b">Неконтролируемая теневая копия базы</text>
+    <text x="636" y="339" font-size="10" fill="#64748b">Нет шифрования диска, нет DLP контроля,</text>
+    <text x="636" y="352" font-size="10" fill="#64748b">риск выноса базы за пределы офиса</text>
+    <rect x="810" y="294" width="65" height="18" rx="3" fill="#dc2626" fill-opacity="0.1"/>
+    <text x="843" y="307" font-size="9" font-weight="bold" fill="#dc2626" text-anchor="middle">Критическая утечка</text>
+  </g>
+  <line x1="220" y1="130" x2="290" y2="130" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
+  <rect x="142.75" y="120.5" width="224.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
+  <text x="255.0" y="133.0" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Запуск скрипта копирования файлов</text>
+  <line x1="590" y1="160" x2="510" y2="140" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
+  <rect x="457.25" y="140.5" width="185.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
+  <text x="550.0" y="153.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Выгрузка сырых Excel по SMB</text>
+  <line x1="390" y1="190" x2="390" y2="240" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
+  <rect x="307.0" y="205.5" width="166.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
+  <text x="390.0" y="218.0" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Парсинг pandas DataFrame</text>
+  <line x1="510" y1="280" x2="590" y2="320" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
+  <rect x="460.5" y="290.5" width="179.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
+  <text x="550.0" y="303.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Кэширование CSV на диск ПК</text>
+  <line x1="390" y1="335" x2="390" y2="385" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
+  <rect x="303.75" y="350.5" width="172.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
+  <text x="390.0" y="363.0" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Генерация отчета P&L, ABC</text>
+  <line x1="290" y1="430" x2="220" y2="330" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
+  <rect x="129.75" y="370.5" width="250.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
+  <text x="255.0" y="383.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Отправка отчетов руководству по почте</text>
+</svg>

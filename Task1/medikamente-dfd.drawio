@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.7.5">
+  <diagram id="diag_1" name="P1 Регистрация (As-Is)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header_1" value="&lt;b&gt;DFD Процесс 1 (As-Is): Первичная регистрация пациента и оформление документов&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 11px; color: #64748b;&#x27;&gt;Текущее состояние: ручной сбор избыточных ПДн, хранение сканов на общем сетевом диске без шифрования и разграничения прав&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;align=left;spacingLeft=15;fontSize=13;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_1_10" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Пациент (Patient)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Субъект ПДн&lt;br&gt;Очное обращение&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_1_11" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Ресепшен (Receptionist)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Сотрудник клиники&lt;br&gt;3 человека&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_1_12" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 1.1 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Избыточный сбор]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Сбор ПДн и анкеты&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Ручное заполнение бланка:&lt;br&gt;паспорт, контакты, работа,&lt;br&gt;хронические заболевания&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="95" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_1_13" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 1.2 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Нет контроля прав]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Ведение Excel-реестра&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Внесение данных пациента&lt;br&gt;в единый неструктурированный&lt;br&gt;файл Patients.xlsx&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="230" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_1_14" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 1.3 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Теневые сканы]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Сканирование документов&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;МФУ -&gt; скан паспорта,&lt;br&gt;договора и согласия&lt;br&gt;в JPG / PDF без учета&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="365" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_1_15" value="&lt;b style=&#x27;color:#dc2626;&#x27;&gt;[D1] Файловый диск: Patients.xlsx&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Риск УЗ-1]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Общий каталог SMB/CIFS&lt;br&gt;Доступен всем доменным пользователям&lt;br&gt;Отсутствует шифрование и аудит&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="600" y="150" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_1_16" value="&lt;b style=&#x27;color:#dc2626;&#x27;&gt;[D2] Файловый диск: \\Pacients\*&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Нарушение 152-ФЗ]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Папки: Pacient1-FIO-BD&lt;br&gt;Сканы паспортов, согласий, анкет&lt;br&gt;Нет версионирования и удаления&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="600" y="330" width="280" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_1_1" value="Бумажная анкета:&lt;br&gt;ФИО, паспорт, телефон,&lt;br&gt;место работы/учебы, анамнез" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="135" as="sourcePoint" />
+            <mxPoint x="290" y="135" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_1_2" value="Выдача бланков&lt;br&gt;и договоров" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="280" as="sourcePoint" />
+            <mxPoint x="130" y="185" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_1_3" value="Ручной ввод&lt;br&gt;ФИО и контактов" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="310" as="sourcePoint" />
+            <mxPoint x="290" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_1_4" value="Сканирование&lt;br&gt;документов на МФУ" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="340" as="sourcePoint" />
+            <mxPoint x="290" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_1_5" value="Запись строки&lt;br&gt;в открытый Excel" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="260" as="sourcePoint" />
+            <mxPoint x="600" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_1_6" value="Сохранение JPG/PDF&lt;br&gt;по SMB без шифрования" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="410" as="sourcePoint" />
+            <mxPoint x="600" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_2" name="P1 Регистрация (To-Be)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header_2" value="&lt;b&gt;DFD Процесс 1 (To-Be): Защищенная регистрация и онбординг пациента&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 11px; color: #64748b;&#x27;&gt;Целевое состояние: Data Minimization, TLS 1.3, Keycloak RBAC/ABAC, PostgreSQL TDE, MinIO S3 SSE-KMS, тегирование PII&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;align=left;spacingLeft=15;fontSize=13;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="940" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_2_10" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Пациент (Client)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Web-портал / App / Планшет&lt;br&gt;Самостоятельный ввод&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="100" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_2_11" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Ресепшен (Staff)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;АРМ сотрудника ресепшена&lt;br&gt;Роль: Receptionist (RBAC)&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="280" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_2_12" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 1.1 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Data Minimization]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Минимизированный сбор ПДн&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Исключены место работы/учебы&lt;br&gt;Только необходимые ФИО, телефон,&lt;br&gt;паспорт и электронное ИДС&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="95" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_2_13" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 1.2 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[OAuth2 / mTLS]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Аутентификация и валидация&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Kong API Gateway + WAF&lt;br&gt;Keycloak IdP (JWT Bearer)&lt;br&gt;Проверка согласия на обработку&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="250" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_2_14" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 1.3 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Data Tagging Engine]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Псевдонимизация и тегирование&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Генерация patient_uuid&lt;br&gt;Маркировка: PII_CONFIDENTIAL&lt;br&gt;Политики OPA + OpenMetadata&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="400" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_2_15" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D1] Patient DB (PostgreSQL)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[AES-256 / УЗ-1]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Шифрование TDE / pgcrypto&lt;br&gt;Row-Level Security (RLS)&lt;br&gt;UUID связка, аудит чтения&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="110" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_2_16" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D2] Doc Storage (MinIO S3)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Vault KMS]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Электронные согласия и сканы&lt;br&gt;Server-Side Encryption (SSE-KMS)&lt;br&gt;Object Versioning &amp; Retention&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="260" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_2_17" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D3] Audit &amp; Event Store (Kafka)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Vector / OpenSearch]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Централизованный Audit Log&lt;br&gt;Шина сообщений Kafka mTLS&lt;br&gt;Data Lineage фиксация&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="410" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_2_18" value="&lt;b style=&#x27;color:#15803d;font-size:11px;&#x27;&gt;🛡️ Меры безопасности To-Be&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 9px; color: #166534;&#x27;&gt;• TLS 1.3 шифрование&lt;br&gt;• RBAC/ABAC доступ&lt;br&gt;• Токенизация patient_id&lt;br&gt;• Тегирование PII&lt;br&gt;• Автоматический аудит&lt;br&gt;• Поддержка ст. 21 152-ФЗ&lt;br&gt;  (удаление по запросу)&lt;/font&gt;" style="shape=rectangle;rounded=1;dashed=1;dashPattern=4 2;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#14532d;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="800" y="180" width="160" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_2_1" value="HTTPS TLS 1.3:&lt;br&gt;ФИО, контакты, паспорт, ИДС" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="140" as="sourcePoint" />
+            <mxPoint x="250" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_2_2" value="Авторизованный доступ&lt;br&gt;к АРМ (Keycloak 2FA)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="310" as="sourcePoint" />
+            <mxPoint x="250" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_2_3" value="Передача профиля&lt;br&gt;через API Gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="190" as="sourcePoint" />
+            <mxPoint x="360" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_2_4" value="Обогащение тегами&lt;br&gt;и генерация UUID" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="345" as="sourcePoint" />
+            <mxPoint x="360" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_2_5" value="Запись карточки&lt;br&gt;пациента (TDE)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="150" as="sourcePoint" />
+            <mxPoint x="540" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_2_6" value="Загрузка сканов&lt;br&gt;с тегом PII_FILE" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="295" as="sourcePoint" />
+            <mxPoint x="540" y="295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_2_7" value="Событие: PatientCreated&lt;br&gt;(Audit Lineage)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="450" as="sourcePoint" />
+            <mxPoint x="540" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_3" name="P2 Запись (As-Is)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header_3" value="&lt;b&gt;DFD Процесс 2 (As-Is): Запись пациента на приём к специалисту&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 11px; color: #64748b;&#x27;&gt;Текущее состояние: открытые Excel-файлы расписаний по докторам, раскрытие врачебной тайны, коллизии блокировок&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;align=left;spacingLeft=15;fontSize=13;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_3_10" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Пациент (Patient)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Обращение по телефону&lt;br&gt;или лично на стойку&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_3_11" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Ресепшен (Receptionist)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Администратор ведет запись&lt;br&gt;в файлы расписаний&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="250" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_3_12" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Врач (Doctor)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Медицинский специалист&lt;br&gt;15 сотрудников&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_3_13" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 2.1 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Коллизии файлов]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Проверка расписания&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Поиск свободного слота&lt;br&gt;в открытом файле Excel&lt;br&gt;Journal-Doctor-FIO.xlsx&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="130" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_3_14" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 2.2 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Утечка врачебной тайны]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Внесение записи на прием&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Ручной ввод ФИО, телефона,&lt;br&gt;специальности и причины&lt;br&gt;визита в ячейку таблицы&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="290" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_3_15" value="&lt;b style=&#x27;color:#dc2626;&#x27;&gt;[D1] Файловый диск: \\Journals\*&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Критический риск]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Таблицы: Journal-Doctor-FIO.xlsx&lt;br&gt;Каждый врач и администратор имеет&lt;br&gt;доступ к расписанию ВСЕХ врачей клиники!&lt;br&gt;Нарушение ст. 13 323-ФЗ (врачебная тайна)&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="590" y="200" width="290" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_3_1" value="Запрос записи: специальность,&lt;br&gt;ФИО, телефон, симптомы" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="140" as="sourcePoint" />
+            <mxPoint x="290" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_3_2" value="Открытие файла Excel&lt;br&gt;доктора через SMB" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="275" as="sourcePoint" />
+            <mxPoint x="290" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_3_3" value="Выбор свободного&lt;br&gt;слота времени" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="225" as="sourcePoint" />
+            <mxPoint x="390" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_3_4" value="Сохранение файла&lt;br&gt;Journal-Doctor-FIO.xlsx" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="320" as="sourcePoint" />
+            <mxPoint x="590" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_3_5" value="Врач открывает расписание&lt;br&gt;(и может открыть чужие файлы!)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="430" as="sourcePoint" />
+            <mxPoint x="590" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_4" name="P2 Запись (To-Be)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header_4" value="&lt;b&gt;DFD Процесс 2 (To-Be): Автоматизированная запись на прием с RBAC/ABAC&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 11px; color: #64748b;&#x27;&gt;Целевое состояние: ЛК пациента, RBAC изоляция журналов врачей, Kafka нотификации, токенизация appointments&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;align=left;spacingLeft=15;fontSize=13;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="940" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_4_10" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Пациент (Client)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Web-портал / Мобильное App&lt;br&gt;Автономная запись 24/7&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="90" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_4_11" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Ресепшен (Staff)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;АРМ ресепшена&lt;br&gt;Только общие слоты&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="240" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_4_12" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Врач (Doctor)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;АРМ врача (RBAC/ABAC)&lt;br&gt;Видит ТОЛЬКО своих пациентов&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="390" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_4_13" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 2.1 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Data Minimization]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Запрос расписания (API)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Фильтрация доступных слотов&lt;br&gt;Без раскрытия чужих данных&lt;br&gt;Rate limiting + WAF&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="100" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_4_14" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 2.2 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Zero Collisions]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Бронирование визита&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Appointment Service (OLTP)&lt;br&gt;Атомарная транзакция в PostgreSQL&lt;br&gt;Тег: PHI_APPOINTMENT&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="250" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_4_15" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 2.3 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Privacy-preserving]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Оповещения и напоминания&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Notification Service (Kafka)&lt;br&gt;SMS/Push за 24ч до приема&lt;br&gt;Без раскрытия диагноза&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="400" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_4_16" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D1] Appointment DB (PostgreSQL)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[TDE / RLS]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Слоты, patient_uuid, doctor_id&lt;br&gt;ABAC правила доступа (OPA)&lt;br&gt;Исключены коллизии блокировок&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="170" width="240" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_4_17" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D2] Message Broker (Kafka mTLS)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Audit &amp; Events]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Топик appointments.events&lt;br&gt;События: Created, Confirmed, Cancelled&lt;br&gt;Шифрование payload + audit&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="340" width="240" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_4_18" value="&lt;b style=&#x27;color:#15803d;font-size:11px;&#x27;&gt;🛡️ Защитные механизмы&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 9px; color: #166534;&#x27;&gt;• Врач видит ТОЛЬКО&lt;br&gt;  свое расписание (ABAC)&lt;br&gt;• Пациент видит только&lt;br&gt;  свободные временные окна&lt;br&gt;• Нет утечки диагнозов&lt;br&gt;• Логирование в SIEM&lt;br&gt;• Высокая доступность&lt;/font&gt;" style="shape=rectangle;rounded=1;dashed=1;dashPattern=4 2;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#14532d;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="810" y="190" width="155" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_4_1" value="HTTPS TLS 1.3: Поиск врача/слота" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="130" as="sourcePoint" />
+            <mxPoint x="250" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_4_2" value="Создание записи с ресепшена" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="280" as="sourcePoint" />
+            <mxPoint x="250" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_4_3" value="Запрос журнала (только свой doctor_id)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="430" as="sourcePoint" />
+            <mxPoint x="250" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_4_4" value="Выбор интервала" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="195" as="sourcePoint" />
+            <mxPoint x="360" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_4_5" value="Фиксация брони в БД" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="270" as="sourcePoint" />
+            <mxPoint x="540" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_4_6" value="Инициация события" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="345" as="sourcePoint" />
+            <mxPoint x="360" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_4_7" value="Публикация брони в Kafka" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="420" as="sourcePoint" />
+            <mxPoint x="540" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_5" name="P3 Прием и ЭМК (As-Is)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header_5" value="&lt;b&gt;DFD Процесс 3 (As-Is): Проведение медицинского приёма и ведение медкарты&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 11px; color: #64748b;&#x27;&gt;Текущее состояние: файлы Word/Excel на файловом сервере, нет ЭЦП, нет версионирования, доступ открыт всей сети&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;align=left;spacingLeft=15;fontSize=13;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_5_10" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Пациент (Patient)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Очный прием в кабинете&lt;br&gt;Опрос, осмотр&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_5_11" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Врач (Doctor)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Медицинский специалист&lt;br&gt;ПК в локальной сети&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="310" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_5_12" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 3.1 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Нет аудита чтения]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Поиск медкарты в проводнике&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Открытие сетевой папки&lt;br&gt;\\Pacients\Pacient1-FIO-BD&lt;br&gt;Чтение Word/PDF файлов&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="100" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_5_13" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 3.2 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Нет юр. значимости]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Осмотр и оформление карты&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Внесение жалоб, диагноза (МКБ),&lt;br&gt;назначений в локальный файл Word&lt;br&gt;БЕЗ цифровой подписи (ЭЦП)&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="250" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_5_14" value="&lt;b style=&#x27;color:#1e40af;font-size:11px;&#x27;&gt;ПРОЦЕСС 3.3 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Бумажный след]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Печать заключений&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Вывод на локальный принтер&lt;br&gt;бумажного листа с диагнозом&lt;br&gt;и назначением лечения&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#2563eb;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="390" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_5_15" value="&lt;b style=&#x27;color:#dc2626;&#x27;&gt;[D1] Файловый диск: Медкарты пациентов&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Критическая уязвимость]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Каталоги \\Pacients\Pacient-FIO-BD\&lt;br&gt;Файлы DOCX, PDF, XLSX, JPG&lt;br&gt;• Доступен любому ПК в офисе&lt;br&gt;• Нет неизменяемости (WORM)&lt;br&gt;• Нет журналирования (кто читал?)&lt;br&gt;• Нарушение 323-ФЗ и УЗ-1 (ФСТЭК № 21)&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="590" y="160" width="300" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_5_1" value="Озвучивание жалоб,&lt;br&gt;анамнез, симптомы" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="150" as="sourcePoint" />
+            <mxPoint x="290" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_5_2" value="Поиск папки пациента&lt;br&gt;в проводнике Windows" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="340" as="sourcePoint" />
+            <mxPoint x="290" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_5_3" value="Загрузка старых записей&lt;br&gt;в Word без аудита" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="195" as="sourcePoint" />
+            <mxPoint x="390" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_5_4" value="Перезапись файла DOCX&lt;br&gt;по открытому SMB" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="270" as="sourcePoint" />
+            <mxPoint x="590" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_5_5" value="Отправка на печать" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="345" as="sourcePoint" />
+            <mxPoint x="390" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_5_6" value="Бумажное заключение пациенту" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="430" as="sourcePoint" />
+            <mxPoint x="220" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_6" name="P3 Прием и ЭМК (To-Be)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header_6" value="&lt;b&gt;DFD Процесс 3 (To-Be): Защищенная электронная медицинская карта (ЭМК / EHR)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 11px; color: #64748b;&#x27;&gt;Целевое состояние: ABAC (доступ только на время визита), УКЭП врача, стандарты FHIR, S3 WORM, SIEM-аудит&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;align=left;spacingLeft=15;fontSize=13;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="940" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_6_10" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Пациент (Patient)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Субъект ПДн&lt;br&gt;Личный кабинет (ЛК)&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="100" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_6_11" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Врач (Doctor)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;АРМ врача&lt;br&gt;Аппаратный токен УКЭП&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="280" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_6_12" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 3.1 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Strict ABAC]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;ABAC авторизация доступа&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;OPA Policy Engine:&lt;br&gt;доступ к медкарте ТОЛЬКО при&lt;br&gt;наличии активной записи на прием&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="95" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_6_13" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 3.2 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[УКЭП / Минздрав 947н]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Ведение протокола (EHR)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Структурированный формат FHIR&lt;br&gt;Тег: PHI_SPECIAL_RESTRICTED&lt;br&gt;Подписание УКЭП врача (947н)&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="250" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_6_14" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 3.3 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[WORM / Immutability]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Иммутабельное архивирование&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Шифрование AES-256 (TDE)&lt;br&gt;Политика неизменяемости (WORM)&lt;br&gt;Запрет скрытого редактирования&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="405" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_6_15" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D1] EHR Clinical DB (PostgreSQL)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[PostgreSQL TDE]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Медицинские записи, диагнозы МКБ&lt;br&gt;Шифрование pgcrypto/TDE&lt;br&gt;Маскирование для не-врачей&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="105" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_6_16" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D2] Medical Docs (MinIO S3 SSE)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[SSE-KMS / WORM]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Подписанные PDF/A, снимки, ЭКГ&lt;br&gt;KMS Envelope Encryption&lt;br&gt;Object Lock (Immutability)&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="255" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_6_17" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D3] SIEM &amp; Audit Vault&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Неотслеживаемость исключена]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Полная фиксация каждого чтения!&lt;br&gt;Vector -&gt; OpenSearch -&gt; Wazuh&lt;br&gt;Срок хранения логов 5 лет&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="405" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_6_18" value="&lt;b style=&#x27;color:#15803d;font-size:11px;&#x27;&gt;🛡️ Гарантии безопасности&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 9px; color: #166534;&#x27;&gt;• Врач другой специальности&lt;br&gt;  НЕ МОЖЕТ открыть карту&lt;br&gt;• Каждая запись подписана&lt;br&gt;  личной УКЭП врача&lt;br&gt;• Невозможно подделать&lt;br&gt;  или удалить историю болезни&lt;br&gt;• 100% аудит просмотров&lt;br&gt;• Полное соответствие 323-ФЗ&lt;/font&gt;" style="shape=rectangle;rounded=1;dashed=1;dashPattern=4 2;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#14532d;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="800" y="180" width="160" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_6_1" value="Запрос ЭМК пациента (mTLS)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="310" as="sourcePoint" />
+            <mxPoint x="250" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_6_2" value="Разрешение OPA (ABAC OK)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="190" as="sourcePoint" />
+            <mxPoint x="360" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_6_3" value="Чтение медкарты (Audit Logged)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="145" as="sourcePoint" />
+            <mxPoint x="540" y="145" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_6_4" value="Сохранение протокола + УКЭП" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="290" as="sourcePoint" />
+            <mxPoint x="540" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_6_5" value="Блокировка изменений" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="345" as="sourcePoint" />
+            <mxPoint x="360" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_6_6" value="Отправка лога в SIEM" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="445" as="sourcePoint" />
+            <mxPoint x="540" y="445" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_6_7" value="Доступ к своей карте в ЛК" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="120" as="sourcePoint" />
+            <mxPoint x="200" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_7" name="P4 Лаборатория (As-Is)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header_7" value="&lt;b&gt;DFD Процесс 4 (As-Is): Направление и получение анализов из лаборатории&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 11px; color: #64748b;&#x27;&gt;Текущее состояние: открытый Exchange e-mail, незащищенные реестры анализов, отсутствие деперсонализации биоматериала&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;align=left;spacingLeft=15;fontSize=13;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_7_10" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Пациент (Patient)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Сдает биоматериал&lt;br&gt;в процедурном кабинете&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_7_11" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Медсестра / Ресепшен&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Оформляет суточный реестр&lt;br&gt;и отправляет пробирки&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_7_12" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Внешняя лаборатория&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Партнерская лаборатория&lt;br&gt;Обмен через Exchange / файлы&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_7_13" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 4.1 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Нет шифрования]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Ведение реестра анализов&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Внесение ФИО, даты, видов&lt;br&gt;исследований в Excel&lt;br&gt;RegistryByDate.xlsx&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="130" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_7_14" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 4.2 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Нарушение тайны]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Передача реестра партнеру&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Отправка списка пациентов&lt;br&gt;и забор пробирок курьером&lt;br&gt;без деперсонализации&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="285" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_7_15" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 4.3 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Открытый e-mail]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Прием результатов (e-mail)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Получение PDF/XLS по Exchange,&lt;br&gt;ручное копирование в папки&lt;br&gt;пациентов на файловом диске&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="415" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_7_16" value="&lt;b style=&#x27;color:#dc2626;&#x27;&gt;[D1] Файловый диск: Laboratory Registry&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Утечка спецкатегорий]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Каталоги \\Laboratory Registry\RegistryByDate.xlsx&lt;br&gt;• Доступен всем сотрудникам&lt;br&gt;• Содержит ФИО + ВИЧ, гепатиты, онкомаркеры!&lt;br&gt;• Нарушение ст. 10 152-ФЗ и ст. 13 323-ФЗ&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="590" y="190" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_7_1" value="Забор биоматериала (ФИО на пробирке)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="130" as="sourcePoint" />
+            <mxPoint x="290" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_7_2" value="Ручной ввод в RegistryByDate.xlsx" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="270" as="sourcePoint" />
+            <mxPoint x="290" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_7_3" value="Запись строки в Excel" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="200" as="sourcePoint" />
+            <mxPoint x="590" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_7_4" value="Формирование списка отправки" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="225" as="sourcePoint" />
+            <mxPoint x="390" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_7_5" value="Отправка реестра с ФИО курьеру" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="335" as="sourcePoint" />
+            <mxPoint x="220" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_7_6" value="Результаты анализов по незашифрованному Exchange" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="440" as="sourcePoint" />
+            <mxPoint x="290" y="445" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_7_7" value="Раскладывание PDF по папкам \\Pacients\" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="450" as="sourcePoint" />
+            <mxPoint x="590" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_8" name="P4 Лаборатория (To-Be)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header_8" value="&lt;b&gt;DFD Процесс 4 (To-Be): Защищенная интеграция с лабораторией (Lab API / mTLS)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 11px; color: #64748b;&#x27;&gt;Целевое состояние: деперсонализация биоматериала (barcode token), mTLS API контракты, Webhook, исключение утечек&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;align=left;spacingLeft=15;fontSize=13;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="940" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_8_10" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Пациент (Patient)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Сдает биоматериал&lt;br&gt;Результаты в ЛК&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="90" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_8_11" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Процедурный кабинет&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Медсестра (АРМ)&lt;br&gt;Маркировка пробирок&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="240" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_8_12" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Внешняя лаборатория&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Lab API Partner&lt;br&gt;Интеграция по стандарту&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="400" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_8_13" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 4.1 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Pseudonymization]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Деперсонализация заказа&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Генерация sample_uuid и barcode.&lt;br&gt;Лаборатории передается ТОЛЬКО код,&lt;br&gt;пол, возраст (без ФИО и паспорта)&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="95" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_8_14" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 4.2 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[mTLS / Zero Trust]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Защищенный API Gateway&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Взаимная аутентификация mTLS&lt;br&gt;Строгий OpenAPI контракт&lt;br&gt;Валидация входящей схемы&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="250" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_8_15" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 4.3 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Tokenization Vault]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Реидентификация и доставка&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Сопоставление sample_uuid -&gt; patient_uuid&lt;br&gt;в закрытом изолированном Vault.&lt;br&gt;Тег: PHI_LAB_RESULT&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="405" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_8_16" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D1] Token Vault (HashiCorp)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Isolated Vault]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Таблица связки: barcode &lt;-&gt; patient_uuid&lt;br&gt;Доступна ТОЛЬКО Lab Service&lt;br&gt;Изолирована от внешнего контура&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="105" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_8_17" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D2] Lab Orders DB (PostgreSQL)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Anonymized Orders]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Статусы заказов, даты готовности&lt;br&gt;Шифрование TDE&lt;br&gt;Без персональных данных&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="255" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_8_18" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D3] Results Storage (MinIO S3)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[SSE-KMS / RLS]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Зашифрованные PDF бланки&lt;br&gt;SSE-KMS шифрование&lt;br&gt;Доступ пациенту только к своим!&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="405" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_8_19" value="&lt;b style=&#x27;color:#15803d;font-size:11px;&#x27;&gt;🛡️ Принципы защиты&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 9px; color: #166534;&#x27;&gt;• Партнер НЕ ЗНАЕТ ФИО&lt;br&gt;  пациента (только barcode)&lt;br&gt;• Никаких Excel реестров&lt;br&gt;• Никаких пересылок по mail&lt;br&gt;• Двусторонний mTLS&lt;br&gt;• Исключен просмотр чужих&lt;br&gt;  анализов другими клиентами&lt;/font&gt;" style="shape=rectangle;rounded=1;dashed=1;dashPattern=4 2;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#14532d;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="800" y="180" width="160" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_8_1" value="Создание заказа на исследование" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="270" as="sourcePoint" />
+            <mxPoint x="250" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_8_2" value="Сохранение токена barcode" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="140" as="sourcePoint" />
+            <mxPoint x="540" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_8_3" value="Передача деперсонализированного заказа" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="190" as="sourcePoint" />
+            <mxPoint x="360" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_8_4" value="mTLS API: отправка barcode + анализ" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="310" as="sourcePoint" />
+            <mxPoint x="200" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_8_5" value="mTLS Webhook: результат с barcode" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="450" as="sourcePoint" />
+            <mxPoint x="250" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_8_6" value="Валидация подписи лаборатории" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="345" as="sourcePoint" />
+            <mxPoint x="360" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_8_7" value="Сохранение PDF в MinIO S3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="440" as="sourcePoint" />
+            <mxPoint x="540" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_8_8" value="Push-уведомление в ЛК пациента" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="110" as="sourcePoint" />
+            <mxPoint x="200" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_9" name="P5 Оплата (As-Is)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header_9" value="&lt;b&gt;DFD Процесс 5 (As-Is): Оплата медицинских услуг и фискализация&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 11px; color: #64748b;&#x27;&gt;Текущее состояние: двойной учет (Excel + 1С), незащищенный протокол ККМ, файловая БД «1С:Бухгалтерия»&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;align=left;spacingLeft=15;fontSize=13;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_9_10" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Пациент (Patient)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Оплата на кассе&lt;br&gt;наличные / карта&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_9_11" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Кассир (Cashier)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;3 сотрудника кассы&lt;br&gt;Двойной учет&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="250" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_9_12" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;ККМ (Кассовый аппарат)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Контрольно-кассовая машина&lt;br&gt;Связь по TCP/IP OLE&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_9_13" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 5.1 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Двойной учет]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Прием платежа на кассе&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Расчет стоимости услуг,&lt;br&gt;прием средств, ввод в локальный&lt;br&gt;файл Excel кассира&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="110" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_9_14" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 5.2 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Незащищенный TCP/IP]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Пробитие чека через ККМ&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Передача команды в ККМ по TCP/IP&lt;br&gt;через устаревшую OLE-компоненту&lt;br&gt;без шифрования трафика&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="250" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_9_15" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 5.3 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Файловый режим 1С]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Проводка в «1С:Бухгалтерия»&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Ручное создание документа оплаты&lt;br&gt;в файловой базе 1С по сети SMB&lt;br&gt;(риск порчи базы при сбое сети)&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="390" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_9_16" value="&lt;b style=&#x27;color:#dc2626;&#x27;&gt;[D1] Локальный Excel кассира&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Shadow Data]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Файлы учета платежей на ПК кассиров&lt;br&gt;Не централизованы, нет контроля доступа,&lt;br&gt;рассинхронизация с бухгалтерией&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="590" y="160" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_9_17" value="&lt;b style=&#x27;color:#dc2626;&#x27;&gt;[D2] 1С:Бухгалтерия (файловая БД)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Риск потери данных]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Сетевой путь: \\Server\1C_Buh\&lt;br&gt;• Блокировки таблиц&lt;br&gt;• Нет шифрования сетевого трафика&lt;br&gt;• Риск повреждения при скачке питания&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="590" y="340" width="290" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_9_1" value="Передача наличных / карты" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="135" as="sourcePoint" />
+            <mxPoint x="290" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_9_2" value="Ввод суммы и ФИО в Excel" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="275" as="sourcePoint" />
+            <mxPoint x="290" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_9_3" value="Сохранение кассового Excel" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="160" as="sourcePoint" />
+            <mxPoint x="590" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_9_4" value="Команда на фискализацию" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="205" as="sourcePoint" />
+            <mxPoint x="390" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_9_5" value="TCP/IP OLE (открытый трафик)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="310" as="sourcePoint" />
+            <mxPoint x="220" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_9_6" value="Выдача бумажного чека пациенту" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="440" as="sourcePoint" />
+            <mxPoint x="220" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_9_7" value="Синхронизация с 1С" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="345" as="sourcePoint" />
+            <mxPoint x="390" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_9_8" value="Запись в файловую БД 1С по SMB" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="420" as="sourcePoint" />
+            <mxPoint x="590" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_10" name="P5 Оплата (To-Be)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header_10" value="&lt;b&gt;DFD Процесс 5 (To-Be): Защищенный платежный шлюз и фискализация (PCI DSS / 54-ФЗ)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 11px; color: #64748b;&#x27;&gt;Целевое состояние: Payment Gateway, СБП/Эквайринг (без хранения карт), ОФД, 1С клиент-сервер по API/Kafka&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;align=left;spacingLeft=15;fontSize=13;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="940" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_10_10" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Пациент (Client)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Оплата в App / ЛК / СБП&lt;br&gt;или терминал на кассе&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="90" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_10_11" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Кассир / Ресепшен&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;АРМ кассира (RBAC)&lt;br&gt;Формирование счетов&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="240" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_10_12" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Банк-эквайер / ОФД&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Внешний шлюз эквайринга&lt;br&gt;Оператор фискальных данных&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="400" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_10_13" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 5.1 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Data Minimization]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Billing &amp; Invoicing Service&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Формирование инвойса по заказу.&lt;br&gt;Связка order_uuid + сумма.&lt;br&gt;Маскирование мед. диагнозов&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="95" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_10_14" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 5.2 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[PCI DSS Level 1]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Payment Gateway (PCI DSS)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Токенизация карт в банке.&lt;br&gt;Клиника НЕ хранит данные карт!&lt;br&gt;TLS 1.3 + криптоподпись webhook&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="250" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_10_15" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 5.3 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[54-ФЗ / Kafka]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Fiscal &amp; 1C Sync Service&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Автоматическая фискализация (54-ФЗ),&lt;br&gt;электронный чек по SMS/email,&lt;br&gt;событие в Kafka для клиент-серверной 1С&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="405" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_10_16" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D1] Billing DB (PostgreSQL)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[TDE / RLS]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Счета, транзакции, фискальные теги&lt;br&gt;Шифрование TDE&lt;br&gt;Тег: FINANCIAL_CONFIDENTIAL&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="105" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_10_17" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D2] Audit &amp; Kafka Pipeline&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[mTLS Kafka]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Топик billing.payments.completed&lt;br&gt;Асинхронная доставка в бухгалтерию&lt;br&gt;Идемпотентность транзакций&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="255" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_10_18" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D3] 1С (Клиент-Сервер)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Enterprise 1C]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;PostgreSQL база данных 1С&lt;br&gt;Интеграция по REST API/Kafka&lt;br&gt;Исключены файловые блокировки&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="405" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_10_19" value="&lt;b style=&#x27;color:#15803d;font-size:11px;&#x27;&gt;🛡️ Принципы защиты&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 9px; color: #166534;&#x27;&gt;• Данные карт НЕ попадают&lt;br&gt;  на сервер клиники (СБП)&lt;br&gt;• Бухгалтерия видит только код&lt;br&gt;  услуги (без диагнозов!)&lt;br&gt;• Исключен теневой Excel&lt;br&gt;• Электронный чек в ОФД&lt;br&gt;• Клиент-серверная 1С&lt;/font&gt;" style="shape=rectangle;rounded=1;dashed=1;dashPattern=4 2;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#14532d;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="800" y="180" width="160" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_10_1" value="Оплата: СБП / Карта / ЛК (TLS 1.3)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="130" as="sourcePoint" />
+            <mxPoint x="250" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_10_2" value="Формирование счета на кассе" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="270" as="sourcePoint" />
+            <mxPoint x="250" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_10_3" value="Передача платежного токена" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="190" as="sourcePoint" />
+            <mxPoint x="360" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_10_4" value="Проведение платежа в банке" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="320" as="sourcePoint" />
+            <mxPoint x="200" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_10_5" value="Webhook от банка + ОФД чек" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="450" as="sourcePoint" />
+            <mxPoint x="250" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_10_6" value="Запись чека в Billing DB" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="150" as="sourcePoint" />
+            <mxPoint x="540" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_10_7" value="Фискализация и нотификация" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="345" as="sourcePoint" />
+            <mxPoint x="360" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_10_8" value="Событие PaymentSuccess в Kafka" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="440" as="sourcePoint" />
+            <mxPoint x="540" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_10_9" value="Синхронизация с 1С" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="655" y="350" as="sourcePoint" />
+            <mxPoint x="655" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_11" name="P6 Аналитика (As-Is)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header_11" value="&lt;b&gt;DFD Процесс 6 (As-Is): Сбор аналитики, управленческая отчетность и бизнес-анализ&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 11px; color: #64748b;&#x27;&gt;Текущее состояние: прямой сбор неанонимизированных Excel файлов на ноутбук аналитика через SMB, Jupyter Notebook&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;align=left;spacingLeft=15;fontSize=13;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_11_10" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Бизнес-аналитик (BA)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Сотрудник IT-отдела&lt;br&gt;Рабочий ноутбук&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_11_11" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Руководство клиники&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Генеральный директор,&lt;br&gt;Главный врач&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_11_12" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 6.1 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Shadow Analytics]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Прямое копирование файлов&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Копирование Excel баз пациентов,&lt;br&gt;журналов и реестров анализов&lt;br&gt;по SMB на личный ноутбук&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="95" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_11_13" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 6.2 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Сырые ПДн в скриптах]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Расчеты в Jupyter Notebook&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Запуск локальных Python скриптов&lt;br&gt;обработки сырых данных (ФИО, суммы,&lt;br&gt;диагнозы) БЕЗ обезличивания&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="240" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_11_14" value="&lt;b style=&#x27;color:#991b1b;font-size:11px;&#x27;&gt;ПРОЦЕСС 6.3 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Почтовая утечка]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Отправка отчетов по почте&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;P&amp;L, ABC-анализ в Excel&lt;br&gt;рассылаются через незащищенный&lt;br&gt;Exchange Mail Server&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="385" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_11_15" value="&lt;b style=&#x27;color:#dc2626;&#x27;&gt;[D1] Файловый сервер клиники&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Нет Data Lineage]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Папки: Pacients, Journals, Registry&lt;br&gt;Сырые файлы клиники за все годы&lt;br&gt;Доступны аналитику без ограничений&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="590" y="120" width="290" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_11_16" value="&lt;b style=&#x27;color:#dc2626;&#x27;&gt;[D2] Локальный диск ноутбука аналитика&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Критическая утечка]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Неконтролируемая теневая копия базы&lt;br&gt;Нет шифрования диска, нет DLP контроля,&lt;br&gt;риск выноса базы за пределы офиса&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#dc2626;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="590" y="290" width="290" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_11_1" value="Запуск скрипта копирования файлов" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="130" as="sourcePoint" />
+            <mxPoint x="290" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_11_2" value="Выгрузка сырых Excel по SMB" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="160" as="sourcePoint" />
+            <mxPoint x="510" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_11_3" value="Парсинг pandas DataFrame" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="190" as="sourcePoint" />
+            <mxPoint x="390" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_11_4" value="Кэширование CSV на диск ПК" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="280" as="sourcePoint" />
+            <mxPoint x="590" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_11_5" value="Генерация отчета P&amp;L, ABC" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#475569;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="335" as="sourcePoint" />
+            <mxPoint x="390" y="385" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_11_6" value="Отправка отчетов руководству по почте" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#dc2626;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="430" as="sourcePoint" />
+            <mxPoint x="220" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_12" name="P6 Аналитика (To-Be)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header_12" value="&lt;b&gt;DFD Процесс 6 (To-Be): Контур обезличенной аналитики (Data Lakehouse &amp; Privacy Gateway)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 11px; color: #64748b;&#x27;&gt;Целевое состояние: Privacy Gateway (k-anonymity), ClickHouse Data Lake, Apache Superset, исключение PII из аналитики&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;align=left;spacingLeft=15;fontSize=13;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="940" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_12_10" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Бизнес-аналитик (BA)&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Доступ через Web BI&lt;br&gt;Без права скачивания сырых ПДн&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="90" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_12_11" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;ML / AI инженеры&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Обучение моделей LLM/ML&lt;br&gt;ТОЛЬКО на обезличенных сетах&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="250" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_12_12" value="&lt;b&gt;[ВНЕШНЯЯ СУЩНОСТЬ]&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 13px;&#x27;&gt;Руководство клиники&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Дашборды в BI Superset&lt;br&gt;Метрики в реальном времени&lt;/font&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="405" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_12_13" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 6.1 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[CDC Streaming]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;CDC &amp; ETL Экстракция&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Debezium + Kafka Connect&lt;br&gt;Потоковое извлечение изменений&lt;br&gt;из PostgreSQL (OLTP)&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="95" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_12_14" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 6.2 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Роскомнадзор 996]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Privacy &amp; Anonymization Engine&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Удаление прямых идентификаторов&lt;br&gt;К-анонимизация (возрастные группы)&lt;br&gt;Дифференциальная приватность&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="250" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_12_15" value="&lt;b style=&#x27;color:#166534;font-size:11px;&#x27;&gt;ПРОЦЕСС 6.3 &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Zero Raw PII]&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;b style=&#x27;font-size: 12px;&#x27;&gt;Витрины данных и BI&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #334155;&#x27;&gt;Агрегаты в ClickHouse (OLAP)&lt;br&gt;Дашборды в Apache Superset&lt;br&gt;Тег: ANALYTICS_ANONYMIZED&lt;/font&gt;" style="shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="405" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_12_16" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D1] Operational DBs (OLTP)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Strict Isolation]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Patient, Appointment, EHR DBs&lt;br&gt;Закрытый производственный контур&lt;br&gt;Прямой доступ аналитика ЗАПРЕЩЕН&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="105" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_12_17" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D2] Analytical Lake (ClickHouse)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[ClickHouse OLAP]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Колоночная СУБД для аналитики&lt;br&gt;100% обезличенные данные!&lt;br&gt;Агрегаты выручки, нагрузки, услуг&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="255" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_12_18" value="&lt;b style=&#x27;color:#16a34a;&#x27;&gt;[D3] Data Catalog (OpenMetadata)&lt;/b&gt; &lt;span style=&#x27;font-size:9px;&#x27;&gt;[Data Lineage]&lt;/span&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 10px; color: #475569;&#x27;&gt;Единый каталог метаданных&lt;br&gt;Сквозной Data Lineage от OLTP к BI&lt;br&gt;Политики маскирования и теги&lt;/font&gt;" style="shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="405" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_12_19" value="&lt;b style=&#x27;color:#15803d;font-size:11px;&#x27;&gt;🛡️ Принципы защиты&lt;/b&gt;&lt;br&gt;&lt;font style=&#x27;font-size: 9px; color: #166534;&#x27;&gt;• Аналитик и AI физически&lt;br&gt;  НЕ ИМЕЮТ доступа к ПДн&lt;br&gt;• Никаких файлов на ноутбуках&lt;br&gt;• К-анонимизация и обобщение&lt;br&gt;• Сквозной Data Lineage&lt;br&gt;• Готовность к 5-кратному росту&lt;br&gt;  и обучению LLM/ML&lt;/font&gt;" style="shape=rectangle;rounded=1;dashed=1;dashPattern=4 2;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#14532d;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="800" y="180" width="160" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_12_1" value="CDC поток изменений (Debezium)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="140" as="sourcePoint" />
+            <mxPoint x="470" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_12_2" value="Потоковая передача в Privacy Engine" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="190" as="sourcePoint" />
+            <mxPoint x="360" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_12_3" value="Загрузка обезличенных данных" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="290" as="sourcePoint" />
+            <mxPoint x="540" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_12_4" value="Построение витрин отчетности" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="345" as="sourcePoint" />
+            <mxPoint x="360" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_12_5" value="Регистрация связей в Data Lineage" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="440" as="sourcePoint" />
+            <mxPoint x="540" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_12_6" value="Аналитик открывает BI Superset (Web)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="130" as="sourcePoint" />
+            <mxPoint x="250" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_12_7" value="ML обучение на ClickHouse витринах" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="280" as="sourcePoint" />
+            <mxPoint x="540" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_12_8" value="Дашборды руководству в браузере" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#16a34a;fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="460" as="sourcePoint" />
+            <mxPoint x="200" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

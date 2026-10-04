@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" width="980" height="560" style="background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <marker id="arrow-default" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+    </marker>
+    <marker id="arrow-vulnerable" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+    <marker id="arrow-secure" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="980" height="60" fill="#1e293b"/>
+  <text x="25" y="32" font-size="18" font-weight="bold" fill="#ffffff">DFD Процесс 1 (To-Be): Защищенная регистрация и онбординг пациента</text>
+  <text x="25" y="50" font-size="12" fill="#94a3b8">Целевое состояние: Data Minimization, TLS 1.3, Keycloak RBAC/ABAC, PostgreSQL TDE, MinIO S3 SSE-KMS, тегирование PII</text>
+
+  <!-- External Entity: Пациент (Client) -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="100" width="170" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect x="30" y="100" width="170" height="24" rx="4" fill="#0284c7"/>
+    <text x="115.0" y="116" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
+    <text x="115.0" y="145" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Пациент (Client)</text>
+    <text x="115.0" y="163" font-size="10" fill="#64748b" text-anchor="middle">Web-портал / App / Планшет
+Самостоятельный ввод</text>
+  </g>
+  <!-- External Entity: Ресепшен (Staff) -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="280" width="170" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect x="30" y="280" width="170" height="24" rx="4" fill="#0284c7"/>
+    <text x="115.0" y="296" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
+    <text x="115.0" y="325" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Ресепшен (Staff)</text>
+    <text x="115.0" y="343" font-size="10" fill="#64748b" text-anchor="middle">АРМ сотрудника ресепшена
+Роль: Receptionist (RBAC)</text>
+  </g>
+  <!-- Process 1.1: Минимизированный сбор ПДн -->
+  <g filter="url(#shadow)">
+    <rect x="250" y="95" width="220" height="95" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <path d="M 250 119 L 470 119" stroke="#16a34a" stroke-width="1"/>
+    <rect x="251" y="96" width="218" height="23" rx="11" fill="#dcfce7"/>
+    <text x="262" y="111" font-size="11" font-weight="bold" fill="#166534">ПРОЦЕСС 1.1</text>
+    <text x="458" y="111" font-size="10" font-weight="bold" fill="#166534" text-anchor="end">Data Minimization</text>
+    <text x="360.0" y="141" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Минимизированный сбор ПДн</text>
+    <text x="360.0" y="159" font-size="10" fill="#475569" text-anchor="middle">Исключены место работы/учебы</text>
+    <text x="360.0" y="173" font-size="10" fill="#475569" text-anchor="middle">Только необходимые ФИО, телефон,</text>
+    <text x="360.0" y="187" font-size="10" fill="#475569" text-anchor="middle">паспорт и электронное ИДС</text>
+  </g>
+  <!-- Process 1.2: Аутентификация и валидация -->
+  <g filter="url(#shadow)">
+    <rect x="250" y="250" width="220" height="95" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <path d="M 250 274 L 470 274" stroke="#16a34a" stroke-width="1"/>
+    <rect x="251" y="251" width="218" height="23" rx="11" fill="#dcfce7"/>
+    <text x="262" y="266" font-size="11" font-weight="bold" fill="#166534">ПРОЦЕСС 1.2</text>
+    <text x="458" y="266" font-size="10" font-weight="bold" fill="#166534" text-anchor="end">OAuth2 / mTLS</text>
+    <text x="360.0" y="296" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Аутентификация и валидация</text>
+    <text x="360.0" y="314" font-size="10" fill="#475569" text-anchor="middle">Kong API Gateway + WAF</text>
+    <text x="360.0" y="328" font-size="10" fill="#475569" text-anchor="middle">Keycloak IdP (JWT Bearer)</text>
+    <text x="360.0" y="342" font-size="10" fill="#475569" text-anchor="middle">Проверка согласия на обработку</text>
+  </g>
+  <!-- Process 1.3: Псевдонимизация и тегирование -->
+  <g filter="url(#shadow)">
+    <rect x="250" y="400" width="220" height="95" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <path d="M 250 424 L 470 424" stroke="#16a34a" stroke-width="1"/>
+    <rect x="251" y="401" width="218" height="23" rx="11" fill="#dcfce7"/>
+    <text x="262" y="416" font-size="11" font-weight="bold" fill="#166534">ПРОЦЕСС 1.3</text>
+    <text x="458" y="416" font-size="10" font-weight="bold" fill="#166534" text-anchor="end">Data Tagging Engine</text>
+    <text x="360.0" y="446" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Псевдонимизация и тегирование</text>
+    <text x="360.0" y="464" font-size="10" fill="#475569" text-anchor="middle">Генерация patient_uuid</text>
+    <text x="360.0" y="478" font-size="10" fill="#475569" text-anchor="middle">Маркировка: PII_CONFIDENTIAL</text>
+    <text x="360.0" y="492" font-size="10" fill="#475569" text-anchor="middle">Политики OPA + OpenMetadata</text>
+  </g>
+  <!-- Data Store D1: Patient DB (PostgreSQL) -->
+  <g filter="url(#shadow)">
+    <rect x="540" y="110" width="230" height="95" fill="#f0fdf4" stroke="none"/>
+    <line x1="540" y1="110" x2="770" y2="110" stroke="#16a34a" stroke-width="2"/>
+    <line x1="540" y1="205" x2="770" y2="205" stroke="#16a34a" stroke-width="2"/>
+    <line x1="540" y1="110" x2="540" y2="205" stroke="#16a34a" stroke-width="2"/>
+    <line x1="576" y1="110" x2="576" y2="205" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="558" y="161.5" font-size="11" font-weight="bold" fill="#16a34a" text-anchor="middle">D1</text>
+    <text x="586" y="130" font-size="12" font-weight="bold" fill="#0f172a">Patient DB (PostgreSQL)</text>
+    <text x="586" y="146" font-size="10" fill="#64748b">Шифрование TDE / pgcrypto</text>
+    <text x="586" y="159" font-size="10" fill="#64748b">Row-Level Security (RLS)</text>
+    <text x="586" y="172" font-size="10" fill="#64748b">UUID связка, аудит чтения</text>
+    <rect x="700" y="114" width="65" height="18" rx="3" fill="#16a34a" fill-opacity="0.1"/>
+    <text x="733" y="127" font-size="9" font-weight="bold" fill="#16a34a" text-anchor="middle">AES-256 / УЗ-1</text>
+  </g>
+  <!-- Data Store D2: Doc Storage (MinIO S3) -->
+  <g filter="url(#shadow)">
+    <rect x="540" y="260" width="230" height="95" fill="#f0fdf4" stroke="none"/>
+    <line x1="540" y1="260" x2="770" y2="260" stroke="#16a34a" stroke-width="2"/>
+    <line x1="540" y1="355" x2="770" y2="355" stroke="#16a34a" stroke-width="2"/>
+    <line x1="540" y1="260" x2="540" y2="355" stroke="#16a34a" stroke-width="2"/>
+    <line x1="576" y1="260" x2="576" y2="355" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="558" y="311.5" font-size="11" font-weight="bold" fill="#16a34a" text-anchor="middle">D2</text>
+    <text x="586" y="280" font-size="12" font-weight="bold" fill="#0f172a">Doc Storage (MinIO S3)</text>
+    <text x="586" y="296" font-size="10" fill="#64748b">Электронные согласия и сканы</text>
+    <text x="586" y="309" font-size="10" fill="#64748b">Server-Side Encryption (SSE-KMS)</text>
+    <text x="586" y="322" font-size="10" fill="#64748b">Object Versioning & Retention</text>
+    <rect x="700" y="264" width="65" height="18" rx="3" fill="#16a34a" fill-opacity="0.1"/>
+    <text x="733" y="277" font-size="9" font-weight="bold" fill="#16a34a" text-anchor="middle">Vault KMS</text>
+  </g>
+  <!-- Data Store D3: Audit & Event Store (Kafka) -->
+  <g filter="url(#shadow)">
+    <rect x="540" y="410" width="230" height="95" fill="#f0fdf4" stroke="none"/>
+    <line x1="540" y1="410" x2="770" y2="410" stroke="#16a34a" stroke-width="2"/>
+    <line x1="540" y1="505" x2="770" y2="505" stroke="#16a34a" stroke-width="2"/>
+    <line x1="540" y1="410" x2="540" y2="505" stroke="#16a34a" stroke-width="2"/>
+    <line x1="576" y1="410" x2="576" y2="505" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="558" y="461.5" font-size="11" font-weight="bold" fill="#16a34a" text-anchor="middle">D3</text>
+    <text x="586" y="430" font-size="12" font-weight="bold" fill="#0f172a">Audit & Event Store (Kafka)</text>
+    <text x="586" y="446" font-size="10" fill="#64748b">Централизованный Audit Log</text>
+    <text x="586" y="459" font-size="10" fill="#64748b">Шина сообщений Kafka mTLS</text>
+    <text x="586" y="472" font-size="10" fill="#64748b">Data Lineage фиксация</text>
+    <rect x="700" y="414" width="65" height="18" rx="3" fill="#16a34a" fill-opacity="0.1"/>
+    <text x="733" y="427" font-size="9" font-weight="bold" fill="#16a34a" text-anchor="middle">Vector / OpenSearch</text>
+  </g>
+  <!-- Security Control: Меры безопасности To-Be -->
+  <g>
+    <rect x="800" y="180" width="160" height="190" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4 2"/>
+    <text x="880.0" y="196" font-size="10" font-weight="bold" fill="#15803d" text-anchor="middle">Меры безопасности To-Be</text>
+    <text x="880.0" y="210" font-size="9" fill="#166534" text-anchor="middle">• TLS 1.3 шифрование</text>
+    <text x="880.0" y="222" font-size="9" fill="#166534" text-anchor="middle">• RBAC/ABAC доступ</text>
+    <text x="880.0" y="234" font-size="9" fill="#166534" text-anchor="middle">• Токенизация patient_id</text>
+    <text x="880.0" y="246" font-size="9" fill="#166534" text-anchor="middle">• Тегирование PII</text>
+    <text x="880.0" y="258" font-size="9" fill="#166534" text-anchor="middle">• Автоматический аудит</text>
+    <text x="880.0" y="270" font-size="9" fill="#166534" text-anchor="middle">• Поддержка ст. 21 152-ФЗ</text>
+    <text x="880.0" y="282" font-size="9" fill="#166534" text-anchor="middle">  (удаление по запросу)</text>
+  </g>
+  <line x1="200" y1="140" x2="250" y2="140" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
+  <rect x="132.25" y="124.0" width="185.5" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
+  <text x="225.0" y="137.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">HTTPS TLS 1.3:</text>
+  <text x="225.0" y="149.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">ФИО, контакты, паспорт, ИДС</text>
+  <line x1="200" y1="310" x2="250" y2="290" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
+  <rect x="151.75" y="284.0" width="146.5" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
+  <text x="225.0" y="297.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Авторизованный доступ</text>
+  <text x="225.0" y="309.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">к АРМ (Keycloak 2FA)</text>
+  <line x1="360" y1="190" x2="360" y2="250" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
+  <rect x="299.75" y="204.0" width="120.5" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
+  <text x="360.0" y="217.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Передача профиля</text>
+  <text x="360.0" y="229.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">через API Gateway</text>
+  <line x1="360" y1="345" x2="360" y2="400" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
+  <rect x="299.75" y="356.5" width="120.5" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
+  <text x="360.0" y="369.5" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Обогащение тегами</text>
+  <text x="360.0" y="381.5" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">и генерация UUID</text>
+  <line x1="470" y1="150" x2="540" y2="150" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
+  <rect x="451.25" y="134.0" width="107.5" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
+  <text x="505.0" y="147.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Запись карточки</text>
+  <text x="505.0" y="159.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">пациента (TDE)</text>
+  <line x1="470" y1="295" x2="540" y2="295" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
+  <rect x="448.0" y="279.0" width="114.0" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
+  <text x="505.0" y="292.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Загрузка сканов</text>
+  <text x="505.0" y="304.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">с тегом PII_FILE</text>
+  <line x1="470" y1="450" x2="540" y2="450" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
+  <rect x="425.25" y="434.0" width="159.5" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
+  <text x="505.0" y="447.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Событие: PatientCreated</text>
+  <text x="505.0" y="459.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">(Audit Lineage)</text>
+</svg>

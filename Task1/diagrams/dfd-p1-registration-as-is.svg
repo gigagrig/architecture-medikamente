@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" width="920" height="520" style="background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <marker id="arrow-default" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+    </marker>
+    <marker id="arrow-vulnerable" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+    <marker id="arrow-secure" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="920" height="60" fill="#1e293b"/>
+  <text x="25" y="32" font-size="18" font-weight="bold" fill="#ffffff">DFD Процесс 1 (As-Is): Первичная регистрация пациента и оформление документов</text>
+  <text x="25" y="50" font-size="12" fill="#94a3b8">Текущее состояние: ручной сбор избыточных ПДн, хранение сканов на общем сетевом диске без шифрования и разграничения прав</text>
+
+  <!-- External Entity: Пациент (Patient) -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="100" width="180" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect x="40" y="100" width="180" height="24" rx="4" fill="#0284c7"/>
+    <text x="130.0" y="116" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
+    <text x="130.0" y="145" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Пациент (Patient)</text>
+    <text x="130.0" y="163" font-size="10" fill="#64748b" text-anchor="middle">Субъект ПДн
+Очное обращение</text>
+  </g>
+  <!-- External Entity: Ресепшен (Receptionist) -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="280" width="180" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect x="40" y="280" width="180" height="24" rx="4" fill="#0284c7"/>
+    <text x="130.0" y="296" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
+    <text x="130.0" y="325" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Ресепшен (Receptionist)</text>
+    <text x="130.0" y="343" font-size="10" fill="#64748b" text-anchor="middle">Сотрудник клиники
+3 человека</text>
+  </g>
+  <!-- Process 1.1: Сбор ПДн и анкеты -->
+  <g filter="url(#shadow)">
+    <rect x="290" y="95" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <path d="M 290 119 L 510 119" stroke="#dc2626" stroke-width="1"/>
+    <rect x="291" y="96" width="218" height="23" rx="11" fill="#fee2e2"/>
+    <text x="302" y="111" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 1.1</text>
+    <text x="498" y="111" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Избыточный сбор</text>
+    <text x="400.0" y="141" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Сбор ПДн и анкеты</text>
+    <text x="400.0" y="159" font-size="10" fill="#475569" text-anchor="middle">Ручное заполнение бланка:</text>
+    <text x="400.0" y="173" font-size="10" fill="#475569" text-anchor="middle">паспорт, контакты, работа,</text>
+    <text x="400.0" y="187" font-size="10" fill="#475569" text-anchor="middle">хронические заболевания</text>
+  </g>
+  <!-- Process 1.2: Ведение Excel-реестра -->
+  <g filter="url(#shadow)">
+    <rect x="290" y="230" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <path d="M 290 254 L 510 254" stroke="#dc2626" stroke-width="1"/>
+    <rect x="291" y="231" width="218" height="23" rx="11" fill="#fee2e2"/>
+    <text x="302" y="246" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 1.2</text>
+    <text x="498" y="246" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Нет контроля прав</text>
+    <text x="400.0" y="276" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Ведение Excel-реестра</text>
+    <text x="400.0" y="294" font-size="10" fill="#475569" text-anchor="middle">Внесение данных пациента</text>
+    <text x="400.0" y="308" font-size="10" fill="#475569" text-anchor="middle">в единый неструктурированный</text>
+    <text x="400.0" y="322" font-size="10" fill="#475569" text-anchor="middle">файл Patients.xlsx</text>
+  </g>
+  <!-- Process 1.3: Сканирование документов -->
+  <g filter="url(#shadow)">
+    <rect x="290" y="365" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <path d="M 290 389 L 510 389" stroke="#dc2626" stroke-width="1"/>
+    <rect x="291" y="366" width="218" height="23" rx="11" fill="#fee2e2"/>
+    <text x="302" y="381" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 1.3</text>
+    <text x="498" y="381" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Теневые сканы</text>
+    <text x="400.0" y="411" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Сканирование документов</text>
+    <text x="400.0" y="429" font-size="10" fill="#475569" text-anchor="middle">МФУ -> скан паспорта,</text>
+    <text x="400.0" y="443" font-size="10" fill="#475569" text-anchor="middle">договора и согласия</text>
+    <text x="400.0" y="457" font-size="10" fill="#475569" text-anchor="middle">в JPG / PDF без учета</text>
+  </g>
+  <!-- Data Store D1: Файловый диск: Patients.xlsx -->
+  <g filter="url(#shadow)">
+    <rect x="600" y="150" width="280" height="90" fill="#fff1f2" stroke="none"/>
+    <line x1="600" y1="150" x2="880" y2="150" stroke="#dc2626" stroke-width="2"/>
+    <line x1="600" y1="240" x2="880" y2="240" stroke="#dc2626" stroke-width="2"/>
+    <line x1="600" y1="150" x2="600" y2="240" stroke="#dc2626" stroke-width="2"/>
+    <line x1="636" y1="150" x2="636" y2="240" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="618" y="199.0" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">D1</text>
+    <text x="646" y="170" font-size="12" font-weight="bold" fill="#0f172a">Файловый диск: Patients.xlsx</text>
+    <text x="646" y="186" font-size="10" fill="#64748b">Общий каталог SMB/CIFS</text>
+    <text x="646" y="199" font-size="10" fill="#64748b">Доступен всем доменным пользователям</text>
+    <text x="646" y="212" font-size="10" fill="#64748b">Отсутствует шифрование и аудит</text>
+    <rect x="810" y="154" width="65" height="18" rx="3" fill="#dc2626" fill-opacity="0.1"/>
+    <text x="843" y="167" font-size="9" font-weight="bold" fill="#dc2626" text-anchor="middle">Риск УЗ-1</text>
+  </g>
+  <!-- Data Store D2: Файловый диск: \\Pacients\* -->
+  <g filter="url(#shadow)">
+    <rect x="600" y="330" width="280" height="105" fill="#fff1f2" stroke="none"/>
+    <line x1="600" y1="330" x2="880" y2="330" stroke="#dc2626" stroke-width="2"/>
+    <line x1="600" y1="435" x2="880" y2="435" stroke="#dc2626" stroke-width="2"/>
+    <line x1="600" y1="330" x2="600" y2="435" stroke="#dc2626" stroke-width="2"/>
+    <line x1="636" y1="330" x2="636" y2="435" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="618" y="386.5" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">D2</text>
+    <text x="646" y="350" font-size="12" font-weight="bold" fill="#0f172a">Файловый диск: \\Pacients\*</text>
+    <text x="646" y="366" font-size="10" fill="#64748b">Папки: Pacient1-FIO-BD</text>
+    <text x="646" y="379" font-size="10" fill="#64748b">Сканы паспортов, согласий, анкет</text>
+    <text x="646" y="392" font-size="10" fill="#64748b">Нет версионирования и удаления</text>
+    <rect x="810" y="334" width="65" height="18" rx="3" fill="#dc2626" fill-opacity="0.1"/>
+    <text x="843" y="347" font-size="9" font-weight="bold" fill="#dc2626" text-anchor="middle">Нарушение 152-ФЗ</text>
+  </g>
+  <line x1="220" y1="135" x2="290" y2="135" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
+  <rect x="162.25" y="112.5" width="185.5" height="45" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
+  <text x="255.0" y="126.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Бумажная анкета:</text>
+  <text x="255.0" y="138.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">ФИО, паспорт, телефон,</text>
+  <text x="255.0" y="150.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">место работы/учебы, анамнез</text>
+  <line x1="130" y1="280" x2="130" y2="185" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
+  <rect x="79.5" y="216.5" width="101.0" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
+  <text x="130.0" y="229.5" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Выдача бланков</text>
+  <text x="130.0" y="241.5" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">и договоров</text>
+  <line x1="220" y1="310" x2="290" y2="280" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
+  <rect x="201.25" y="279.0" width="107.5" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
+  <text x="255.0" y="292.0" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Ручной ввод</text>
+  <text x="255.0" y="304.0" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">ФИО и контактов</text>
+  <line x1="220" y1="340" x2="290" y2="400" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
+  <rect x="194.75" y="354.0" width="120.5" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
+  <text x="255.0" y="367.0" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Сканирование</text>
+  <text x="255.0" y="379.0" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">документов на МФУ</text>
+  <line x1="510" y1="260" x2="600" y2="200" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
+  <rect x="498.0" y="214.0" width="114.0" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
+  <text x="555.0" y="227.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Запись строки</text>
+  <text x="555.0" y="239.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">в открытый Excel</text>
+  <line x1="510" y1="410" x2="600" y2="380" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
+  <rect x="481.75" y="379.0" width="146.5" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
+  <text x="555.0" y="392.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Сохранение JPG/PDF</text>
+  <text x="555.0" y="404.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">по SMB без шифрования</text>
+</svg>

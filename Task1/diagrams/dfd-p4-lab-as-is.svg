@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" width="920" height="520" style="background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <marker id="arrow-default" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+    </marker>
+    <marker id="arrow-vulnerable" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+    <marker id="arrow-secure" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="920" height="60" fill="#1e293b"/>
+  <text x="25" y="32" font-size="18" font-weight="bold" fill="#ffffff">DFD Процесс 4 (As-Is): Направление и получение анализов из лаборатории</text>
+  <text x="25" y="50" font-size="12" fill="#94a3b8">Текущее состояние: открытый Exchange e-mail, незащищенные реестры анализов, отсутствие деперсонализации биоматериала</text>
+
+  <!-- External Entity: Пациент (Patient) -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="90" width="180" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect x="40" y="90" width="180" height="24" rx="4" fill="#0284c7"/>
+    <text x="130.0" y="106" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
+    <text x="130.0" y="135" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Пациент (Patient)</text>
+    <text x="130.0" y="153" font-size="10" fill="#64748b" text-anchor="middle">Сдает биоматериал
+в процедурном кабинете</text>
+  </g>
+  <!-- External Entity: Медсестра / Ресепшен -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="240" width="180" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect x="40" y="240" width="180" height="24" rx="4" fill="#0284c7"/>
+    <text x="130.0" y="256" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
+    <text x="130.0" y="285" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Медсестра / Ресепшен</text>
+    <text x="130.0" y="303" font-size="10" fill="#64748b" text-anchor="middle">Оформляет суточный реестр
+и отправляет пробирки</text>
+  </g>
+  <!-- External Entity: Внешняя лаборатория -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="390" width="180" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect x="40" y="390" width="180" height="24" rx="4" fill="#0284c7"/>
+    <text x="130.0" y="406" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
+    <text x="130.0" y="435" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Внешняя лаборатория</text>
+    <text x="130.0" y="453" font-size="10" fill="#64748b" text-anchor="middle">Партнерская лаборатория
+Обмен через Exchange / файлы</text>
+  </g>
+  <!-- Process 4.1: Ведение реестра анализов -->
+  <g filter="url(#shadow)">
+    <rect x="290" y="130" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <path d="M 290 154 L 510 154" stroke="#dc2626" stroke-width="1"/>
+    <rect x="291" y="131" width="218" height="23" rx="11" fill="#fee2e2"/>
+    <text x="302" y="146" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 4.1</text>
+    <text x="498" y="146" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Нет шифрования</text>
+    <text x="400.0" y="176" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Ведение реестра анализов</text>
+    <text x="400.0" y="194" font-size="10" fill="#475569" text-anchor="middle">Внесение ФИО, даты, видов</text>
+    <text x="400.0" y="208" font-size="10" fill="#475569" text-anchor="middle">исследований в Excel</text>
+    <text x="400.0" y="222" font-size="10" fill="#475569" text-anchor="middle">RegistryByDate.xlsx</text>
+  </g>
+  <!-- Process 4.2: Передача реестра партнеру -->
+  <g filter="url(#shadow)">
+    <rect x="290" y="285" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <path d="M 290 309 L 510 309" stroke="#dc2626" stroke-width="1"/>
+    <rect x="291" y="286" width="218" height="23" rx="11" fill="#fee2e2"/>
+    <text x="302" y="301" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 4.2</text>
+    <text x="498" y="301" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Нарушение тайны</text>
+    <text x="400.0" y="331" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Передача реестра партнеру</text>
+    <text x="400.0" y="349" font-size="10" fill="#475569" text-anchor="middle">Отправка списка пациентов</text>
+    <text x="400.0" y="363" font-size="10" fill="#475569" text-anchor="middle">и забор пробирок курьером</text>
+    <text x="400.0" y="377" font-size="10" fill="#475569" text-anchor="middle">без деперсонализации</text>
+  </g>
+  <!-- Process 4.3: Прием результатов (e-mail) -->
+  <g filter="url(#shadow)">
+    <rect x="290" y="415" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <path d="M 290 439 L 510 439" stroke="#dc2626" stroke-width="1"/>
+    <rect x="291" y="416" width="218" height="23" rx="11" fill="#fee2e2"/>
+    <text x="302" y="431" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 4.3</text>
+    <text x="498" y="431" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Открытый e-mail</text>
+    <text x="400.0" y="461" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Прием результатов (e-mail)</text>
+    <text x="400.0" y="479" font-size="10" fill="#475569" text-anchor="middle">Получение PDF/XLS по Exchange,</text>
+    <text x="400.0" y="493" font-size="10" fill="#475569" text-anchor="middle">ручное копирование в папки</text>
+    <text x="400.0" y="507" font-size="10" fill="#475569" text-anchor="middle">пациентов на файловом диске</text>
+  </g>
+  <!-- Data Store D1: Файловый диск: Laboratory Registry -->
+  <g filter="url(#shadow)">
+    <rect x="590" y="190" width="300" height="130" fill="#fff1f2" stroke="none"/>
+    <line x1="590" y1="190" x2="890" y2="190" stroke="#dc2626" stroke-width="2"/>
+    <line x1="590" y1="320" x2="890" y2="320" stroke="#dc2626" stroke-width="2"/>
+    <line x1="590" y1="190" x2="590" y2="320" stroke="#dc2626" stroke-width="2"/>
+    <line x1="626" y1="190" x2="626" y2="320" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="608" y="259.0" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">D1</text>
+    <text x="636" y="210" font-size="12" font-weight="bold" fill="#0f172a">Файловый диск: Laboratory Registry</text>
+    <text x="636" y="226" font-size="10" fill="#64748b">Каталоги \\Laboratory Registry\RegistryByDate.xlsx</text>
+    <text x="636" y="239" font-size="10" fill="#64748b">• Доступен всем сотрудникам</text>
+    <text x="636" y="252" font-size="10" fill="#64748b">• Содержит ФИО + ВИЧ, гепатиты, онкомаркеры!</text>
+    <text x="636" y="265" font-size="10" fill="#64748b">• Нарушение ст. 10 152-ФЗ и ст. 13 323-ФЗ</text>
+    <rect x="820" y="194" width="65" height="18" rx="3" fill="#dc2626" fill-opacity="0.1"/>
+    <text x="853" y="207" font-size="9" font-weight="bold" fill="#dc2626" text-anchor="middle">Утечка спецкатегорий</text>
+  </g>
+  <line x1="220" y1="130" x2="290" y2="150" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
+  <rect x="133.0" y="130.5" width="244.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
+  <text x="255.0" y="143.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Забор биоматериала (ФИО на пробирке)</text>
+  <line x1="220" y1="270" x2="290" y2="180" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
+  <rect x="142.75" y="215.5" width="224.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
+  <text x="255.0" y="228.0" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Ручной ввод в RegistryByDate.xlsx</text>
+  <line x1="510" y1="200" x2="590" y2="230" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
+  <rect x="476.75" y="205.5" width="146.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
+  <text x="550.0" y="218.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Запись строки в Excel</text>
+  <line x1="390" y1="225" x2="390" y2="285" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
+  <rect x="294.0" y="245.5" width="192.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
+  <text x="390.0" y="258.0" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Формирование списка отправки</text>
+  <line x1="290" y1="335" x2="220" y2="420" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
+  <rect x="152.5" y="368.0" width="205.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
+  <text x="255.0" y="380.5" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Отправка реестра с ФИО курьеру</text>
+  <line x1="220" y1="440" x2="290" y2="445" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
+  <rect x="94.0" y="433.0" width="322.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
+  <text x="255.0" y="445.5" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Результаты анализов по незашифрованному Exchange</text>
+  <line x1="510" y1="450" x2="590" y2="280" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
+  <rect x="418.25" y="355.5" width="263.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
+  <text x="550.0" y="368.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Раскладывание PDF по папкам \\Pacients\</text>
+</svg>
