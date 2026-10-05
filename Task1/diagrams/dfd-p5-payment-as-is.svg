@@ -1,140 +1,150 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" width="920" height="520" style="background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-  <defs>
-    <marker id="arrow-default" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
-    </marker>
-    <marker id="arrow-vulnerable" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
-    </marker>
-    <marker id="arrow-secure" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
-    </marker>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
-    </filter>
-  </defs>
-
-  <!-- Header -->
-  <rect x="0" y="0" width="920" height="60" fill="#1e293b"/>
-  <text x="25" y="32" font-size="18" font-weight="bold" fill="#ffffff">DFD Процесс 5 (As-Is): Оплата медицинских услуг и фискализация</text>
-  <text x="25" y="50" font-size="12" fill="#94a3b8">Текущее состояние: двойной учет (Excel + 1С), незащищенный протокол ККМ, файловая БД «1С:Бухгалтерия»</text>
-
-  <!-- External Entity: Пациент (Patient) -->
-  <g filter="url(#shadow)">
-    <rect x="40" y="100" width="180" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-    <rect x="40" y="100" width="180" height="24" rx="4" fill="#0284c7"/>
-    <text x="130.0" y="116" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
-    <text x="130.0" y="145" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Пациент (Patient)</text>
-    <text x="130.0" y="163" font-size="10" fill="#64748b" text-anchor="middle">Оплата на кассе
-наличные / карта</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1905" height="909" viewBox="0 0 1905 909" role="img" aria-labelledby="title description">
+  <title id="title">DFD Процесс 5 (As-Is): Оплата медицинских услуг и фискализация</title>
+  <desc id="description">Текущее состояние: двойной учет (Excel + 1С), незащищенный протокол ККМ, файловая БД «1С:Бухгалтерия»</desc>
+  <rect width="1905" height="909" fill="white" />
+  <text x="28" y="32" font-family="DejaVu Sans" font-size="22" fill="#0f172a" font-weight="700">DFD Процесс 5 (As-Is): Оплата медицинских услуг и фискализация</text>
+  <text x="28" y="60" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Текущее состояние: двойной учет (Excel + 1С), незащищенный протокол ККМ, файловая БД «1С:Бухгалтерия»</text>
+  <text x="28" y="89" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Стрелка: направление передачи данных. Красный: уязвимость. Зелёный: мера защиты. Синий: внешний участник.</text>
+  <g id="graph0" class="graph" transform="translate(28,877.0)">
+    <title>DFD</title>
+    <polygon fill="white" stroke="transparent" points="-8.64,8.64 -8.64,-742.64 1857.64,-742.64 1857.64,8.64 -8.64,8.64" />
+    <g id="node1" class="node">
+      <title>E1</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="573,-697 279,-697 279,-591 573,-591 573,-697" />
+      <text text-anchor="start" x="344.5" y="-672.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E1</text>
+      <text text-anchor="start" x="339" y="-648.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Пациент (Patient)</text>
+      <text text-anchor="start" x="365.5" y="-622.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Оплата на кассе</text>
+      <text text-anchor="start" x="362" y="-607.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">наличные / карта</text>
+    </g>
+    <g id="node4" class="node">
+      <title>5.1</title>
+      <path fill="#fff1f2" stroke="#b91c1c" stroke-width="2" d="M1180,-716C1180,-716 910,-716 910,-716 904,-716 898,-710 898,-704 898,-704 898,-584 898,-584 898,-578 904,-572 910,-572 910,-572 1180,-572 1180,-572 1186,-572 1192,-578 1192,-584 1192,-584 1192,-704 1192,-704 1192,-710 1186,-716 1180,-716" />
+      <text text-anchor="start" x="1001" y="-691.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 5.1</text>
+      <text text-anchor="start" x="923" y="-667.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Прием платежа на кассе</text>
+      <text text-anchor="start" x="955" y="-641.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Расчет стоимости услуг,</text>
+      <text text-anchor="start" x="920" y="-626.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">прием средств, ввод в локальный</text>
+      <text text-anchor="start" x="974" y="-611.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">файл Excel кассира</text>
+      <text text-anchor="start" x="989" y="-589.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Двойной учет</text>
+    </g>
+    <g id="flow_0" class="edge">
+      <title>E1-&gt;5.1</title>
+      <path fill="none" stroke="#475569" stroke-width="1.8" d="M573.22,-617.51C587.3,-615.67 601.4,-614.11 615,-613 713.78,-604.91 739.17,-605.61 838,-613 854.66,-614.25 872.01,-616.05 889.27,-618.18" />
+      <polygon fill="#475569" stroke="#475569" stroke-width="1.8" points="888.92,-621.13 897.73,-619.24 889.67,-615.23 888.92,-621.13" />
+      <rect x="617.5" y="-632.8" width="218.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="726.5" y="-616.8" font-family="DejaVu Sans" font-size="14.00" fill="#475569">Передача наличных / карты</text>
+    </g>
+    <g id="node2" class="node">
+      <title>E2</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="573,-526 279,-526 279,-420 573,-420 573,-526" />
+      <text text-anchor="start" x="344.5" y="-501.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E2</text>
+      <text text-anchor="start" x="345" y="-477.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Кассир (Cashier)</text>
+      <text text-anchor="start" x="352.5" y="-451.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">3 сотрудника кассы</text>
+      <text text-anchor="start" x="375.5" y="-436.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Двойной учет</text>
+    </g>
+    <g id="flow_1" class="edge">
+      <title>E2-&gt;5.1</title>
+      <path fill="none" stroke="#475569" stroke-width="1.8" d="M573.21,-506.88C652.03,-525.84 750.75,-550.7 838,-576 854.71,-580.84 872.09,-586.15 889.37,-591.6" />
+      <polygon fill="#475569" stroke="#475569" stroke-width="1.8" points="888.83,-594.56 897.84,-594.29 890.63,-588.88 888.83,-594.56" />
+      <rect x="623.0" y="-595.8" width="207.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="726.5" y="-579.8" font-family="DejaVu Sans" font-size="14.00" fill="#475569">Ввод суммы и ФИО в Excel</text>
+    </g>
+    <g id="node3" class="node">
+      <title>E3</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="573,-355 279,-355 279,-249 573,-249 573,-355" />
+      <text text-anchor="start" x="344.5" y="-330.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E3</text>
+      <text text-anchor="start" x="302.5" y="-306.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">ККМ (Кассовый аппарат)</text>
+      <text text-anchor="start" x="316" y="-280.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Контрольно-кассовая машина</text>
+      <text text-anchor="start" x="354" y="-265.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Связь по TCP/IP OLE</text>
+    </g>
+    <g id="flow_5" class="edge">
+      <title>E3-&gt;E1</title>
+      <path fill="none" stroke="#475569" stroke-width="1.8" d="M278.92,-329.04C170.97,-356.14 51.45,-405.85 103,-488 140.3,-547.44 207.34,-584.77 270.72,-607.95" />
+      <polygon fill="#475569" stroke="#475569" stroke-width="1.8" points="269.82,-610.79 278.83,-610.85 271.82,-605.19 269.82,-610.79" />
+      <rect x="51.0" y="-492.8" width="192.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="147" y="-476.8" font-family="DejaVu Sans" font-size="14.00" fill="#475569">Выдача бумажного чека</text>
+      <text text-anchor="middle" x="147" y="-461.8" font-family="DejaVu Sans" font-size="14.00" fill="#475569">пациенту</text>
+    </g>
+    <g id="node5" class="node">
+      <title>5.2</title>
+      <path fill="#fff1f2" stroke="#b91c1c" stroke-width="2" d="M1180,-418C1180,-418 910,-418 910,-418 904,-418 898,-412 898,-406 898,-406 898,-286 898,-286 898,-280 904,-274 910,-274 910,-274 1180,-274 1180,-274 1186,-274 1192,-280 1192,-286 1192,-286 1192,-406 1192,-406 1192,-412 1186,-418 1180,-418" />
+      <text text-anchor="start" x="1001" y="-393.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 5.2</text>
+      <text text-anchor="start" x="914" y="-369.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Пробитие чека через ККМ</text>
+      <text text-anchor="start" x="915.5" y="-343.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Передача команды в ККМ по TCP/IP</text>
+      <text text-anchor="start" x="914" y="-328.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">через устаревшую OLE-компоненту</text>
+      <text text-anchor="start" x="949.5" y="-313.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">без шифрования трафика</text>
+      <text text-anchor="start" x="950" y="-291.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Незащищенный TCP/IP</text>
+    </g>
+    <g id="flow_3" class="edge">
+      <title>5.1-&gt;5.2</title>
+      <path fill="none" stroke="#475569" stroke-width="1.8" d="M1045,-571.75C1045,-527.96 1045,-472 1045,-426.75" />
+      <polygon fill="#475569" stroke="#475569" stroke-width="1.8" points="1047.98,-426.64 1045,-418.14 1042.03,-426.64 1047.98,-426.64" />
+      <rect x="928.5" y="-507.3" width="212.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="1034.5" y="-491.3" font-family="DejaVu Sans" font-size="14.00" fill="#475569">Команда на фискализацию</text>
+    </g>
+    <g id="node7" class="node">
+      <title>D1</title>
+      <polygon fill="#fff1f2" stroke="transparent" points="1531.5,-554 1531.5,-734 1825.5,-734 1825.5,-554 1531.5,-554" />
+      <text text-anchor="start" x="1624" y="-706.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D1</text>
+      <text text-anchor="start" x="1553.5" y="-682.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Локальный Excel кассира</text>
+      <text text-anchor="start" x="1568.5" y="-656.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Файлы учета платежей на ПК</text>
+      <text text-anchor="start" x="1645" y="-641.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">кассиров</text>
+      <text text-anchor="start" x="1551.5" y="-626.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Не централизованы, нет контроля</text>
+      <text text-anchor="start" x="1646.5" y="-611.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">доступа,</text>
+      <text text-anchor="start" x="1550.5" y="-596.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">рассинхронизация с бухгалтерией</text>
+      <text text-anchor="start" x="1626.5" y="-574.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Shadow Data</text>
+      <polyline fill="none" stroke="#b91c1c" stroke-width="2" points="1824.5,-733 1532.5,-733 1532.5,-555 1824.5,-555 " />
+    </g>
+    <g id="flow_2" class="edge">
+      <title>5.1-&gt;D1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M1192.27,-619.24C1212.29,-616.66 1232.61,-614.45 1252,-613 1346.85,-605.9 1371.14,-606.09 1466,-613 1484.46,-614.35 1503.75,-616.34 1522.85,-618.69" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="1522.51,-621.64 1531.32,-619.75 1523.25,-615.74 1522.51,-621.64" />
+      <rect x="1250.5" y="-632.8" width="217.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="1359" y="-616.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Сохранение кассового Excel</text>
+    </g>
+    <g id="flow_4" class="edge">
+      <title>5.2-&gt;E3</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M897.76,-335.57C802.63,-328.79 678.72,-319.95 581.91,-313.05" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="581.91,-310.06 573.22,-312.43 581.49,-316 581.91,-310.06" />
+      <rect x="609.0" y="-350.8" width="235.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="726.5" y="-334.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">TCP/IP OLE (открытый трафик)</text>
+    </g>
+    <g id="node6" class="node">
+      <title>5.3</title>
+      <path fill="#fff1f2" stroke="#b91c1c" stroke-width="2" d="M1198,-144C1198,-144 892,-144 892,-144 886,-144 880,-138 880,-132 880,-132 880,-12 880,-12 880,-6 886,0 892,0 892,0 1198,0 1198,0 1204,0 1210,-6 1210,-12 1210,-12 1210,-132 1210,-132 1210,-138 1204,-144 1198,-144" />
+      <text text-anchor="start" x="1001" y="-119.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 5.3</text>
+      <text text-anchor="start" x="896" y="-95.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Проводка в «1С:Бухгалтерия»</text>
+      <text text-anchor="start" x="912.5" y="-69.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Ручное создание документа оплаты</text>
+      <text text-anchor="start" x="924.5" y="-54.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">в файловой базе 1С по сети SMB</text>
+      <text text-anchor="start" x="925" y="-39.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">(риск порчи базы при сбое сети)</text>
+      <text text-anchor="start" x="960" y="-17.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Файловый режим 1С</text>
+    </g>
+    <g id="flow_6" class="edge">
+      <title>5.2-&gt;5.3</title>
+      <path fill="none" stroke="#475569" stroke-width="1.8" d="M1045,-273.72C1045,-236.59 1045,-191.21 1045,-152.91" />
+      <polygon fill="#475569" stroke="#475569" stroke-width="1.8" points="1047.98,-152.85 1045,-144.35 1042.03,-152.85 1047.98,-152.85" />
+      <rect x="953.5" y="-221.3" width="162.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="1034.5" y="-205.3" font-family="DejaVu Sans" font-size="14.00" fill="#475569">Синхронизация с 1С</text>
+    </g>
+    <g id="node8" class="node">
+      <title>D2</title>
+      <polygon fill="#fff1f2" stroke="transparent" points="1508,-205 1508,-385 1849,-385 1849,-205 1508,-205" />
+      <text text-anchor="start" x="1624.5" y="-357.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D2</text>
+      <text text-anchor="start" x="1524.5" y="-333.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">1С:Бухгалтерия (файловая БД)</text>
+      <text text-anchor="start" x="1569" y="-307.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Сетевой путь: \Server\1C_Buh\</text>
+      <text text-anchor="start" x="1600" y="-292.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">• Блокировки таблиц</text>
+      <text text-anchor="start" x="1541.5" y="-277.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">• Нет шифрования сетевого трафика</text>
+      <text text-anchor="start" x="1561.5" y="-262.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">• Риск повреждения при скачке</text>
+      <text text-anchor="start" x="1648.5" y="-247.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">питания</text>
+      <text text-anchor="start" x="1595.5" y="-225.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Риск потери данных</text>
+      <polyline fill="none" stroke="#b91c1c" stroke-width="2" points="1848,-384 1509,-384 1509,-206 1848,-206 " />
+    </g>
+    <g id="flow_7" class="edge">
+      <title>5.3-&gt;D2</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M1210.27,-130.01C1299.13,-161.39 1408.98,-200.18 1499.83,-232.26" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="1498.99,-235.12 1508,-235.14 1500.97,-229.51 1498.99,-235.12" />
+      <rect x="1246.0" y="-251.8" width="226.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="1359" y="-235.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Запись в файловую БД 1С по</text>
+      <text text-anchor="middle" x="1359" y="-220.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">SMB</text>
+    </g>
   </g>
-  <!-- External Entity: Кассир (Cashier) -->
-  <g filter="url(#shadow)">
-    <rect x="40" y="250" width="180" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-    <rect x="40" y="250" width="180" height="24" rx="4" fill="#0284c7"/>
-    <text x="130.0" y="266" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
-    <text x="130.0" y="295" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Кассир (Cashier)</text>
-    <text x="130.0" y="313" font-size="10" fill="#64748b" text-anchor="middle">3 сотрудника кассы
-Двойной учет</text>
-  </g>
-  <!-- External Entity: ККМ (Кассовый аппарат) -->
-  <g filter="url(#shadow)">
-    <rect x="40" y="400" width="180" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-    <rect x="40" y="400" width="180" height="24" rx="4" fill="#0284c7"/>
-    <text x="130.0" y="416" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
-    <text x="130.0" y="445" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">ККМ (Кассовый аппарат)</text>
-    <text x="130.0" y="463" font-size="10" fill="#64748b" text-anchor="middle">Контрольно-кассовая машина
-Связь по TCP/IP OLE</text>
-  </g>
-  <!-- Process 5.1: Прием платежа на кассе -->
-  <g filter="url(#shadow)">
-    <rect x="290" y="110" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
-    <path d="M 290 134 L 510 134" stroke="#dc2626" stroke-width="1"/>
-    <rect x="291" y="111" width="218" height="23" rx="11" fill="#fee2e2"/>
-    <text x="302" y="126" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 5.1</text>
-    <text x="498" y="126" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Двойной учет</text>
-    <text x="400.0" y="156" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Прием платежа на кассе</text>
-    <text x="400.0" y="174" font-size="10" fill="#475569" text-anchor="middle">Расчет стоимости услуг,</text>
-    <text x="400.0" y="188" font-size="10" fill="#475569" text-anchor="middle">прием средств, ввод в локальный</text>
-    <text x="400.0" y="202" font-size="10" fill="#475569" text-anchor="middle">файл Excel кассира</text>
-  </g>
-  <!-- Process 5.2: Пробитие чека через ККМ -->
-  <g filter="url(#shadow)">
-    <rect x="290" y="250" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
-    <path d="M 290 274 L 510 274" stroke="#dc2626" stroke-width="1"/>
-    <rect x="291" y="251" width="218" height="23" rx="11" fill="#fee2e2"/>
-    <text x="302" y="266" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 5.2</text>
-    <text x="498" y="266" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Незащищенный TCP/IP</text>
-    <text x="400.0" y="296" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Пробитие чека через ККМ</text>
-    <text x="400.0" y="314" font-size="10" fill="#475569" text-anchor="middle">Передача команды в ККМ по TCP/IP</text>
-    <text x="400.0" y="328" font-size="10" fill="#475569" text-anchor="middle">через устаревшую OLE-компоненту</text>
-    <text x="400.0" y="342" font-size="10" fill="#475569" text-anchor="middle">без шифрования трафика</text>
-  </g>
-  <!-- Process 5.3: Проводка в «1С:Бухгалтерия» -->
-  <g filter="url(#shadow)">
-    <rect x="290" y="390" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
-    <path d="M 290 414 L 510 414" stroke="#dc2626" stroke-width="1"/>
-    <rect x="291" y="391" width="218" height="23" rx="11" fill="#fee2e2"/>
-    <text x="302" y="406" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 5.3</text>
-    <text x="498" y="406" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Файловый режим 1С</text>
-    <text x="400.0" y="436" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Проводка в «1С:Бухгалтерия»</text>
-    <text x="400.0" y="454" font-size="10" fill="#475569" text-anchor="middle">Ручное создание документа оплаты</text>
-    <text x="400.0" y="468" font-size="10" fill="#475569" text-anchor="middle">в файловой базе 1С по сети SMB</text>
-    <text x="400.0" y="482" font-size="10" fill="#475569" text-anchor="middle">(риск порчи базы при сбое сети)</text>
-  </g>
-  <!-- Data Store D1: Локальный Excel кассира -->
-  <g filter="url(#shadow)">
-    <rect x="590" y="160" width="290" height="100" fill="#fff1f2" stroke="none"/>
-    <line x1="590" y1="160" x2="880" y2="160" stroke="#dc2626" stroke-width="2"/>
-    <line x1="590" y1="260" x2="880" y2="260" stroke="#dc2626" stroke-width="2"/>
-    <line x1="590" y1="160" x2="590" y2="260" stroke="#dc2626" stroke-width="2"/>
-    <line x1="626" y1="160" x2="626" y2="260" stroke="#dc2626" stroke-width="1.5"/>
-    <text x="608" y="214.0" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">D1</text>
-    <text x="636" y="180" font-size="12" font-weight="bold" fill="#0f172a">Локальный Excel кассира</text>
-    <text x="636" y="196" font-size="10" fill="#64748b">Файлы учета платежей на ПК кассиров</text>
-    <text x="636" y="209" font-size="10" fill="#64748b">Не централизованы, нет контроля доступа,</text>
-    <text x="636" y="222" font-size="10" fill="#64748b">рассинхронизация с бухгалтерией</text>
-    <rect x="810" y="164" width="65" height="18" rx="3" fill="#dc2626" fill-opacity="0.1"/>
-    <text x="843" y="177" font-size="9" font-weight="bold" fill="#dc2626" text-anchor="middle">Shadow Data</text>
-  </g>
-  <!-- Data Store D2: 1С:Бухгалтерия (файловая БД) -->
-  <g filter="url(#shadow)">
-    <rect x="590" y="340" width="290" height="110" fill="#fff1f2" stroke="none"/>
-    <line x1="590" y1="340" x2="880" y2="340" stroke="#dc2626" stroke-width="2"/>
-    <line x1="590" y1="450" x2="880" y2="450" stroke="#dc2626" stroke-width="2"/>
-    <line x1="590" y1="340" x2="590" y2="450" stroke="#dc2626" stroke-width="2"/>
-    <line x1="626" y1="340" x2="626" y2="450" stroke="#dc2626" stroke-width="1.5"/>
-    <text x="608" y="399.0" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">D2</text>
-    <text x="636" y="360" font-size="12" font-weight="bold" fill="#0f172a">1С:Бухгалтерия (файловая БД)</text>
-    <text x="636" y="376" font-size="10" fill="#64748b">Сетевой путь: \\Server\1C_Buh\</text>
-    <text x="636" y="389" font-size="10" fill="#64748b">• Блокировки таблиц</text>
-    <text x="636" y="402" font-size="10" fill="#64748b">• Нет шифрования сетевого трафика</text>
-    <text x="636" y="415" font-size="10" fill="#64748b">• Риск повреждения при скачке питания</text>
-    <rect x="810" y="344" width="65" height="18" rx="3" fill="#dc2626" fill-opacity="0.1"/>
-    <text x="843" y="357" font-size="9" font-weight="bold" fill="#dc2626" text-anchor="middle">Риск потери данных</text>
-  </g>
-  <line x1="220" y1="135" x2="290" y2="140" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
-  <rect x="168.75" y="128.0" width="172.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
-  <text x="255.0" y="140.5" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Передача наличных / карты</text>
-  <line x1="220" y1="275" x2="290" y2="170" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
-  <rect x="172.0" y="213.0" width="166.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
-  <text x="255.0" y="225.5" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Ввод суммы и ФИО в Excel</text>
-  <line x1="510" y1="160" x2="590" y2="190" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
-  <rect x="460.5" y="165.5" width="179.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
-  <text x="550.0" y="178.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Сохранение кассового Excel</text>
-  <line x1="390" y1="205" x2="390" y2="250" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
-  <rect x="310.25" y="218.0" width="159.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
-  <text x="390.0" y="230.5" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Команда на фискализацию</text>
-  <line x1="290" y1="310" x2="220" y2="420" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
-  <rect x="159.0" y="355.5" width="192.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
-  <text x="255.0" y="368.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">TCP/IP OLE (открытый трафик)</text>
-  <line x1="220" y1="440" x2="220" y2="170" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
-  <rect x="117.5" y="295.5" width="205.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
-  <text x="220.0" y="308.0" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Выдача бумажного чека пациенту</text>
-  <line x1="390" y1="345" x2="390" y2="390" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
-  <rect x="326.5" y="358.0" width="127.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
-  <text x="390.0" y="370.5" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Синхронизация с 1С</text>
-  <line x1="510" y1="420" x2="590" y2="390" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
-  <rect x="447.5" y="395.5" width="205.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
-  <text x="550.0" y="408.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Запись в файловую БД 1С по SMB</text>
 </svg>

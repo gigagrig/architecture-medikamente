@@ -1,131 +1,119 @@
 #!/usr/bin/env python3
-"""
-Generates Task1/medikamente-dfd.drawio containing 12 diagrams across separate tabs.
-Ensures full XML well-formedness.
-"""
+"""Export 12 editable DFD pages using the same layout as the SVG files."""
 
-import os
 import html
+from pathlib import Path
+import xml.etree.ElementTree as ET
+
+from diagram_layout import PALETTE, edge_points, layout, midpoint, node_html
 from generate_diagrams import all_diagrams
 
-DRAWIO_PATH = os.path.join(os.path.dirname(__file__), "medikamente-dfd.drawio")
+DRAWIO_PATH = Path(__file__).resolve().parent / "medikamente-dfd.drawio"
+PAGE_NAMES = ["Регистрация", "Запись", "Приём и ЭМК", "Лаборатория", "Оплата", "Аналитика"]
 
-def xml_attr_escape(s):
-    # First convert newlines to <br> if needed
-    s = s.replace('\n', '<br>')
-    # Then escape for XML attribute
-    return html.escape(s, quote=True)
 
-def generate_drawio():
-    xml_lines = [
-        '<?xml version="1.0" encoding="UTF-8"?>',
-        '<mxfile host="app.diagrams.net" version="24.7.5">'
-    ]
+def cell(root, identifier, value, style, x, y, width, height):
+    element = ET.SubElement(root, "mxCell", {
+        "id": identifier, "parent": "1", "vertex": "1",
+        "value": value, "style": style})
+    ET.SubElement(element, "mxGeometry", {
+        "x": str(round(x, 2)), "y": str(round(y, 2)),
+        "width": str(round(width, 2)), "height": str(round(height, 2)),
+        "as": "geometry"})
+    return element
 
-    for diag_id, (diag_name, diag) in enumerate(all_diagrams, start=1):
-        clean_name = diag['title'].split(':')[0].replace('DFD ', '')
-        is_as_is = 'as-is' in diag_name.lower()
-        mode_str = 'As-Is' if is_as_is else 'To-Be'
-        # Extract process short label
-        if 'Процесс 1' in clean_name:
-            tab_name = f"P1 Регистрация ({mode_str})"
-        elif 'Процесс 2' in clean_name:
-            tab_name = f"P2 Запись ({mode_str})"
-        elif 'Процесс 3' in clean_name:
-            tab_name = f"P3 Прием и ЭМК ({mode_str})"
-        elif 'Процесс 4' in clean_name:
-            tab_name = f"P4 Лаборатория ({mode_str})"
-        elif 'Процесс 5' in clean_name:
-            tab_name = f"P5 Оплата ({mode_str})"
-        elif 'Процесс 6' in clean_name:
-            tab_name = f"P6 Аналитика ({mode_str})"
-        else:
-            tab_name = f"{clean_name} ({mode_str})"
-        
-        xml_lines.append(f'  <diagram id="diag_{diag_id}" name="{html.escape(tab_name, quote=True)}">')
-        xml_lines.append('    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">')
-        xml_lines.append('      <root>')
-        xml_lines.append('        <mxCell id="0" />')
-        xml_lines.append('        <mxCell id="1" parent="0" />')
-        
-        # Header banner
-        header_html = f"<b>{diag['title']}</b><br><font style='font-size: 11px; color: #64748b;'>{diag['subtitle']}</font>"
-        header_val = xml_attr_escape(header_html)
-        diag_w = diag['width'] - 40
-        xml_lines.append(f'        <mxCell id="header_{diag_id}" value="{header_val}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;align=left;spacingLeft=15;fontSize=13;fontColor=#0f172a;" vertex="1" parent="1">')
-        xml_lines.append(f'          <mxGeometry x="20" y="20" width="{diag_w}" height="50" as="geometry" />')
-        xml_lines.append('        </mxCell>')
-        
-        cell_id = 10
 
-        for el in diag['elements']:
-            cid = f"cell_{diag_id}_{cell_id}"
-            cell_id += 1
-            
-            x, y, w, h = el['x'], el['y'], el['w'], el['h']
-            title = el['title']
-            sub = el.get('subtitle', '')
-            t = el.get('type')
-            badge = el.get('badge', '')
-            
-            if t == 'entity':
-                inner = f"<b>[ВНЕШНЯЯ СУЩНОСТЬ]</b><br><b style='font-size: 13px;'>{title}</b><br><font style='font-size: 10px; color: #475569;'>{sub}</font>"
-                style = "shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontColor=#0f172a;align=center;"
-            elif t == 'process':
-                is_vuln = el.get('status') == 'vulnerable'
-                is_sec = el.get('status') == 'secure'
-                fill = "#fee2e2" if is_vuln else ("#dcfce7" if is_sec else "#eff6ff")
-                stroke = "#dc2626" if is_vuln else ("#16a34a" if is_sec else "#2563eb")
-                color = "#991b1b" if is_vuln else ("#166534" if is_sec else "#1e40af")
-                pid = el.get('id', '')
-                badge_str = f" <span style='font-size:9px;'>[{badge}]</span>" if badge else ""
-                inner = f"<b style='color:{color};font-size:11px;'>ПРОЦЕСС {pid}{badge_str}</b><br><b style='font-size: 12px;'>{title}</b><br><font style='font-size: 10px; color: #334155;'>{sub}</font>"
-                style = f"shape=rect;rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor={fill};strokeColor={stroke};strokeWidth=2;fontColor=#0f172a;align=center;verticalAlign=top;spacingTop=6;"
-            elif t == 'store':
-                sid = el.get('id', '')
-                is_vuln = el.get('status') == 'vulnerable'
-                is_sec = el.get('status') == 'secure'
-                stroke = "#dc2626" if is_vuln else ("#16a34a" if is_sec else "#475569")
-                fill = "#fff1f2" if is_vuln else ("#f0fdf4" if is_sec else "#f8fafc")
-                badge_str = f" <span style='font-size:9px;'>[{badge}]</span>" if badge else ""
-                inner = f"<b style='color:{stroke};'>[{sid}] {title}</b>{badge_str}<br><font style='font-size: 10px; color: #475569;'>{sub}</font>"
-                style = f"shape=partialRectangle;top=1;bottom=1;left=1;right=0;whiteSpace=wrap;html=1;fillColor={fill};strokeColor={stroke};strokeWidth=2;fontColor=#0f172a;align=left;spacingLeft=12;"
-            elif t == 'security_badge':
-                inner = f"<b style='color:#15803d;font-size:11px;'>🛡️ {title}</b><br><font style='font-size: 9px; color: #166534;'>{sub}</font>"
-                style = "shape=rectangle;rounded=1;dashed=1;dashPattern=4 2;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=1.5;fontColor=#14532d;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;"
+def main():
+    file = ET.Element("mxfile", {"host": "app.diagrams.net", "type": "device"})
+    for index, (name, diagram) in enumerate(all_diagrams):
+        prepared = layout(diagram)
+        data = prepared["data"]
+        mode = "As-Is" if name.endswith("as-is") else "To-Be"
+        page_name = f"P{index // 2 + 1} {PAGE_NAMES[index // 2]} ({mode})"
+        page = ET.SubElement(file, "diagram", {"id": name, "name": page_name})
+        model = ET.SubElement(page, "mxGraphModel", {
+            "grid": "1", "gridSize": "10", "guides": "1", "connect": "1",
+            "page": "1", "pageScale": "1", "background": "#ffffff",
+            "pageWidth": str(prepared["width"]), "pageHeight": str(prepared["height"])})
+        root = ET.SubElement(model, "root")
+        ET.SubElement(root, "mxCell", {"id": "0"})
+        ET.SubElement(root, "mxCell", {"id": "1", "parent": "0"})
+        heading = "<br>".join(html.escape(s) for s in prepared["title"])
+        subtitle = "<br>".join(html.escape(s) for s in prepared["subtitle"])
+        header = f'<b style="font-size:22px">{heading}</b><br>{subtitle}<br><br>' \
+            'Стрелка: направление передачи данных. Красный: уязвимость. ' \
+            'Зелёный: мера защиты. Синий: внешний участник.'
+        cell(root, "header", header,
+             "text;html=1;align=left;verticalAlign=top;fontSize=14;"
+             "fontFamily=DejaVu Sans;fontColor=#0f172a;whiteSpace=wrap;",
+             28, 12, prepared["width"] - 56, prepared["graph_top"] - 32)
+        by_id = {e["id"]: e for e in diagram["elements"]}
+        objects = {e["name"]: e for e in data["objects"] if e.get("name") in by_id}
+        bounds = {}
+        for identifier, obj in objects.items():
+            element = by_id[identifier]
+            px, py = map(float, obj["pos"].split(","))
+            width, height = float(obj["width"]) * 72, float(obj["height"]) * 72
+            x = px - width / 2 + 28
+            y = prepared["graph_top"] + prepared["graph_height"] - py - height / 2
+            bounds[identifier] = (x, y, width, height)
+            color, fill = PALETTE["entity" if element["type"] == "entity"
+                                  else element.get("status", "normal")]
+            shape = {"entity": "shape=rectangle;rounded=0;",
+                     "process": "shape=rectangle;rounded=1;arcSize=10;",
+                     "store": "shape=partialRectangle;top=1;bottom=1;left=1;right=0;"}[element["type"]]
+            label = node_html(element).replace('POINT-SIZE="', 'style="font-size:')
+            label = label.replace('font-size:14"', 'font-size:14px"') \
+                .replace('font-size:17"', 'font-size:17px"')
+            label = label.replace(' WIDTH="270"', '')
+            cell(root, identifier, label,
+                 shape + f"whiteSpace=wrap;html=1;fillColor={fill};strokeColor={color};"
+                 "strokeWidth=2;fontColor=#0f172a;fontSize=14;fontFamily=DejaVu Sans;"
+                 "align=center;verticalAlign=middle;spacing=10;",
+                 x, y, width, height)
+        for edge in (e for e in data["edges"] if e.get("id")):
+            source = data["objects"][edge["tail"]]["name"]
+            target = data["objects"][edge["head"]]["name"]
+            points = [(p[0] + 28, prepared["graph_top"] + prepared["graph_height"] - p[1])
+                      for p in edge_points(edge)]
+            fractions = []
+            for identifier, point in [(source, points[0]), (target, points[-1])]:
+                x, y, w, h = bounds[identifier]
+                fractions.append((max(0, min(1, (point[0] - x) / w)),
+                                  max(0, min(1, (point[1] - y) / h))))
+            style = f"html=1;strokeColor={edge['color']};strokeWidth=1.8;" \
+                f"fontColor={edge['fontcolor']};fontSize=14;fontFamily=DejaVu Sans;" \
+                "endArrow=block;endFill=1;endSize=9;rounded=0;" \
+                "labelBackgroundColor=#ffffff;spacing=5;" \
+                f"exitX={fractions[0][0]};exitY={fractions[0][1]};exitPerimeter=0;" \
+                f"entryX={fractions[1][0]};entryY={fractions[1][1]};entryPerimeter=0;"
+            value = "<br>".join(html.escape(s) for s in edge["label"].splitlines())
+            connector = ET.SubElement(root, "mxCell", {
+                "id": edge["id"], "parent": "1", "source": source, "target": target,
+                "edge": "1", "value": value, "style": style})
+            geometry = ET.SubElement(connector, "mxGeometry", {"relative": "1", "as": "geometry"})
+            waypoints = ET.SubElement(geometry, "Array", {"as": "points"})
+            for x, y in points[1:-1]:
+                ET.SubElement(waypoints, "mxPoint", {"x": str(round(x, 2)), "y": str(round(y, 2))})
+            middle = midpoint(points)
+            lx, ly = map(float, edge["lp"].split(","))
+            ET.SubElement(geometry, "mxPoint", {
+                "x": str(round(lx + 28 - middle[0], 2)),
+                "y": str(round(prepared["graph_top"] + prepared["graph_height"] - ly - middle[1], 2)),
+                "as": "offset"})
+        if prepared["notes"]:
+            content = '<b>' + html.escape(prepared["notes"][0]) + '</b><br>' \
+                + "<br>".join(html.escape(s) for s in prepared["notes"][1:])
+            cell(root, "security_notes", content,
+                 "rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;"
+                 "strokeColor=#166534;fontColor=#14532d;fontSize=14;"
+                 "fontFamily=DejaVu Sans;align=left;spacing=12;",
+                 20, prepared["graph_top"] + prepared["graph_height"] + 19,
+                 prepared["width"] - 40, len(prepared["notes"]) * 21 + 16)
+    ET.indent(file)
+    DRAWIO_PATH.write_text(ET.tostring(file, encoding="unicode") + "\n", encoding="utf-8")
+    print(f"Generated: {DRAWIO_PATH.name}")
 
-            val = xml_attr_escape(inner)
-            xml_lines.append(f'        <mxCell id="{cid}" value="{val}" style="{style}" vertex="1" parent="1">')
-            xml_lines.append(f'          <mxGeometry x="{x}" y="{y}" width="{w}" height="{h}" as="geometry" />')
-            xml_lines.append('        </mxCell>')
 
-        # Draw flows as connectors
-        for fl_idx, fl in enumerate(diag['flows'], start=1):
-            fid = f"flow_{diag_id}_{fl_idx}"
-            fx, fy = fl['from_pt']
-            tx, ty = fl['to_pt']
-            lbl = xml_attr_escape(fl['label'])
-            st = fl.get('style', 'normal')
-            
-            color = "#dc2626" if st == 'vulnerable' else ("#16a34a" if st == 'secure' else "#475569")
-            style = f"edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor={color};strokeWidth=1.5;fontColor={color};fontSize=10;fontStyle=1;labelBackgroundColor=#ffffff;"
-            
-            xml_lines.append(f'        <mxCell id="{fid}" value="{lbl}" style="{style}" edge="1" parent="1">')
-            xml_lines.append(f'          <mxGeometry relative="1" as="geometry">')
-            xml_lines.append(f'            <mxPoint x="{fx}" y="{fy}" as="sourcePoint" />')
-            xml_lines.append(f'            <mxPoint x="{tx}" y="{ty}" as="targetPoint" />')
-            xml_lines.append('          </mxGeometry>')
-            xml_lines.append('        </mxCell>')
-
-        xml_lines.append('      </root>')
-        xml_lines.append('    </mxGraphModel>')
-        xml_lines.append('  </diagram>')
-
-    xml_lines.append('</mxfile>')
-
-    with open(DRAWIO_PATH, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(xml_lines))
-    print(f"Generated draw.io XML: {DRAWIO_PATH}")
-
-if __name__ == '__main__':
-    generate_drawio()
+if __name__ == "__main__":
+    main()

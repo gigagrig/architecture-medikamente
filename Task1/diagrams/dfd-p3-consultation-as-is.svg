@@ -1,116 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" width="920" height="520" style="background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-  <defs>
-    <marker id="arrow-default" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
-    </marker>
-    <marker id="arrow-vulnerable" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
-    </marker>
-    <marker id="arrow-secure" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
-    </marker>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
-    </filter>
-  </defs>
-
-  <!-- Header -->
-  <rect x="0" y="0" width="920" height="60" fill="#1e293b"/>
-  <text x="25" y="32" font-size="18" font-weight="bold" fill="#ffffff">DFD Процесс 3 (As-Is): Проведение медицинского приёма и ведение медкарты</text>
-  <text x="25" y="50" font-size="12" fill="#94a3b8">Текущее состояние: файлы Word/Excel на файловом сервере, нет ЭЦП, нет версионирования, доступ открыт всей сети</text>
-
-  <!-- External Entity: Пациент (Patient) -->
-  <g filter="url(#shadow)">
-    <rect x="40" y="120" width="180" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-    <rect x="40" y="120" width="180" height="24" rx="4" fill="#0284c7"/>
-    <text x="130.0" y="136" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
-    <text x="130.0" y="165" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Пациент (Patient)</text>
-    <text x="130.0" y="183" font-size="10" fill="#64748b" text-anchor="middle">Очный прием в кабинете
-Опрос, осмотр</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1554" height="916" viewBox="0 0 1554 916" role="img" aria-labelledby="title description">
+  <title id="title">DFD Процесс 3 (As-Is): Проведение медицинского приёма и ведение медкарты</title>
+  <desc id="description">Текущее состояние: файлы Word/Excel на файловом сервере, нет ЭЦП, нет версионирования, доступ открыт всей сети</desc>
+  <rect width="1554" height="916" fill="white" />
+  <text x="28" y="32" font-family="DejaVu Sans" font-size="22" fill="#0f172a" font-weight="700">DFD Процесс 3 (As-Is): Проведение медицинского приёма и ведение медкарты</text>
+  <text x="28" y="60" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Текущее состояние: файлы Word/Excel на файловом сервере, нет ЭЦП, нет версионирования, доступ открыт всей сети</text>
+  <text x="28" y="89" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Стрелка: направление передачи данных. Красный: уязвимость. Зелёный: мера защиты. Синий: внешний участник.</text>
+  <g id="graph0" class="graph" transform="translate(28,884.0)">
+    <title>DFD</title>
+    <polygon fill="white" stroke="transparent" points="-8.64,8.64 -8.64,-749.64 1506.17,-749.64 1506.17,8.64 -8.64,8.64" />
+    <g id="node1" class="node">
+      <title>E1</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="496.53,-674 202.53,-674 202.53,-568 496.53,-568 496.53,-674" />
+      <text text-anchor="start" x="268.03" y="-649.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E1</text>
+      <text text-anchor="start" x="262.53" y="-625.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Пациент (Patient)</text>
+      <text text-anchor="start" x="257.03" y="-599.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Очный прием в кабинете</text>
+      <text text-anchor="start" x="296.53" y="-584.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Опрос, осмотр</text>
+    </g>
+    <g id="node3" class="node">
+      <title>3.1</title>
+      <path fill="#fff1f2" stroke="#b91c1c" stroke-width="2" d="M1042.03,-693C1042.03,-693 729.03,-693 729.03,-693 723.03,-693 717.03,-687 717.03,-681 717.03,-681 717.03,-561 717.03,-561 717.03,-555 723.03,-549 729.03,-549 729.03,-549 1042.03,-549 1042.03,-549 1048.03,-549 1054.03,-555 1054.03,-561 1054.03,-561 1054.03,-681 1054.03,-681 1054.03,-687 1048.03,-693 1042.03,-693" />
+      <text text-anchor="start" x="842.03" y="-668.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 3.1</text>
+      <text text-anchor="start" x="733.53" y="-644.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Поиск медкарты в проводнике</text>
+      <text text-anchor="start" x="794.03" y="-618.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Открытие сетевой папки</text>
+      <text text-anchor="start" x="796.53" y="-603.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">\Pacients\Pacient1-FIO-BD</text>
+      <text text-anchor="start" x="794.03" y="-588.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Чтение Word/PDF файлов</text>
+      <text text-anchor="start" x="809.03" y="-566.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Нет аудита чтения</text>
+    </g>
+    <g id="flow_0" class="edge">
+      <title>E1-&gt;3.1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M496.71,-621C562.09,-621 639.61,-621 708.17,-621" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="708.41,-623.98 716.91,-621 708.41,-618.03 708.41,-623.98" />
+      <rect x="524.78" y="-658.8" width="164.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="606.78" y="-642.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Озвучивание жалоб,</text>
+      <text text-anchor="middle" x="606.78" y="-627.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">анамнез, симптомы</text>
+    </g>
+    <g id="node2" class="node">
+      <title>E2</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="595.53,-368 301.53,-368 301.53,-262 595.53,-262 595.53,-368" />
+      <text text-anchor="start" x="367.03" y="-343.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E2</text>
+      <text text-anchor="start" x="381.53" y="-319.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Врач (Doctor)</text>
+      <text text-anchor="start" x="353.03" y="-293.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Медицинский специалист</text>
+      <text text-anchor="start" x="372.03" y="-278.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">ПК в локальной сети</text>
+    </g>
+    <g id="flow_1" class="edge">
+      <title>E2-&gt;3.1</title>
+      <path fill="none" stroke="#475569" stroke-width="1.8" d="M523.46,-368.13C593.03,-416.52 697.44,-489.15 776.29,-544" />
+      <polygon fill="#475569" stroke="#475569" stroke-width="1.8" points="774.68,-546.51 783.35,-548.92 778.07,-541.62 774.68,-546.51" />
+      <rect x="648.53" y="-463.8" width="179.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="738.03" y="-447.8" font-family="DejaVu Sans" font-size="14.00" fill="#475569">Поиск папки пациента</text>
+      <text text-anchor="middle" x="738.03" y="-432.8" font-family="DejaVu Sans" font-size="14.00" fill="#475569">в проводнике Windows</text>
+    </g>
+    <g id="node4" class="node">
+      <title>3.2</title>
+      <path fill="#fff1f2" stroke="#b91c1c" stroke-width="2" d="M1033.53,-387C1033.53,-387 737.53,-387 737.53,-387 731.53,-387 725.53,-381 725.53,-375 725.53,-375 725.53,-255 725.53,-255 725.53,-249 731.53,-243 737.53,-243 737.53,-243 1033.53,-243 1033.53,-243 1039.53,-243 1045.53,-249 1045.53,-255 1045.53,-255 1045.53,-375 1045.53,-375 1045.53,-381 1039.53,-387 1033.53,-387" />
+      <text text-anchor="start" x="841.53" y="-362.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 3.2</text>
+      <text text-anchor="start" x="741.53" y="-338.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Осмотр и оформление карты</text>
+      <text text-anchor="start" x="761.03" y="-312.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внесение жалоб, диагноза (МКБ),</text>
+      <text text-anchor="start" x="752.53" y="-297.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">назначений в локальный файл Word</text>
+      <text text-anchor="start" x="776.53" y="-282.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">БЕЗ цифровой подписи (ЭЦП)</text>
+      <text text-anchor="start" x="804.03" y="-260.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Нет юр. значимости</text>
+    </g>
+    <g id="flow_2" class="edge">
+      <title>3.1-&gt;3.2</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M885.53,-548.73C885.53,-502.88 885.53,-443.23 885.53,-395.8" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="888.51,-395.59 885.53,-387.09 882.56,-395.59 888.51,-395.59" />
+      <rect x="879.53" y="-463.8" width="199.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="979.03" y="-447.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Загрузка старых записей</text>
+      <text text-anchor="middle" x="979.03" y="-432.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">в Word без аудита</text>
+    </g>
+    <g id="node6" class="node">
+      <title>D1</title>
+      <polygon fill="#fff1f2" stroke="transparent" points="1183.53,-501 1183.53,-741 1497.53,-741 1497.53,-501 1183.53,-501" />
+      <text text-anchor="start" x="1286.03" y="-713.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D1</text>
+      <text text-anchor="start" x="1206.03" y="-689.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Файловый диск: Медкарты</text>
+      <text text-anchor="start" x="1288.53" y="-672.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">пациентов</text>
+      <text text-anchor="start" x="1306.03" y="-648.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Каталоги</text>
+      <text text-anchor="start" x="1253.03" y="-633.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">\Pacients\Pacient-FIO-BD\</text>
+      <text text-anchor="start" x="1236.03" y="-618.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Файлы DOCX, PDF, XLSX, JPG</text>
+      <text text-anchor="start" x="1224.53" y="-603.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">• Доступен любому ПК в офисе</text>
+      <text text-anchor="start" x="1226.53" y="-588.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">• Нет неизменяемости (WORM)</text>
+      <text text-anchor="start" x="1208.03" y="-573.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">• Нет журналирования (кто читал?)</text>
+      <text text-anchor="start" x="1199.53" y="-558.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">• Нарушение 323-ФЗ и УЗ-1 (ФСТЭК №</text>
+      <text text-anchor="start" x="1328.53" y="-543.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">21)</text>
+      <text text-anchor="start" x="1239.53" y="-521.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Критическая уязвимость</text>
+      <polyline fill="none" stroke="#b91c1c" stroke-width="2" points="1496.53,-740 1184.53,-740 1184.53,-502 1496.53,-502 " />
+    </g>
+    <g id="node5" class="node">
+      <title>3.3</title>
+      <path fill="#f8fafc" stroke="#475569" stroke-width="2" d="M1020.53,-144C1020.53,-144 750.53,-144 750.53,-144 744.53,-144 738.53,-138 738.53,-132 738.53,-132 738.53,-12 738.53,-12 738.53,-6 744.53,0 750.53,0 750.53,0 1020.53,0 1020.53,0 1026.53,0 1032.53,-6 1032.53,-12 1032.53,-12 1032.53,-132 1032.53,-132 1032.53,-138 1026.53,-144 1020.53,-144" />
+      <text text-anchor="start" x="841.53" y="-119.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 3.3</text>
+      <text text-anchor="start" x="787.53" y="-95.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Печать заключений</text>
+      <text text-anchor="start" x="775.53" y="-69.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Вывод на локальный принтер</text>
+      <text text-anchor="start" x="774.03" y="-54.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">бумажного листа с диагнозом</text>
+      <text text-anchor="start" x="798.53" y="-39.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">и назначением лечения</text>
+      <text text-anchor="start" x="819.53" y="-17.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Бумажный след</text>
+    </g>
+    <g id="flow_4" class="edge">
+      <title>3.2-&gt;3.3</title>
+      <path fill="none" stroke="#475569" stroke-width="1.8" d="M885.53,-243C885.53,-214.69 885.53,-181.97 885.53,-152.84" />
+      <polygon fill="#475569" stroke="#475569" stroke-width="1.8" points="888.51,-152.83 885.53,-144.33 882.56,-152.83 888.51,-152.83" />
+      <rect x="879.53" y="-205.8" width="160.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="959.53" y="-189.8" font-family="DejaVu Sans" font-size="14.00" fill="#475569">Отправка на печать</text>
+    </g>
+    <g id="flow_3" class="edge">
+      <title>3.2-&gt;D1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M1019.52,-387.07C1042.87,-400.44 1066.66,-414.73 1088.53,-429 1119.95,-449.5 1152.55,-472.67 1183.46,-495.61" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="1181.85,-498.12 1190.44,-500.82 1185.4,-493.35 1181.85,-498.12" />
+      <rect x="1124.53" y="-463.8" width="195.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="1222.03" y="-447.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Перезапись файла DOCX</text>
+      <text text-anchor="middle" x="1222.03" y="-432.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">по открытому SMB</text>
+    </g>
+    <g id="flow_5" class="edge">
+      <title>3.3-&gt;E1</title>
+      <path fill="none" stroke="#475569" stroke-width="1.8" d="M738.27,-80.31C516.94,-94.72 114.95,-135.37 26.53,-243 -68.34,-358.49 113.55,-490.52 240.77,-563.68" />
+      <polygon fill="#475569" stroke="#475569" stroke-width="1.8" points="239.45,-566.35 248.31,-567.98 242.4,-561.18 239.45,-566.35" />
+      <rect x="20.53" y="-327.3" width="253.99999999999997" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="147.53" y="-311.3" font-family="DejaVu Sans" font-size="14.00" fill="#475569">Бумажное заключение пациенту</text>
+    </g>
   </g>
-  <!-- External Entity: Врач (Doctor) -->
-  <g filter="url(#shadow)">
-    <rect x="40" y="310" width="180" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-    <rect x="40" y="310" width="180" height="24" rx="4" fill="#0284c7"/>
-    <text x="130.0" y="326" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
-    <text x="130.0" y="355" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Врач (Doctor)</text>
-    <text x="130.0" y="373" font-size="10" fill="#64748b" text-anchor="middle">Медицинский специалист
-ПК в локальной сети</text>
-  </g>
-  <!-- Process 3.1: Поиск медкарты в проводнике -->
-  <g filter="url(#shadow)">
-    <rect x="290" y="100" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
-    <path d="M 290 124 L 510 124" stroke="#dc2626" stroke-width="1"/>
-    <rect x="291" y="101" width="218" height="23" rx="11" fill="#fee2e2"/>
-    <text x="302" y="116" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 3.1</text>
-    <text x="498" y="116" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Нет аудита чтения</text>
-    <text x="400.0" y="146" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Поиск медкарты в проводнике</text>
-    <text x="400.0" y="164" font-size="10" fill="#475569" text-anchor="middle">Открытие сетевой папки</text>
-    <text x="400.0" y="178" font-size="10" fill="#475569" text-anchor="middle">\\Pacients\Pacient1-FIO-BD</text>
-    <text x="400.0" y="192" font-size="10" fill="#475569" text-anchor="middle">Чтение Word/PDF файлов</text>
-  </g>
-  <!-- Process 3.2: Осмотр и оформление карты -->
-  <g filter="url(#shadow)">
-    <rect x="290" y="250" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
-    <path d="M 290 274 L 510 274" stroke="#dc2626" stroke-width="1"/>
-    <rect x="291" y="251" width="218" height="23" rx="11" fill="#fee2e2"/>
-    <text x="302" y="266" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 3.2</text>
-    <text x="498" y="266" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Нет юр. значимости</text>
-    <text x="400.0" y="296" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Осмотр и оформление карты</text>
-    <text x="400.0" y="314" font-size="10" fill="#475569" text-anchor="middle">Внесение жалоб, диагноза (МКБ),</text>
-    <text x="400.0" y="328" font-size="10" fill="#475569" text-anchor="middle">назначений в локальный файл Word</text>
-    <text x="400.0" y="342" font-size="10" fill="#475569" text-anchor="middle">БЕЗ цифровой подписи (ЭЦП)</text>
-  </g>
-  <!-- Process 3.3: Печать заключений -->
-  <g filter="url(#shadow)">
-    <rect x="290" y="390" width="220" height="95" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
-    <path d="M 290 414 L 510 414" stroke="#2563eb" stroke-width="1"/>
-    <rect x="291" y="391" width="218" height="23" rx="11" fill="#eff6ff"/>
-    <text x="302" y="406" font-size="11" font-weight="bold" fill="#1e40af">ПРОЦЕСС 3.3</text>
-    <text x="498" y="406" font-size="10" font-weight="bold" fill="#1e40af" text-anchor="end">Бумажный след</text>
-    <text x="400.0" y="436" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Печать заключений</text>
-    <text x="400.0" y="454" font-size="10" fill="#475569" text-anchor="middle">Вывод на локальный принтер</text>
-    <text x="400.0" y="468" font-size="10" fill="#475569" text-anchor="middle">бумажного листа с диагнозом</text>
-    <text x="400.0" y="482" font-size="10" fill="#475569" text-anchor="middle">и назначением лечения</text>
-  </g>
-  <!-- Data Store D1: Файловый диск: Медкарты пациентов -->
-  <g filter="url(#shadow)">
-    <rect x="590" y="160" width="300" height="140" fill="#fff1f2" stroke="none"/>
-    <line x1="590" y1="160" x2="890" y2="160" stroke="#dc2626" stroke-width="2"/>
-    <line x1="590" y1="300" x2="890" y2="300" stroke="#dc2626" stroke-width="2"/>
-    <line x1="590" y1="160" x2="590" y2="300" stroke="#dc2626" stroke-width="2"/>
-    <line x1="626" y1="160" x2="626" y2="300" stroke="#dc2626" stroke-width="1.5"/>
-    <text x="608" y="234.0" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">D1</text>
-    <text x="636" y="180" font-size="12" font-weight="bold" fill="#0f172a">Файловый диск: Медкарты пациентов</text>
-    <text x="636" y="196" font-size="10" fill="#64748b">Каталоги \\Pacients\Pacient-FIO-BD\</text>
-    <text x="636" y="209" font-size="10" fill="#64748b">Файлы DOCX, PDF, XLSX, JPG</text>
-    <text x="636" y="222" font-size="10" fill="#64748b">• Доступен любому ПК в офисе</text>
-    <text x="636" y="235" font-size="10" fill="#64748b">• Нет неизменяемости (WORM)</text>
-    <text x="636" y="248" font-size="10" fill="#64748b">• Нет журналирования (кто читал?)</text>
-    <text x="636" y="261" font-size="10" fill="#64748b">• Нарушение 323-ФЗ и УЗ-1 (ФСТЭК № 21)</text>
-    <rect x="820" y="164" width="65" height="18" rx="3" fill="#dc2626" fill-opacity="0.1"/>
-    <text x="853" y="177" font-size="9" font-weight="bold" fill="#dc2626" text-anchor="middle">Критическая уязвимость</text>
-  </g>
-  <line x1="220" y1="150" x2="290" y2="150" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
-  <rect x="191.5" y="134.0" width="127.0" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
-  <text x="255.0" y="147.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Озвучивание жалоб,</text>
-  <text x="255.0" y="159.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">анамнез, симптомы</text>
-  <line x1="220" y1="340" x2="290" y2="180" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
-  <rect x="185.0" y="244.0" width="140.0" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
-  <text x="255.0" y="257.0" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Поиск папки пациента</text>
-  <text x="255.0" y="269.0" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">в проводнике Windows</text>
-  <line x1="390" y1="195" x2="390" y2="250" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
-  <rect x="310.25" y="206.5" width="159.5" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
-  <text x="390.0" y="219.5" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Загрузка старых записей</text>
-  <text x="390.0" y="231.5" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">в Word без аудита</text>
-  <line x1="510" y1="270" x2="590" y2="230" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
-  <rect x="476.75" y="234.0" width="146.5" height="32" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
-  <text x="550.0" y="247.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Перезапись файла DOCX</text>
-  <text x="550.0" y="259.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">по открытому SMB</text>
-  <line x1="390" y1="345" x2="390" y2="390" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
-  <rect x="326.5" y="358.0" width="127.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
-  <text x="390.0" y="370.5" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Отправка на печать</text>
-  <line x1="290" y1="430" x2="220" y2="200" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
-  <rect x="159.0" y="305.5" width="192.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
-  <text x="255.0" y="318.0" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Бумажное заключение пациенту</text>
 </svg>

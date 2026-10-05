@@ -1,148 +1,147 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" width="980" height="560" style="background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-  <defs>
-    <marker id="arrow-default" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
-    </marker>
-    <marker id="arrow-vulnerable" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
-    </marker>
-    <marker id="arrow-secure" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
-    </marker>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
-    </filter>
-  </defs>
-
-  <!-- Header -->
-  <rect x="0" y="0" width="980" height="60" fill="#1e293b"/>
-  <text x="25" y="32" font-size="18" font-weight="bold" fill="#ffffff">DFD Процесс 2 (To-Be): Автоматизированная запись на прием с RBAC/ABAC</text>
-  <text x="25" y="50" font-size="12" fill="#94a3b8">Целевое состояние: ЛК пациента, RBAC изоляция журналов врачей, Kafka нотификации, токенизация appointments</text>
-
-  <!-- External Entity: Пациент (Client) -->
-  <g filter="url(#shadow)">
-    <rect x="30" y="90" width="170" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-    <rect x="30" y="90" width="170" height="24" rx="4" fill="#0284c7"/>
-    <text x="115.0" y="106" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
-    <text x="115.0" y="135" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Пациент (Client)</text>
-    <text x="115.0" y="153" font-size="10" fill="#64748b" text-anchor="middle">Web-портал / Мобильное App
-Автономная запись 24/7</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1571" height="1026" viewBox="0 0 1571 1026" role="img" aria-labelledby="title description">
+  <title id="title">DFD Процесс 2 (To-Be): Автоматизированная запись на прием с RBAC/ABAC</title>
+  <desc id="description">Целевое состояние: ЛК пациента, RBAC изоляция журналов врачей, Kafka нотификации, токенизация appointments</desc>
+  <rect width="1571" height="1026" fill="white" />
+  <text x="28" y="32" font-family="DejaVu Sans" font-size="22" fill="#0f172a" font-weight="700">DFD Процесс 2 (To-Be): Автоматизированная запись на прием с RBAC/ABAC</text>
+  <text x="28" y="60" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Целевое состояние: ЛК пациента, RBAC изоляция журналов врачей, Kafka нотификации, токенизация appointments</text>
+  <text x="28" y="89" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Стрелка: направление передачи данных. Красный: уязвимость. Зелёный: мера защиты. Синий: внешний участник.</text>
+  <g id="graph0" class="graph" transform="translate(28,838.0)">
+    <title>DFD</title>
+    <polygon fill="white" stroke="transparent" points="-8.64,8.64 -8.64,-703.64 1523.64,-703.64 1523.64,8.64 -8.64,8.64" />
+    <g id="node1" class="node">
+      <title>E1</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-673 0,-673 0,-567 294,-567 294,-673" />
+      <text text-anchor="start" x="65.5" y="-648.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E1</text>
+      <text text-anchor="start" x="66.5" y="-624.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Пациент (Client)</text>
+      <text text-anchor="start" x="40" y="-598.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Web-портал / Мобильное App</text>
+      <text text-anchor="start" x="58" y="-583.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Автономная запись 24/7</text>
+    </g>
+    <g id="node4" class="node">
+      <title>2.1</title>
+      <path fill="#f0fdf4" stroke="#166534" stroke-width="2" d="M892,-692C892,-692 622,-692 622,-692 616,-692 610,-686 610,-680 610,-680 610,-560 610,-560 610,-554 616,-548 622,-548 622,-548 892,-548 892,-548 898,-548 904,-554 904,-560 904,-560 904,-680 904,-680 904,-686 898,-692 892,-692" />
+      <text text-anchor="start" x="713" y="-667.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 2.1</text>
+      <text text-anchor="start" x="636" y="-643.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Запрос расписания (API)</text>
+      <text text-anchor="start" x="642.5" y="-617.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Фильтрация доступных слотов</text>
+      <text text-anchor="start" x="647" y="-602.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Без раскрытия чужих данных</text>
+      <text text-anchor="start" x="687" y="-587.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Rate limiting + WAF</text>
+      <text text-anchor="start" x="685.5" y="-565.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Data Minimization</text>
+    </g>
+    <g id="flow_0" class="edge">
+      <title>E1-&gt;2.1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M294.14,-580.65C308.2,-577.95 322.32,-575.65 336,-574 433.96,-562.19 459.98,-562.76 558,-574 572.14,-575.62 586.74,-577.87 601.31,-580.52" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="600.97,-583.48 609.87,-582.12 602.06,-577.63 600.97,-583.48" />
+      <rect x="364.0" y="-608.8" width="166.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="447" y="-592.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">HTTPS TLS 1.3: Поиск</text>
+      <text text-anchor="middle" x="447" y="-577.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">врача/слота</text>
+    </g>
+    <g id="node2" class="node">
+      <title>E2</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-399 0,-399 0,-293 294,-293 294,-399" />
+      <text text-anchor="start" x="65.5" y="-374.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E2</text>
+      <text text-anchor="start" x="64.5" y="-350.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Ресепшен (Staff)</text>
+      <text text-anchor="start" x="89.5" y="-324.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">АРМ ресепшена</text>
+      <text text-anchor="start" x="71" y="-309.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Только общие слоты</text>
+    </g>
+    <g id="node5" class="node">
+      <title>2.2</title>
+      <path fill="#f0fdf4" stroke="#166534" stroke-width="2" d="M894.5,-418C894.5,-418 619.5,-418 619.5,-418 613.5,-418 607.5,-412 607.5,-406 607.5,-406 607.5,-286 607.5,-286 607.5,-280 613.5,-274 619.5,-274 619.5,-274 894.5,-274 894.5,-274 900.5,-274 906.5,-280 906.5,-286 906.5,-286 906.5,-406 906.5,-406 906.5,-412 900.5,-418 894.5,-418" />
+      <text text-anchor="start" x="713.5" y="-393.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 2.2</text>
+      <text text-anchor="start" x="650.5" y="-369.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Бронирование визита</text>
+      <text text-anchor="start" x="660" y="-343.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Appointment Service (OLTP)</text>
+      <text text-anchor="start" x="624" y="-328.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Атомарная транзакция в PostgreSQL</text>
+      <text text-anchor="start" x="675.5" y="-313.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Тег: PHI_APPOINTMENT</text>
+      <text text-anchor="start" x="699.5" y="-291.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Zero Collisions</text>
+    </g>
+    <g id="flow_1" class="edge">
+      <title>E2-&gt;2.2</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M294.02,-346C385.92,-346 504.51,-346 598.52,-346" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="598.75,-348.98 607.25,-346 598.75,-343.03 598.75,-348.98" />
+      <rect x="330.0" y="-365.8" width="234.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="447" y="-349.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Создание записи с ресепшена</text>
+    </g>
+    <g id="node3" class="node">
+      <title>E3</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-202 0,-202 0,-96 294,-96 294,-202" />
+      <text text-anchor="start" x="65.5" y="-177.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E3</text>
+      <text text-anchor="start" x="80" y="-153.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Врач (Doctor)</text>
+      <text text-anchor="start" x="60.5" y="-127.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">АРМ врача (RBAC/ABAC)</text>
+      <text text-anchor="start" x="27" y="-112.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Видит ТОЛЬКО своих пациентов</text>
+    </g>
+    <g id="node6" class="node">
+      <title>2.3</title>
+      <path fill="#f0fdf4" stroke="#166534" stroke-width="2" d="M902,-144C902,-144 612,-144 612,-144 606,-144 600,-138 600,-132 600,-132 600,-12 600,-12 600,-6 606,0 612,0 612,0 902,0 902,0 908,0 914,-6 914,-12 914,-12 914,-132 914,-132 914,-138 908,-144 902,-144" />
+      <text text-anchor="start" x="713" y="-119.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 2.3</text>
+      <text text-anchor="start" x="616" y="-95.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Оповещения и напоминания</text>
+      <text text-anchor="start" x="663" y="-69.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Notification Service (Kafka)</text>
+      <text text-anchor="start" x="656.5" y="-54.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">SMS/Push за 24ч до приема</text>
+      <text text-anchor="start" x="666.5" y="-39.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Без раскрытия диагноза</text>
+      <text text-anchor="start" x="683" y="-17.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Privacy-preserving</text>
+    </g>
+    <g id="flow_2" class="edge">
+      <title>E3-&gt;2.3</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M294.02,-130.51C383.54,-119.17 498.37,-104.63 591.15,-92.88" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="591.72,-95.8 599.78,-91.78 590.97,-89.9 591.72,-95.8" />
+      <rect x="332.0" y="-159.8" width="230.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="447" y="-143.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Запрос журнала (только свой</text>
+      <text text-anchor="middle" x="447" y="-128.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">doctor_id)</text>
+    </g>
+    <g id="flow_3" class="edge">
+      <title>2.1-&gt;2.2</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M757,-547.72C757,-510.59 757,-465.21 757,-426.91" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="759.98,-426.85 757,-418.35 754.03,-426.85 759.98,-426.85" />
+      <rect x="675.5" y="-495.3" width="142.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="746.5" y="-479.3" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Выбор интервала</text>
+    </g>
+    <g id="node7" class="node">
+      <title>D1</title>
+      <polygon fill="#f0fdf4" stroke="transparent" points="1192,-545 1192,-695 1515,-695 1515,-545 1192,-545" />
+      <text text-anchor="start" x="1299.5" y="-667.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D1</text>
+      <text text-anchor="start" x="1208.5" y="-643.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Appointment DB (PostgreSQL)</text>
+      <text text-anchor="start" x="1246.5" y="-617.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Слоты, patient_uuid, doctor_id</text>
+      <text text-anchor="start" x="1248.5" y="-602.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">ABAC правила доступа (OPA)</text>
+      <text text-anchor="start" x="1230" y="-587.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Исключены коллизии блокировок</text>
+      <text text-anchor="start" x="1316.5" y="-565.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">TDE / RLS</text>
+      <polyline fill="none" stroke="#166534" stroke-width="2" points="1514,-694 1193,-694 1193,-546 1514,-546 " />
+    </g>
+    <g id="flow_5" class="edge">
+      <title>2.2-&gt;2.3</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M757,-273.72C757,-236.59 757,-191.21 757,-152.91" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="759.98,-152.85 757,-144.35 754.03,-152.85 759.98,-152.85" />
+      <rect x="666.0" y="-221.3" width="161.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="746.5" y="-205.3" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Инициация события</text>
+    </g>
+    <g id="flow_4" class="edge">
+      <title>2.2-&gt;D1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M906.87,-414.61C991.08,-453.43 1096.67,-502.09 1183.93,-542.31" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="1182.81,-545.07 1191.78,-545.92 1185.3,-539.66 1182.81,-545.07" />
+      <rect x="967.0" y="-542.8" width="172.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="1053" y="-526.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Фиксация брони в БД</text>
+    </g>
+    <g id="node8" class="node">
+      <title>D2</title>
+      <polygon fill="#f0fdf4" stroke="transparent" points="1194.5,-199.5 1194.5,-364.5 1512.5,-364.5 1512.5,-199.5 1194.5,-199.5" />
+      <text text-anchor="start" x="1299" y="-336.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D2</text>
+      <text text-anchor="start" x="1210.5" y="-312.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Message Broker (Kafka mTLS)</text>
+      <text text-anchor="start" x="1256" y="-286.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Топик appointments.events</text>
+      <text text-anchor="start" x="1247" y="-271.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">События: Created, Confirmed,</text>
+      <text text-anchor="start" x="1319.5" y="-256.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Cancelled</text>
+      <text text-anchor="start" x="1247.5" y="-241.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Шифрование payload + audit</text>
+      <text text-anchor="start" x="1295.5" y="-219.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Audit &amp; Events</text>
+      <polyline fill="none" stroke="#166534" stroke-width="2" points="1511.5,-363.5 1195.5,-363.5 1195.5,-200.5 1511.5,-200.5 " />
+    </g>
+    <g id="flow_6" class="edge">
+      <title>2.3-&gt;D2</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M914.2,-127.18C997.85,-156.72 1100.9,-193.13 1186.06,-223.21" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="1185.24,-226.07 1194.25,-226.1 1187.22,-220.46 1185.24,-226.07" />
+      <rect x="950.0" y="-228.8" width="206.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="1053" y="-212.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Публикация брони в Kafka</text>
+    </g>
   </g>
-  <!-- External Entity: Ресепшен (Staff) -->
-  <g filter="url(#shadow)">
-    <rect x="30" y="240" width="170" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-    <rect x="30" y="240" width="170" height="24" rx="4" fill="#0284c7"/>
-    <text x="115.0" y="256" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
-    <text x="115.0" y="285" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Ресепшен (Staff)</text>
-    <text x="115.0" y="303" font-size="10" fill="#64748b" text-anchor="middle">АРМ ресепшена
-Только общие слоты</text>
-  </g>
-  <!-- External Entity: Врач (Doctor) -->
-  <g filter="url(#shadow)">
-    <rect x="30" y="390" width="170" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-    <rect x="30" y="390" width="170" height="24" rx="4" fill="#0284c7"/>
-    <text x="115.0" y="406" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
-    <text x="115.0" y="435" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Врач (Doctor)</text>
-    <text x="115.0" y="453" font-size="10" fill="#64748b" text-anchor="middle">АРМ врача (RBAC/ABAC)
-Видит ТОЛЬКО своих пациентов</text>
-  </g>
-  <!-- Process 2.1: Запрос расписания (API) -->
-  <g filter="url(#shadow)">
-    <rect x="250" y="100" width="220" height="95" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
-    <path d="M 250 124 L 470 124" stroke="#16a34a" stroke-width="1"/>
-    <rect x="251" y="101" width="218" height="23" rx="11" fill="#dcfce7"/>
-    <text x="262" y="116" font-size="11" font-weight="bold" fill="#166534">ПРОЦЕСС 2.1</text>
-    <text x="458" y="116" font-size="10" font-weight="bold" fill="#166534" text-anchor="end">Data Minimization</text>
-    <text x="360.0" y="146" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Запрос расписания (API)</text>
-    <text x="360.0" y="164" font-size="10" fill="#475569" text-anchor="middle">Фильтрация доступных слотов</text>
-    <text x="360.0" y="178" font-size="10" fill="#475569" text-anchor="middle">Без раскрытия чужих данных</text>
-    <text x="360.0" y="192" font-size="10" fill="#475569" text-anchor="middle">Rate limiting + WAF</text>
-  </g>
-  <!-- Process 2.2: Бронирование визита -->
-  <g filter="url(#shadow)">
-    <rect x="250" y="250" width="220" height="95" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
-    <path d="M 250 274 L 470 274" stroke="#16a34a" stroke-width="1"/>
-    <rect x="251" y="251" width="218" height="23" rx="11" fill="#dcfce7"/>
-    <text x="262" y="266" font-size="11" font-weight="bold" fill="#166534">ПРОЦЕСС 2.2</text>
-    <text x="458" y="266" font-size="10" font-weight="bold" fill="#166534" text-anchor="end">Zero Collisions</text>
-    <text x="360.0" y="296" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Бронирование визита</text>
-    <text x="360.0" y="314" font-size="10" fill="#475569" text-anchor="middle">Appointment Service (OLTP)</text>
-    <text x="360.0" y="328" font-size="10" fill="#475569" text-anchor="middle">Атомарная транзакция в PostgreSQL</text>
-    <text x="360.0" y="342" font-size="10" fill="#475569" text-anchor="middle">Тег: PHI_APPOINTMENT</text>
-  </g>
-  <!-- Process 2.3: Оповещения и напоминания -->
-  <g filter="url(#shadow)">
-    <rect x="250" y="400" width="220" height="95" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
-    <path d="M 250 424 L 470 424" stroke="#16a34a" stroke-width="1"/>
-    <rect x="251" y="401" width="218" height="23" rx="11" fill="#dcfce7"/>
-    <text x="262" y="416" font-size="11" font-weight="bold" fill="#166534">ПРОЦЕСС 2.3</text>
-    <text x="458" y="416" font-size="10" font-weight="bold" fill="#166534" text-anchor="end">Privacy-preserving</text>
-    <text x="360.0" y="446" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Оповещения и напоминания</text>
-    <text x="360.0" y="464" font-size="10" fill="#475569" text-anchor="middle">Notification Service (Kafka)</text>
-    <text x="360.0" y="478" font-size="10" fill="#475569" text-anchor="middle">SMS/Push за 24ч до приема</text>
-    <text x="360.0" y="492" font-size="10" fill="#475569" text-anchor="middle">Без раскрытия диагноза</text>
-  </g>
-  <!-- Data Store D1: Appointment DB (PostgreSQL) -->
-  <g filter="url(#shadow)">
-    <rect x="540" y="170" width="240" height="95" fill="#f0fdf4" stroke="none"/>
-    <line x1="540" y1="170" x2="780" y2="170" stroke="#16a34a" stroke-width="2"/>
-    <line x1="540" y1="265" x2="780" y2="265" stroke="#16a34a" stroke-width="2"/>
-    <line x1="540" y1="170" x2="540" y2="265" stroke="#16a34a" stroke-width="2"/>
-    <line x1="576" y1="170" x2="576" y2="265" stroke="#16a34a" stroke-width="1.5"/>
-    <text x="558" y="221.5" font-size="11" font-weight="bold" fill="#16a34a" text-anchor="middle">D1</text>
-    <text x="586" y="190" font-size="12" font-weight="bold" fill="#0f172a">Appointment DB (PostgreSQL)</text>
-    <text x="586" y="206" font-size="10" fill="#64748b">Слоты, patient_uuid, doctor_id</text>
-    <text x="586" y="219" font-size="10" fill="#64748b">ABAC правила доступа (OPA)</text>
-    <text x="586" y="232" font-size="10" fill="#64748b">Исключены коллизии блокировок</text>
-    <rect x="710" y="174" width="65" height="18" rx="3" fill="#16a34a" fill-opacity="0.1"/>
-    <text x="743" y="187" font-size="9" font-weight="bold" fill="#16a34a" text-anchor="middle">TDE / RLS</text>
-  </g>
-  <!-- Data Store D2: Message Broker (Kafka mTLS) -->
-  <g filter="url(#shadow)">
-    <rect x="540" y="340" width="240" height="95" fill="#f0fdf4" stroke="none"/>
-    <line x1="540" y1="340" x2="780" y2="340" stroke="#16a34a" stroke-width="2"/>
-    <line x1="540" y1="435" x2="780" y2="435" stroke="#16a34a" stroke-width="2"/>
-    <line x1="540" y1="340" x2="540" y2="435" stroke="#16a34a" stroke-width="2"/>
-    <line x1="576" y1="340" x2="576" y2="435" stroke="#16a34a" stroke-width="1.5"/>
-    <text x="558" y="391.5" font-size="11" font-weight="bold" fill="#16a34a" text-anchor="middle">D2</text>
-    <text x="586" y="360" font-size="12" font-weight="bold" fill="#0f172a">Message Broker (Kafka mTLS)</text>
-    <text x="586" y="376" font-size="10" fill="#64748b">Топик appointments.events</text>
-    <text x="586" y="389" font-size="10" fill="#64748b">События: Created, Confirmed, Cancelled</text>
-    <text x="586" y="402" font-size="10" fill="#64748b">Шифрование payload + audit</text>
-    <rect x="710" y="344" width="65" height="18" rx="3" fill="#16a34a" fill-opacity="0.1"/>
-    <text x="743" y="357" font-size="9" font-weight="bold" fill="#16a34a" text-anchor="middle">Audit & Events</text>
-  </g>
-  <!-- Security Control: Защитные механизмы -->
-  <g>
-    <rect x="810" y="190" width="155" height="180" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4 2"/>
-    <text x="887.5" y="206" font-size="10" font-weight="bold" fill="#15803d" text-anchor="middle">Защитные механизмы</text>
-    <text x="887.5" y="220" font-size="9" fill="#166534" text-anchor="middle">• Врач видит ТОЛЬКО</text>
-    <text x="887.5" y="232" font-size="9" fill="#166534" text-anchor="middle">  свое расписание (ABAC)</text>
-    <text x="887.5" y="244" font-size="9" fill="#166534" text-anchor="middle">• Пациент видит только</text>
-    <text x="887.5" y="256" font-size="9" fill="#166534" text-anchor="middle">  свободные временные окна</text>
-    <text x="887.5" y="268" font-size="9" fill="#166534" text-anchor="middle">• Нет утечки диагнозов</text>
-    <text x="887.5" y="280" font-size="9" fill="#166534" text-anchor="middle">• Логирование в SIEM</text>
-    <text x="887.5" y="292" font-size="9" fill="#166534" text-anchor="middle">• Высокая доступность</text>
-  </g>
-  <line x1="200" y1="130" x2="250" y2="130" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="116.0" y="120.5" width="218.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="225.0" y="133.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">HTTPS TLS 1.3: Поиск врача/слота</text>
-  <line x1="200" y1="280" x2="250" y2="270" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="132.25" y="265.5" width="185.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="225.0" y="278.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Создание записи с ресепшена</text>
-  <line x1="200" y1="430" x2="250" y2="420" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="96.5" y="415.5" width="257.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="225.0" y="428.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Запрос журнала (только свой doctor_id)</text>
-  <line x1="360" y1="195" x2="360" y2="250" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="306.25" y="213.0" width="107.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="360.0" y="225.5" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Выбор интервала</text>
-  <line x1="470" y1="270" x2="540" y2="230" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="438.25" y="240.5" width="133.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="505.0" y="253.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Фиксация брони в БД</text>
-  <line x1="360" y1="345" x2="360" y2="400" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="299.75" y="363.0" width="120.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="360.0" y="375.5" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Инициация события</text>
-  <line x1="470" y1="420" x2="540" y2="390" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="422.0" y="395.5" width="166.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="505.0" y="408.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Публикация брони в Kafka</text>
+  <rect x="20" y="857.0" width="1531" height="142" rx="8" fill="#f0fdf4" stroke="#166534" />
+  <text x="32" y="878.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="700">Защитные механизмы</text>
+  <text x="32" y="899.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="400">• Врач видит ТОЛЬКО свое расписание (ABAC)</text>
+  <text x="32" y="920.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="400">• Пациент видит только свободные временные окна</text>
+  <text x="32" y="941.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="400">• Нет утечки диагнозов</text>
+  <text x="32" y="962.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="400">• Логирование в SIEM</text>
+  <text x="32" y="983.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="400">• Высокая доступность</text>
 </svg>

@@ -1,169 +1,173 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" width="980" height="560" style="background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-  <defs>
-    <marker id="arrow-default" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
-    </marker>
-    <marker id="arrow-vulnerable" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
-    </marker>
-    <marker id="arrow-secure" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
-    </marker>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
-    </filter>
-  </defs>
-
-  <!-- Header -->
-  <rect x="0" y="0" width="980" height="60" fill="#1e293b"/>
-  <text x="25" y="32" font-size="18" font-weight="bold" fill="#ffffff">DFD Процесс 5 (To-Be): Защищенный платежный шлюз и фискализация (PCI DSS / 54-ФЗ)</text>
-  <text x="25" y="50" font-size="12" fill="#94a3b8">Целевое состояние: Payment Gateway, СБП/Эквайринг (без хранения карт), ОФД, 1С клиент-сервер по API/Kafka</text>
-
-  <!-- External Entity: Пациент (Client) -->
-  <g filter="url(#shadow)">
-    <rect x="30" y="90" width="170" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-    <rect x="30" y="90" width="170" height="24" rx="4" fill="#0284c7"/>
-    <text x="115.0" y="106" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
-    <text x="115.0" y="135" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Пациент (Client)</text>
-    <text x="115.0" y="153" font-size="10" fill="#64748b" text-anchor="middle">Оплата в App / ЛК / СБП
-или терминал на кассе</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1501" height="1018" viewBox="0 0 1501 1018" role="img" aria-labelledby="title description">
+  <title id="title">DFD Процесс 5 (To-Be): Защищенный платежный шлюз и фискализация (PCI DSS / 54-ФЗ)</title>
+  <desc id="description">Целевое состояние: Payment Gateway, СБП/Эквайринг (без хранения карт), ОФД, 1С клиент-сервер по API/Kafka</desc>
+  <rect width="1501" height="1018" fill="white" />
+  <text x="28" y="32" font-family="DejaVu Sans" font-size="22" fill="#0f172a" font-weight="700">DFD Процесс 5 (To-Be): Защищенный платежный шлюз и фискализация (PCI DSS / 54-ФЗ)</text>
+  <text x="28" y="60" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Целевое состояние: Payment Gateway, СБП/Эквайринг (без хранения карт), ОФД, 1С клиент-сервер по API/Kafka</text>
+  <text x="28" y="89" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Стрелка: направление передачи данных. Красный: уязвимость. Зелёный: мера защиты. Синий: внешний участник.</text>
+  <g id="graph0" class="graph" transform="translate(28,830.0)">
+    <title>DFD</title>
+    <polygon fill="white" stroke="transparent" points="-8.64,8.64 -8.64,-695.64 1453.64,-695.64 1453.64,8.64 -8.64,8.64" />
+    <g id="node1" class="node">
+      <title>E1</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="327,-665 33,-665 33,-559 327,-559 327,-665" />
+      <text text-anchor="start" x="98.5" y="-640.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E1</text>
+      <text text-anchor="start" x="99.5" y="-616.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Пациент (Client)</text>
+      <text text-anchor="start" x="91.5" y="-590.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Оплата в App / ЛК / СБП</text>
+      <text text-anchor="start" x="95.5" y="-575.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">или терминал на кассе</text>
+    </g>
+    <g id="node4" class="node">
+      <title>5.1</title>
+      <path fill="#f0fdf4" stroke="#166534" stroke-width="2" d="M858,-684C858,-684 588,-684 588,-684 582,-684 576,-678 576,-672 576,-672 576,-552 576,-552 576,-546 582,-540 588,-540 588,-540 858,-540 858,-540 864,-540 870,-546 870,-552 870,-552 870,-672 870,-672 870,-678 864,-684 858,-684" />
+      <text text-anchor="start" x="679" y="-659.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 5.1</text>
+      <text text-anchor="start" x="597.5" y="-635.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Billing &amp; Invoicing Service</text>
+      <text text-anchor="start" x="597" y="-609.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Формирование инвойса по заказу.</text>
+      <text text-anchor="start" x="623" y="-594.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Связка order_uuid + сумма.</text>
+      <text text-anchor="start" x="611.5" y="-579.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Маскирование мед. диагнозов</text>
+      <text text-anchor="start" x="651.5" y="-557.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Data Minimization</text>
+    </g>
+    <g id="flow_0" class="edge">
+      <title>E1-&gt;5.1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M327.3,-612C401.54,-612 491.58,-612 567,-612" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="567.15,-614.98 575.65,-612 567.15,-609.03 567.15,-614.98" />
+      <rect x="353.5" y="-649.8" width="196.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="451.5" y="-633.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Оплата: СБП / Карта / ЛК</text>
+      <text text-anchor="middle" x="451.5" y="-618.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">(TLS 1.3)</text>
+    </g>
+    <g id="node2" class="node">
+      <title>E2</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="442,-416 148,-416 148,-310 442,-310 442,-416" />
+      <text text-anchor="start" x="213.5" y="-391.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E2</text>
+      <text text-anchor="start" x="202" y="-367.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Кассир / Ресепшен</text>
+      <text text-anchor="start" x="222" y="-341.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">АРМ кассира (RBAC)</text>
+      <text text-anchor="start" x="213.5" y="-326.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Формирование счетов</text>
+    </g>
+    <g id="flow_1" class="edge">
+      <title>E2-&gt;5.1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M366.37,-416.25C401.86,-441.31 445.86,-471.02 487,-495 512.78,-510.03 540.77,-524.94 568.18,-538.82" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="566.96,-541.54 575.89,-542.71 569.64,-536.23 566.96,-541.54" />
+      <rect x="481.0" y="-499.8" width="232.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="597" y="-483.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Формирование счета на кассе</text>
+    </g>
+    <g id="node5" class="node">
+      <title>5.2</title>
+      <path fill="#f0fdf4" stroke="#166534" stroke-width="2" d="M862,-435C862,-435 584,-435 584,-435 578,-435 572,-429 572,-423 572,-423 572,-303 572,-303 572,-297 578,-291 584,-291 584,-291 862,-291 862,-291 868,-291 874,-297 874,-303 874,-303 874,-423 874,-423 874,-429 868,-435 862,-435" />
+      <text text-anchor="start" x="679" y="-410.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 5.2</text>
+      <text text-anchor="start" x="588" y="-386.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Payment Gateway (PCI DSS)</text>
+      <text text-anchor="start" x="624.5" y="-360.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Токенизация карт в банке.</text>
+      <text text-anchor="start" x="599.5" y="-345.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Клиника НЕ хранит данные карт!</text>
+      <text text-anchor="start" x="596.5" y="-330.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">TLS 1.3 + криптоподпись webhook</text>
+      <text text-anchor="start" x="661.5" y="-308.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">PCI DSS Level 1</text>
+    </g>
+    <g id="node3" class="node">
+      <title>E3</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-140 0,-140 0,-34 294,-34 294,-140" />
+      <text text-anchor="start" x="65.5" y="-115.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E3</text>
+      <text text-anchor="start" x="49" y="-91.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Банк-эквайер / ОФД</text>
+      <text text-anchor="start" x="46" y="-65.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешний шлюз эквайринга</text>
+      <text text-anchor="start" x="33.5" y="-50.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Оператор фискальных данных</text>
+    </g>
+    <g id="node6" class="node">
+      <title>5.3</title>
+      <path fill="#f0fdf4" stroke="#166534" stroke-width="2" d="M858,-174C858,-174 588,-174 588,-174 582,-174 576,-168 576,-162 576,-162 576,-12 576,-12 576,-6 582,0 588,0 588,0 858,0 858,0 864,0 870,-6 870,-12 870,-12 870,-162 870,-162 870,-168 864,-174 858,-174" />
+      <text text-anchor="start" x="679" y="-149.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 5.3</text>
+      <text text-anchor="start" x="606.5" y="-125.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Fiscal &amp; 1C Sync Service</text>
+      <text text-anchor="start" x="608" y="-99.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Автоматическая фискализация</text>
+      <text text-anchor="start" x="693" y="-84.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">(54-ФЗ),</text>
+      <text text-anchor="start" x="608.5" y="-69.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">электронный чек по SMS/email,</text>
+      <text text-anchor="start" x="648.5" y="-54.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">событие в Kafka для</text>
+      <text text-anchor="start" x="644.5" y="-39.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">клиент-серверной 1С</text>
+      <text text-anchor="start" x="668.5" y="-17.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">54-ФЗ / Kafka</text>
+    </g>
+    <g id="flow_4" class="edge">
+      <title>E3-&gt;5.3</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M294.21,-87C377.68,-87 482.06,-87 566.94,-87" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="567.11,-89.98 575.61,-87 567.11,-84.03 567.11,-89.98" />
+      <rect x="320.5" y="-109.8" width="229.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="435" y="-93.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Webhook от банка + ОФД чек</text>
+    </g>
+    <g id="flow_2" class="edge">
+      <title>5.1-&gt;5.2</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M723,-539.89C723,-509.8 723,-474.61 723,-443.65" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="725.98,-443.54 723,-435.04 720.03,-443.54 725.98,-443.54" />
+      <rect x="717.0" y="-499.8" width="231.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="832.5" y="-483.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Передача платежного токена</text>
+    </g>
+    <g id="node7" class="node">
+      <title>D1</title>
+      <polygon fill="#f0fdf4" stroke="transparent" points="1109,-537 1109,-687 1417,-687 1417,-537 1109,-537" />
+      <text text-anchor="start" x="1208.5" y="-659.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D1</text>
+      <text text-anchor="start" x="1150" y="-635.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Billing DB (PostgreSQL)</text>
+      <text text-anchor="start" x="1125" y="-609.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Счета, транзакции, фискальные теги</text>
+      <text text-anchor="start" x="1198.5" y="-594.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Шифрование TDE</text>
+      <text text-anchor="start" x="1153" y="-579.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Тег: FINANCIAL_CONFIDENTIAL</text>
+      <text text-anchor="start" x="1225.5" y="-557.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">TDE / RLS</text>
+      <polyline fill="none" stroke="#166534" stroke-width="2" points="1416,-686 1110,-686 1110,-538 1416,-538 " />
+    </g>
+    <g id="flow_5" class="edge">
+      <title>5.1-&gt;D1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M870.2,-612C941.32,-612 1026.89,-612 1099.98,-612" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="1100.33,-614.98 1108.83,-612 1100.33,-609.03 1100.33,-614.98" />
+      <rect x="896.5" y="-634.8" width="186.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="989.5" y="-618.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Запись чека в Billing DB</text>
+    </g>
+    <g id="flow_3" class="edge">
+      <title>5.2-&gt;E3</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M573.54,-290.9C477.18,-245.07 353.66,-186.31 264.37,-143.83" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="265.6,-141.12 256.65,-140.16 263.05,-146.5 265.6,-141.12" />
+      <rect x="464.0" y="-243.3" width="229.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="578.5" y="-227.3" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Проведение платежа в банке</text>
+    </g>
+    <g id="flow_6" class="edge">
+      <title>5.2-&gt;5.3</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M723,-290.72C723,-257.84 723,-218.32 723,-182.95" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="725.98,-182.55 723,-174.05 720.03,-182.55 725.98,-182.55" />
+      <rect x="717.0" y="-243.3" width="235.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="834.5" y="-227.3" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Фискализация и нотификация</text>
+    </g>
+    <g id="node8" class="node">
+      <title>D2</title>
+      <polygon fill="#f0fdf4" stroke="transparent" points="1003.5,-288 1003.5,-438 1316.5,-438 1316.5,-288 1003.5,-288" />
+      <text text-anchor="start" x="1106" y="-410.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D2</text>
+      <text text-anchor="start" x="1052" y="-386.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Audit &amp; Kafka Pipeline</text>
+      <text text-anchor="start" x="1040" y="-360.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Топик billing.payments.completed</text>
+      <text text-anchor="start" x="1020" y="-345.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Асинхронная доставка в бухгалтерию</text>
+      <text text-anchor="start" x="1049" y="-330.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Идемпотентность транзакций</text>
+      <text text-anchor="start" x="1114" y="-308.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">mTLS Kafka</text>
+      <polyline fill="none" stroke="#166534" stroke-width="2" points="1315.5,-437 1004.5,-437 1004.5,-289 1315.5,-289 " />
+    </g>
+    <g id="flow_7" class="edge">
+      <title>5.3-&gt;D2</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M870.25,-162.57C901.04,-179.35 932.95,-197.65 962,-216 994.22,-236.36 1028.05,-260.27 1058.43,-282.78" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="1056.67,-285.18 1065.27,-287.86 1060.22,-280.4 1056.67,-285.18" />
+      <rect x="1001.0" y="-250.8" width="210.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="1106" y="-234.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Событие PaymentSuccess в</text>
+      <text text-anchor="middle" x="1106" y="-219.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Kafka</text>
+    </g>
+    <g id="node9" class="node">
+      <title>D3</title>
+      <polygon fill="#f0fdf4" stroke="transparent" points="1105,-12 1105,-162 1399,-162 1399,-12 1105,-12" />
+      <text text-anchor="start" x="1197.5" y="-134.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D3</text>
+      <text text-anchor="start" x="1154.5" y="-110.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">1С (Клиент-Сервер)</text>
+      <text text-anchor="start" x="1151.5" y="-84.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">PostgreSQL база данных 1С</text>
+      <text text-anchor="start" x="1142" y="-69.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Интеграция по REST API/Kafka</text>
+      <text text-anchor="start" x="1125" y="-54.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Исключены файловые блокировки</text>
+      <text text-anchor="start" x="1198.5" y="-32.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Enterprise 1C</text>
+      <polyline fill="none" stroke="#166534" stroke-width="2" points="1398,-161 1106,-161 1106,-13 1398,-13 " />
+    </g>
+    <g id="flow_8" class="edge">
+      <title>D2-&gt;D3</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M1259.38,-287.9C1270.56,-275.21 1280.31,-261.16 1287,-246 1297.39,-222.44 1295.85,-195.5 1289.6,-170.62" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="1292.43,-169.68 1287.31,-162.27 1286.69,-171.26 1292.43,-169.68" />
+      <rect x="1289.0" y="-243.3" width="162.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="1370" y="-227.3" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Синхронизация с 1С</text>
+    </g>
   </g>
-  <!-- External Entity: Кассир / Ресепшен -->
-  <g filter="url(#shadow)">
-    <rect x="30" y="240" width="170" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-    <rect x="30" y="240" width="170" height="24" rx="4" fill="#0284c7"/>
-    <text x="115.0" y="256" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
-    <text x="115.0" y="285" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Кассир / Ресепшен</text>
-    <text x="115.0" y="303" font-size="10" fill="#64748b" text-anchor="middle">АРМ кассира (RBAC)
-Формирование счетов</text>
-  </g>
-  <!-- External Entity: Банк-эквайер / ОФД -->
-  <g filter="url(#shadow)">
-    <rect x="30" y="400" width="170" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-    <rect x="30" y="400" width="170" height="24" rx="4" fill="#0284c7"/>
-    <text x="115.0" y="416" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
-    <text x="115.0" y="445" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Банк-эквайер / ОФД</text>
-    <text x="115.0" y="463" font-size="10" fill="#64748b" text-anchor="middle">Внешний шлюз эквайринга
-Оператор фискальных данных</text>
-  </g>
-  <!-- Process 5.1: Billing & Invoicing Service -->
-  <g filter="url(#shadow)">
-    <rect x="250" y="95" width="220" height="95" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
-    <path d="M 250 119 L 470 119" stroke="#16a34a" stroke-width="1"/>
-    <rect x="251" y="96" width="218" height="23" rx="11" fill="#dcfce7"/>
-    <text x="262" y="111" font-size="11" font-weight="bold" fill="#166534">ПРОЦЕСС 5.1</text>
-    <text x="458" y="111" font-size="10" font-weight="bold" fill="#166534" text-anchor="end">Data Minimization</text>
-    <text x="360.0" y="141" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Billing & Invoicing Service</text>
-    <text x="360.0" y="159" font-size="10" fill="#475569" text-anchor="middle">Формирование инвойса по заказу.</text>
-    <text x="360.0" y="173" font-size="10" fill="#475569" text-anchor="middle">Связка order_uuid + сумма.</text>
-    <text x="360.0" y="187" font-size="10" fill="#475569" text-anchor="middle">Маскирование мед. диагнозов</text>
-  </g>
-  <!-- Process 5.2: Payment Gateway (PCI DSS) -->
-  <g filter="url(#shadow)">
-    <rect x="250" y="250" width="220" height="95" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
-    <path d="M 250 274 L 470 274" stroke="#16a34a" stroke-width="1"/>
-    <rect x="251" y="251" width="218" height="23" rx="11" fill="#dcfce7"/>
-    <text x="262" y="266" font-size="11" font-weight="bold" fill="#166534">ПРОЦЕСС 5.2</text>
-    <text x="458" y="266" font-size="10" font-weight="bold" fill="#166534" text-anchor="end">PCI DSS Level 1</text>
-    <text x="360.0" y="296" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Payment Gateway (PCI DSS)</text>
-    <text x="360.0" y="314" font-size="10" fill="#475569" text-anchor="middle">Токенизация карт в банке.</text>
-    <text x="360.0" y="328" font-size="10" fill="#475569" text-anchor="middle">Клиника НЕ хранит данные карт!</text>
-    <text x="360.0" y="342" font-size="10" fill="#475569" text-anchor="middle">TLS 1.3 + криптоподпись webhook</text>
-  </g>
-  <!-- Process 5.3: Fiscal & 1C Sync Service -->
-  <g filter="url(#shadow)">
-    <rect x="250" y="405" width="220" height="95" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
-    <path d="M 250 429 L 470 429" stroke="#16a34a" stroke-width="1"/>
-    <rect x="251" y="406" width="218" height="23" rx="11" fill="#dcfce7"/>
-    <text x="262" y="421" font-size="11" font-weight="bold" fill="#166534">ПРОЦЕСС 5.3</text>
-    <text x="458" y="421" font-size="10" font-weight="bold" fill="#166534" text-anchor="end">54-ФЗ / Kafka</text>
-    <text x="360.0" y="451" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Fiscal & 1C Sync Service</text>
-    <text x="360.0" y="469" font-size="10" fill="#475569" text-anchor="middle">Автоматическая фискализация (54-ФЗ),</text>
-    <text x="360.0" y="483" font-size="10" fill="#475569" text-anchor="middle">электронный чек по SMS/email,</text>
-    <text x="360.0" y="497" font-size="10" fill="#475569" text-anchor="middle">событие в Kafka для клиент-серверной 1С</text>
-  </g>
-  <!-- Data Store D1: Billing DB (PostgreSQL) -->
-  <g filter="url(#shadow)">
-    <rect x="540" y="105" width="230" height="95" fill="#f0fdf4" stroke="none"/>
-    <line x1="540" y1="105" x2="770" y2="105" stroke="#16a34a" stroke-width="2"/>
-    <line x1="540" y1="200" x2="770" y2="200" stroke="#16a34a" stroke-width="2"/>
-    <line x1="540" y1="105" x2="540" y2="200" stroke="#16a34a" stroke-width="2"/>
-    <line x1="576" y1="105" x2="576" y2="200" stroke="#16a34a" stroke-width="1.5"/>
-    <text x="558" y="156.5" font-size="11" font-weight="bold" fill="#16a34a" text-anchor="middle">D1</text>
-    <text x="586" y="125" font-size="12" font-weight="bold" fill="#0f172a">Billing DB (PostgreSQL)</text>
-    <text x="586" y="141" font-size="10" fill="#64748b">Счета, транзакции, фискальные теги</text>
-    <text x="586" y="154" font-size="10" fill="#64748b">Шифрование TDE</text>
-    <text x="586" y="167" font-size="10" fill="#64748b">Тег: FINANCIAL_CONFIDENTIAL</text>
-    <rect x="700" y="109" width="65" height="18" rx="3" fill="#16a34a" fill-opacity="0.1"/>
-    <text x="733" y="122" font-size="9" font-weight="bold" fill="#16a34a" text-anchor="middle">TDE / RLS</text>
-  </g>
-  <!-- Data Store D2: Audit & Kafka Pipeline -->
-  <g filter="url(#shadow)">
-    <rect x="540" y="255" width="230" height="95" fill="#f0fdf4" stroke="none"/>
-    <line x1="540" y1="255" x2="770" y2="255" stroke="#16a34a" stroke-width="2"/>
-    <line x1="540" y1="350" x2="770" y2="350" stroke="#16a34a" stroke-width="2"/>
-    <line x1="540" y1="255" x2="540" y2="350" stroke="#16a34a" stroke-width="2"/>
-    <line x1="576" y1="255" x2="576" y2="350" stroke="#16a34a" stroke-width="1.5"/>
-    <text x="558" y="306.5" font-size="11" font-weight="bold" fill="#16a34a" text-anchor="middle">D2</text>
-    <text x="586" y="275" font-size="12" font-weight="bold" fill="#0f172a">Audit & Kafka Pipeline</text>
-    <text x="586" y="291" font-size="10" fill="#64748b">Топик billing.payments.completed</text>
-    <text x="586" y="304" font-size="10" fill="#64748b">Асинхронная доставка в бухгалтерию</text>
-    <text x="586" y="317" font-size="10" fill="#64748b">Идемпотентность транзакций</text>
-    <rect x="700" y="259" width="65" height="18" rx="3" fill="#16a34a" fill-opacity="0.1"/>
-    <text x="733" y="272" font-size="9" font-weight="bold" fill="#16a34a" text-anchor="middle">mTLS Kafka</text>
-  </g>
-  <!-- Data Store D3: 1С (Клиент-Сервер) -->
-  <g filter="url(#shadow)">
-    <rect x="540" y="405" width="230" height="95" fill="#f0fdf4" stroke="none"/>
-    <line x1="540" y1="405" x2="770" y2="405" stroke="#16a34a" stroke-width="2"/>
-    <line x1="540" y1="500" x2="770" y2="500" stroke="#16a34a" stroke-width="2"/>
-    <line x1="540" y1="405" x2="540" y2="500" stroke="#16a34a" stroke-width="2"/>
-    <line x1="576" y1="405" x2="576" y2="500" stroke="#16a34a" stroke-width="1.5"/>
-    <text x="558" y="456.5" font-size="11" font-weight="bold" fill="#16a34a" text-anchor="middle">D3</text>
-    <text x="586" y="425" font-size="12" font-weight="bold" fill="#0f172a">1С (Клиент-Сервер)</text>
-    <text x="586" y="441" font-size="10" fill="#64748b">PostgreSQL база данных 1С</text>
-    <text x="586" y="454" font-size="10" fill="#64748b">Интеграция по REST API/Kafka</text>
-    <text x="586" y="467" font-size="10" fill="#64748b">Исключены файловые блокировки</text>
-    <rect x="700" y="409" width="65" height="18" rx="3" fill="#16a34a" fill-opacity="0.1"/>
-    <text x="733" y="422" font-size="9" font-weight="bold" fill="#16a34a" text-anchor="middle">Enterprise 1C</text>
-  </g>
-  <!-- Security Control: Принципы защиты -->
-  <g>
-    <rect x="800" y="180" width="160" height="195" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4 2"/>
-    <text x="880.0" y="196" font-size="10" font-weight="bold" fill="#15803d" text-anchor="middle">Принципы защиты</text>
-    <text x="880.0" y="210" font-size="9" fill="#166534" text-anchor="middle">• Данные карт НЕ попадают</text>
-    <text x="880.0" y="222" font-size="9" fill="#166534" text-anchor="middle">  на сервер клиники (СБП)</text>
-    <text x="880.0" y="234" font-size="9" fill="#166534" text-anchor="middle">• Бухгалтерия видит только код</text>
-    <text x="880.0" y="246" font-size="9" fill="#166534" text-anchor="middle">  услуги (без диагнозов!)</text>
-    <text x="880.0" y="258" font-size="9" fill="#166534" text-anchor="middle">• Исключен теневой Excel</text>
-    <text x="880.0" y="270" font-size="9" fill="#166534" text-anchor="middle">• Электронный чек в ОФД</text>
-    <text x="880.0" y="282" font-size="9" fill="#166534" text-anchor="middle">• Клиент-серверная 1С</text>
-  </g>
-  <line x1="200" y1="130" x2="250" y2="130" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="109.5" y="120.5" width="231.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="225.0" y="133.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Оплата: СБП / Карта / ЛК (TLS 1.3)</text>
-  <line x1="200" y1="270" x2="250" y2="160" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="132.25" y="205.5" width="185.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="225.0" y="218.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Формирование счета на кассе</text>
-  <line x1="360" y1="190" x2="360" y2="250" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="270.5" y="210.5" width="179.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="360.0" y="223.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Передача платежного токена</text>
-  <line x1="250" y1="320" x2="200" y2="420" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="135.5" y="360.5" width="179.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="225.0" y="373.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Проведение платежа в банке</text>
-  <line x1="200" y1="450" x2="250" y2="430" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="135.5" y="430.5" width="179.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="225.0" y="443.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Webhook от банка + ОФД чек</text>
-  <line x1="470" y1="150" x2="540" y2="150" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="422.0" y="140.5" width="166.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="505.0" y="153.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Запись чека в Billing DB</text>
-  <line x1="360" y1="345" x2="360" y2="405" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="270.5" y="365.5" width="179.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="360.0" y="378.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Фискализация и нотификация</text>
-  <line x1="470" y1="440" x2="540" y2="310" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="402.5" y="365.5" width="205.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="505.0" y="378.0" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Событие PaymentSuccess в Kafka</text>
-  <line x1="655" y1="350" x2="655" y2="405" stroke="#16a34a" stroke-width="1.5"  marker-end="url(#arrow-secure)"/>
-  <rect x="591.5" y="368.0" width="127.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#16a34a" stroke-width="0.75"/>
-  <text x="655.0" y="380.5" font-size="9.5" fill="#16a34a" font-weight="600" text-anchor="middle">Синхронизация с 1С</text>
+  <rect x="20" y="849.0" width="1461" height="142" rx="8" fill="#f0fdf4" stroke="#166534" />
+  <text x="32" y="870.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="700">Принципы защиты</text>
+  <text x="32" y="891.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="400">• Данные карт НЕ попадают на сервер клиники (СБП)</text>
+  <text x="32" y="912.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="400">• Бухгалтерия видит только код услуги (без диагнозов!)</text>
+  <text x="32" y="933.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="400">• Исключен теневой Excel</text>
+  <text x="32" y="954.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="400">• Электронный чек в ОФД</text>
+  <text x="32" y="975.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="400">• Клиент-серверная 1С</text>
 </svg>

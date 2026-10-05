@@ -1,122 +1,136 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" width="920" height="520" style="background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-  <defs>
-    <marker id="arrow-default" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
-    </marker>
-    <marker id="arrow-vulnerable" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
-    </marker>
-    <marker id="arrow-secure" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
-    </marker>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
-    </filter>
-  </defs>
-
-  <!-- Header -->
-  <rect x="0" y="0" width="920" height="60" fill="#1e293b"/>
-  <text x="25" y="32" font-size="18" font-weight="bold" fill="#ffffff">DFD Процесс 4 (As-Is): Направление и получение анализов из лаборатории</text>
-  <text x="25" y="50" font-size="12" fill="#94a3b8">Текущее состояние: открытый Exchange e-mail, незащищенные реестры анализов, отсутствие деперсонализации биоматериала</text>
-
-  <!-- External Entity: Пациент (Patient) -->
-  <g filter="url(#shadow)">
-    <rect x="40" y="90" width="180" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-    <rect x="40" y="90" width="180" height="24" rx="4" fill="#0284c7"/>
-    <text x="130.0" y="106" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
-    <text x="130.0" y="135" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Пациент (Patient)</text>
-    <text x="130.0" y="153" font-size="10" fill="#64748b" text-anchor="middle">Сдает биоматериал
-в процедурном кабинете</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1464" height="916" viewBox="0 0 1464 916" role="img" aria-labelledby="title description">
+  <title id="title">DFD Процесс 4 (As-Is): Направление и получение анализов из лаборатории</title>
+  <desc id="description">Текущее состояние: открытый Exchange e-mail, незащищенные реестры анализов, отсутствие деперсонализации биоматериала</desc>
+  <rect width="1464" height="916" fill="white" />
+  <text x="28" y="32" font-family="DejaVu Sans" font-size="22" fill="#0f172a" font-weight="700">DFD Процесс 4 (As-Is): Направление и получение анализов из лаборатории</text>
+  <text x="28" y="60" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Текущее состояние: открытый Exchange e-mail, незащищенные реестры анализов, отсутствие деперсонализации биоматериала</text>
+  <text x="28" y="89" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Стрелка: направление передачи данных. Красный: уязвимость. Зелёный: мера защиты. Синий: внешний участник.</text>
+  <g id="graph0" class="graph" transform="translate(28,884.0)">
+    <title>DFD</title>
+    <polygon fill="white" stroke="transparent" points="-8.64,8.64 -8.64,-749.64 1416.14,-749.64 1416.14,8.64 -8.64,8.64" />
+    <g id="node1" class="node">
+      <title>E1</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="297,-681.5 3,-681.5 3,-575.5 297,-575.5 297,-681.5" />
+      <text text-anchor="start" x="68.5" y="-657.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E1</text>
+      <text text-anchor="start" x="63" y="-632.9" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Пациент (Patient)</text>
+      <text text-anchor="start" x="77" y="-607.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Сдает биоматериал</text>
+      <text text-anchor="start" x="57.5" y="-592.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">в процедурном кабинете</text>
+    </g>
+    <g id="node4" class="node">
+      <title>4.1</title>
+      <path fill="#fff1f2" stroke="#b91c1c" stroke-width="2" d="M865.5,-700.5C865.5,-700.5 592.5,-700.5 592.5,-700.5 586.5,-700.5 580.5,-694.5 580.5,-688.5 580.5,-688.5 580.5,-568.5 580.5,-568.5 580.5,-562.5 586.5,-556.5 592.5,-556.5 592.5,-556.5 865.5,-556.5 865.5,-556.5 871.5,-556.5 877.5,-562.5 877.5,-568.5 877.5,-568.5 877.5,-688.5 877.5,-688.5 877.5,-694.5 871.5,-700.5 865.5,-700.5" />
+      <text text-anchor="start" x="685.5" y="-676.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 4.1</text>
+      <text text-anchor="start" x="597" y="-651.9" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Ведение реестра анализов</text>
+      <text text-anchor="start" x="626" y="-626.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внесение ФИО, даты, видов</text>
+      <text text-anchor="start" x="651" y="-611.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">исследований в Excel</text>
+      <text text-anchor="start" x="659.5" y="-596.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">RegistryByDate.xlsx</text>
+      <text text-anchor="start" x="659" y="-574.3" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Нет шифрования</text>
+    </g>
+    <g id="flow_0" class="edge">
+      <title>E1-&gt;4.1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M297.23,-628.5C381.12,-628.5 486.23,-628.5 571.74,-628.5" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="571.97,-631.48 580.47,-628.5 571.97,-625.53 571.97,-631.48" />
+      <rect x="323.25" y="-666.3" width="231.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="438.75" y="-650.3" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Забор биоматериала (ФИО на</text>
+      <text text-anchor="middle" x="438.75" y="-635.3" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">пробирке)</text>
+    </g>
+    <g id="node2" class="node">
+      <title>E2</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="444,-383 150,-383 150,-277 444,-277 444,-383" />
+      <text text-anchor="start" x="215.5" y="-358.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E2</text>
+      <text text-anchor="start" x="185.5" y="-334.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Медсестра / Ресепшен</text>
+      <text text-anchor="start" x="190" y="-308.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Оформляет суточный реестр</text>
+      <text text-anchor="start" x="210" y="-293.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">и отправляет пробирки</text>
+    </g>
+    <g id="flow_1" class="edge">
+      <title>E2-&gt;4.1</title>
+      <path fill="none" stroke="#475569" stroke-width="1.8" d="M372.91,-383.1C440.83,-429.72 541.26,-498.64 618.16,-551.42" />
+      <polygon fill="#475569" stroke="#475569" stroke-width="1.8" points="616.83,-554.12 625.53,-556.48 620.2,-549.22 616.83,-554.12" />
+      <rect x="495.0" y="-478.8" width="152.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="571" y="-462.8" font-family="DejaVu Sans" font-size="14.00" fill="#475569">Ручной ввод в</text>
+      <text text-anchor="middle" x="571" y="-447.8" font-family="DejaVu Sans" font-size="14.00" fill="#475569">RegistryByDate.xlsx</text>
+    </g>
+    <g id="node5" class="node">
+      <title>4.2</title>
+      <path fill="#fff1f2" stroke="#b91c1c" stroke-width="2" d="M872,-402C872,-402 586,-402 586,-402 580,-402 574,-396 574,-390 574,-390 574,-270 574,-270 574,-264 580,-258 586,-258 586,-258 872,-258 872,-258 878,-258 884,-264 884,-270 884,-270 884,-390 884,-390 884,-396 878,-402 872,-402" />
+      <text text-anchor="start" x="685" y="-377.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 4.2</text>
+      <text text-anchor="start" x="590" y="-353.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Передача реестра партнеру</text>
+      <text text-anchor="start" x="625" y="-327.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Отправка списка пациентов</text>
+      <text text-anchor="start" x="626.5" y="-312.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">и забор пробирок курьером</text>
+      <text text-anchor="start" x="644.5" y="-297.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">без деперсонализации</text>
+      <text text-anchor="start" x="654" y="-275.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Нарушение тайны</text>
+    </g>
+    <g id="node3" class="node">
+      <title>E3</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-125 0,-125 0,-19 294,-19 294,-125" />
+      <text text-anchor="start" x="65.5" y="-100.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E3</text>
+      <text text-anchor="start" x="35.5" y="-76.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Внешняя лаборатория</text>
+      <text text-anchor="start" x="50" y="-50.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Партнерская лаборатория</text>
+      <text text-anchor="start" x="32" y="-35.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Обмен через Exchange / файлы</text>
+    </g>
+    <g id="node6" class="node">
+      <title>4.3</title>
+      <path fill="#fff1f2" stroke="#b91c1c" stroke-width="2" d="M868.5,-144C868.5,-144 589.5,-144 589.5,-144 583.5,-144 577.5,-138 577.5,-132 577.5,-132 577.5,-12 577.5,-12 577.5,-6 583.5,0 589.5,0 589.5,0 868.5,0 868.5,0 874.5,0 880.5,-6 880.5,-12 880.5,-12 880.5,-132 880.5,-132 880.5,-138 874.5,-144 868.5,-144" />
+      <text text-anchor="start" x="685.5" y="-119.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 4.3</text>
+      <text text-anchor="start" x="594" y="-95.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Прием результатов (e-mail)</text>
+      <text text-anchor="start" x="609" y="-69.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Получение PDF/XLS по Exchange,</text>
+      <text text-anchor="start" x="624" y="-54.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">ручное копирование в папки</text>
+      <text text-anchor="start" x="616.5" y="-39.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">пациентов на файловом диске</text>
+      <text text-anchor="start" x="661" y="-17.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Открытый e-mail</text>
+    </g>
+    <g id="flow_5" class="edge">
+      <title>E3-&gt;4.3</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M294.24,-72C378,-72 482.97,-72 568.79,-72" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="568.8,-74.98 577.3,-72 568.8,-69.03 568.8,-74.98" />
+      <rect x="320.25" y="-109.8" width="231.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="435.75" y="-93.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Результаты анализов по</text>
+      <text text-anchor="middle" x="435.75" y="-78.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">незашифрованному Exchange</text>
+    </g>
+    <g id="flow_3" class="edge">
+      <title>4.1-&gt;4.2</title>
+      <path fill="none" stroke="#475569" stroke-width="1.8" d="M724.72,-556.49C723.17,-522.46 722.02,-481.12 723,-444 723.29,-433.2 723.73,-421.83 724.24,-410.63" />
+      <polygon fill="#475569" stroke="#475569" stroke-width="1.8" points="727.21,-410.74 724.65,-402.11 721.27,-410.45 727.21,-410.74" />
+      <rect x="717.0" y="-471.3" width="248.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="841" y="-455.3" font-family="DejaVu Sans" font-size="14.00" fill="#475569">Формирование списка отправки</text>
+    </g>
+    <g id="node7" class="node">
+      <title>D1</title>
+      <polygon fill="#fff1f2" stroke="transparent" points="1102.5,-516 1102.5,-741 1407.5,-741 1407.5,-516 1102.5,-516" />
+      <text text-anchor="start" x="1201" y="-713.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D1</text>
+      <text text-anchor="start" x="1119" y="-688.9" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Файловый диск: Laboratory</text>
+      <text text-anchor="start" x="1215.5" y="-671.9" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Registry</text>
+      <text text-anchor="start" x="1179" y="-648.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Каталоги \Laboratory</text>
+      <text text-anchor="start" x="1154.5" y="-633.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Registry\RegistryByDate.xlsx</text>
+      <text text-anchor="start" x="1144" y="-618.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">• Доступен всем сотрудникам</text>
+      <text text-anchor="start" x="1125" y="-603.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">• Содержит ФИО + ВИЧ, гепатиты,</text>
+      <text text-anchor="start" x="1203.5" y="-588.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">онкомаркеры!</text>
+      <text text-anchor="start" x="1124.5" y="-573.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">• Нарушение ст. 10 152-ФЗ и ст. 13</text>
+      <text text-anchor="start" x="1228.5" y="-558.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">323-ФЗ</text>
+      <text text-anchor="start" x="1163" y="-536.3" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Утечка спецкатегорий</text>
+      <polyline fill="none" stroke="#b91c1c" stroke-width="2" points="1406.5,-740 1103.5,-740 1103.5,-517 1406.5,-517 " />
+    </g>
+    <g id="flow_2" class="edge">
+      <title>4.1-&gt;D1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M877.62,-628.5C944.92,-628.5 1024.63,-628.5 1093.41,-628.5" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="1093.67,-631.48 1102.17,-628.5 1093.67,-625.53 1093.67,-631.48" />
+      <rect x="904.0" y="-651.3" width="172.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="990" y="-635.3" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Запись строки в Excel</text>
+    </g>
+    <g id="flow_4" class="edge">
+      <title>4.2-&gt;E3</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M573.8,-260.73C479.82,-219.4 361.49,-167.35 273.28,-128.54" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="274.35,-125.77 265.37,-125.07 271.95,-131.21 274.35,-125.77" />
+      <rect x="450.0" y="-220.8" width="196.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="548" y="-204.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Отправка реестра с ФИО</text>
+      <text text-anchor="middle" x="548" y="-189.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">курьеру</text>
+    </g>
+    <g id="flow_6" class="edge">
+      <title>4.3-&gt;D1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M802.71,-144.16C837.5,-178.2 879.33,-219.77 916,-258 975.89,-320.45 988.56,-338.2 1047,-402 1079.01,-436.94 1113.89,-474.83 1145.78,-509.39" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="1143.74,-511.58 1151.7,-515.81 1148.12,-507.54 1143.74,-511.58" />
+      <rect x="1041.0" y="-349.8" width="237.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="1159.5" y="-333.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Раскладывание PDF по папкам</text>
+      <text text-anchor="middle" x="1159.5" y="-318.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">\\Pacients\</text>
+    </g>
   </g>
-  <!-- External Entity: Медсестра / Ресепшен -->
-  <g filter="url(#shadow)">
-    <rect x="40" y="240" width="180" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-    <rect x="40" y="240" width="180" height="24" rx="4" fill="#0284c7"/>
-    <text x="130.0" y="256" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
-    <text x="130.0" y="285" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Медсестра / Ресепшен</text>
-    <text x="130.0" y="303" font-size="10" fill="#64748b" text-anchor="middle">Оформляет суточный реестр
-и отправляет пробирки</text>
-  </g>
-  <!-- External Entity: Внешняя лаборатория -->
-  <g filter="url(#shadow)">
-    <rect x="40" y="390" width="180" height="85" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-    <rect x="40" y="390" width="180" height="24" rx="4" fill="#0284c7"/>
-    <text x="130.0" y="406" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ВНЕШНЯЯ СУЩНОСТЬ</text>
-    <text x="130.0" y="435" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Внешняя лаборатория</text>
-    <text x="130.0" y="453" font-size="10" fill="#64748b" text-anchor="middle">Партнерская лаборатория
-Обмен через Exchange / файлы</text>
-  </g>
-  <!-- Process 4.1: Ведение реестра анализов -->
-  <g filter="url(#shadow)">
-    <rect x="290" y="130" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
-    <path d="M 290 154 L 510 154" stroke="#dc2626" stroke-width="1"/>
-    <rect x="291" y="131" width="218" height="23" rx="11" fill="#fee2e2"/>
-    <text x="302" y="146" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 4.1</text>
-    <text x="498" y="146" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Нет шифрования</text>
-    <text x="400.0" y="176" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Ведение реестра анализов</text>
-    <text x="400.0" y="194" font-size="10" fill="#475569" text-anchor="middle">Внесение ФИО, даты, видов</text>
-    <text x="400.0" y="208" font-size="10" fill="#475569" text-anchor="middle">исследований в Excel</text>
-    <text x="400.0" y="222" font-size="10" fill="#475569" text-anchor="middle">RegistryByDate.xlsx</text>
-  </g>
-  <!-- Process 4.2: Передача реестра партнеру -->
-  <g filter="url(#shadow)">
-    <rect x="290" y="285" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
-    <path d="M 290 309 L 510 309" stroke="#dc2626" stroke-width="1"/>
-    <rect x="291" y="286" width="218" height="23" rx="11" fill="#fee2e2"/>
-    <text x="302" y="301" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 4.2</text>
-    <text x="498" y="301" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Нарушение тайны</text>
-    <text x="400.0" y="331" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Передача реестра партнеру</text>
-    <text x="400.0" y="349" font-size="10" fill="#475569" text-anchor="middle">Отправка списка пациентов</text>
-    <text x="400.0" y="363" font-size="10" fill="#475569" text-anchor="middle">и забор пробирок курьером</text>
-    <text x="400.0" y="377" font-size="10" fill="#475569" text-anchor="middle">без деперсонализации</text>
-  </g>
-  <!-- Process 4.3: Прием результатов (e-mail) -->
-  <g filter="url(#shadow)">
-    <rect x="290" y="415" width="220" height="95" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
-    <path d="M 290 439 L 510 439" stroke="#dc2626" stroke-width="1"/>
-    <rect x="291" y="416" width="218" height="23" rx="11" fill="#fee2e2"/>
-    <text x="302" y="431" font-size="11" font-weight="bold" fill="#991b1b">ПРОЦЕСС 4.3</text>
-    <text x="498" y="431" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="end">Открытый e-mail</text>
-    <text x="400.0" y="461" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Прием результатов (e-mail)</text>
-    <text x="400.0" y="479" font-size="10" fill="#475569" text-anchor="middle">Получение PDF/XLS по Exchange,</text>
-    <text x="400.0" y="493" font-size="10" fill="#475569" text-anchor="middle">ручное копирование в папки</text>
-    <text x="400.0" y="507" font-size="10" fill="#475569" text-anchor="middle">пациентов на файловом диске</text>
-  </g>
-  <!-- Data Store D1: Файловый диск: Laboratory Registry -->
-  <g filter="url(#shadow)">
-    <rect x="590" y="190" width="300" height="130" fill="#fff1f2" stroke="none"/>
-    <line x1="590" y1="190" x2="890" y2="190" stroke="#dc2626" stroke-width="2"/>
-    <line x1="590" y1="320" x2="890" y2="320" stroke="#dc2626" stroke-width="2"/>
-    <line x1="590" y1="190" x2="590" y2="320" stroke="#dc2626" stroke-width="2"/>
-    <line x1="626" y1="190" x2="626" y2="320" stroke="#dc2626" stroke-width="1.5"/>
-    <text x="608" y="259.0" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">D1</text>
-    <text x="636" y="210" font-size="12" font-weight="bold" fill="#0f172a">Файловый диск: Laboratory Registry</text>
-    <text x="636" y="226" font-size="10" fill="#64748b">Каталоги \\Laboratory Registry\RegistryByDate.xlsx</text>
-    <text x="636" y="239" font-size="10" fill="#64748b">• Доступен всем сотрудникам</text>
-    <text x="636" y="252" font-size="10" fill="#64748b">• Содержит ФИО + ВИЧ, гепатиты, онкомаркеры!</text>
-    <text x="636" y="265" font-size="10" fill="#64748b">• Нарушение ст. 10 152-ФЗ и ст. 13 323-ФЗ</text>
-    <rect x="820" y="194" width="65" height="18" rx="3" fill="#dc2626" fill-opacity="0.1"/>
-    <text x="853" y="207" font-size="9" font-weight="bold" fill="#dc2626" text-anchor="middle">Утечка спецкатегорий</text>
-  </g>
-  <line x1="220" y1="130" x2="290" y2="150" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
-  <rect x="133.0" y="130.5" width="244.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
-  <text x="255.0" y="143.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Забор биоматериала (ФИО на пробирке)</text>
-  <line x1="220" y1="270" x2="290" y2="180" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
-  <rect x="142.75" y="215.5" width="224.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
-  <text x="255.0" y="228.0" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Ручной ввод в RegistryByDate.xlsx</text>
-  <line x1="510" y1="200" x2="590" y2="230" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
-  <rect x="476.75" y="205.5" width="146.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
-  <text x="550.0" y="218.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Запись строки в Excel</text>
-  <line x1="390" y1="225" x2="390" y2="285" stroke="#475569" stroke-width="1.5"  marker-end="url(#arrow-default)"/>
-  <rect x="294.0" y="245.5" width="192.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#475569" stroke-width="0.75"/>
-  <text x="390.0" y="258.0" font-size="9.5" fill="#475569" font-weight="600" text-anchor="middle">Формирование списка отправки</text>
-  <line x1="290" y1="335" x2="220" y2="420" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
-  <rect x="152.5" y="368.0" width="205.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
-  <text x="255.0" y="380.5" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Отправка реестра с ФИО курьеру</text>
-  <line x1="220" y1="440" x2="290" y2="445" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
-  <rect x="94.0" y="433.0" width="322.0" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
-  <text x="255.0" y="445.5" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Результаты анализов по незашифрованному Exchange</text>
-  <line x1="510" y1="450" x2="590" y2="280" stroke="#dc2626" stroke-width="1.5"  marker-end="url(#arrow-vulnerable)"/>
-  <rect x="418.25" y="355.5" width="263.5" height="19" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#dc2626" stroke-width="0.75"/>
-  <text x="550.0" y="368.0" font-size="9.5" fill="#dc2626" font-weight="600" text-anchor="middle">Раскладывание PDF по папкам \\Pacients\</text>
 </svg>
