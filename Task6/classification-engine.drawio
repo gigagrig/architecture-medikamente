@@ -1,0 +1,557 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.5">
+  <diagram id="classification-engine" name="C4 / C2 — движок пакетной классификации">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="2518" pageHeight="2119">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="C4 / C2 — движок пакетной классификации" vertex="1" parent="1" style="text;html=0;align=center;fontSize=22;fontStyle=1;">
+          <mxGeometry x="40" y="10" width="2438.0" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster_platform" value="Движок классификации — граница подсистемы" vertex="1" parent="1" style="rounded=1;dashed=1;fillColor=none;strokeColor=#94a3b8;verticalAlign=top;align=left;spacing=8;fontSize=18;">
+          <mxGeometry x="778.0" y="367.5" width="1652.5" height="907.0300000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="files" value="Файловый архив&#10;[Software System]&#10;Excel / CSV / зарегистрированные сканы" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#64748b;strokeColor=#64748b;fontColor=#ffffff;fontSize=13;">
+          <mxGeometry x="765.4988000000001" y="293.49987999999996" width="309.00239999999997" height="66.00024" as="geometry" />
+        </mxCell>
+        <mxCell id="exports" value="Операционная платформа&#10;[Software System]&#10;Разрешённые пакетные выгрузки" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#64748b;strokeColor=#64748b;fontColor=#ffffff;fontSize=13;">
+          <mxGeometry x="788.9996" y="1282.5298800000003" width="262.0008" height="66.00024" as="geometry" />
+        </mxCell>
+        <mxCell id="operator" value="Владелец / оператор проверки&#10;[Person]&#10;Уполномоченная проверка карантина" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#123b60;strokeColor=#64748b;fontColor=#ffffff;fontSize=13;">
+          <mxGeometry x="774.9992" y="1391.5298800000003" width="290.0016" height="66.00024" as="geometry" />
+        </mxCell>
+        <mxCell id="iam" value="Идентификация платформы&#10;[Software System]&#10;Вход и роли / Keycloak" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#64748b;strokeColor=#64748b;fontColor=#ffffff;fontSize=13;">
+          <mxGeometry x="808.0004" y="1723.5298800000003" width="223.9992" height="66.00024" as="geometry" />
+        </mxCell>
+        <mxCell id="policy" value="Политики платформы&#10;[Software System]&#10;Версия правил доступа / OPA" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#64748b;strokeColor=#64748b;fontColor=#ffffff;fontSize=13;">
+          <mxGeometry x="804.5012" y="184.49988" width="230.9976" height="66.00024" as="geometry" />
+        </mxCell>
+        <mxCell id="keys" value="KMS платформы&#10;[Software System]&#10;Ключи зон и сервисные секреты" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#64748b;strokeColor=#64748b;fontColor=#ffffff;fontSize=13;">
+          <mxGeometry x="792.9992" y="1832.5298800000003" width="254.0016" height="66.00024" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" value="Каталог метаданных&#10;[Software System]&#10;Классы, владельцы и происхождение" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#64748b;strokeColor=#64748b;fontColor=#ffffff;fontSize=13;">
+          <mxGeometry x="773.5016" y="1609.5298800000003" width="292.9968" height="66.00024" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" value="Аудит платформы&#10;[Software System]&#10;Решения, доступ и оповещения" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#64748b;strokeColor=#64748b;fontColor=#ffffff;fontSize=13;">
+          <mxGeometry x="796.0016" y="1941.5258800000001" width="247.9968" height="66.00024" as="geometry" />
+        </mxCell>
+        <mxCell id="lake" value="Озеро платформы&#10;[Software System]&#10;L1: конфиденциальная область&#10;L2: проверенные наборы / S3" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#64748b;strokeColor=#64748b;fontColor=#ffffff;fontSize=13;">
+          <mxGeometry x="2181.5016" y="1282.5304" width="247.9968" height="79.9992" as="geometry" />
+        </mxCell>
+        <mxCell id="warehouse" value="Витрины платформы&#10;[Software System]&#10;L3: утверждённые агрегаты&#10;ClickHouse / закрытая промежуточная версия" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#64748b;strokeColor=#64748b;fontColor=#ffffff;fontSize=13;">
+          <mxGeometry x="2132.9988" y="1405.5304" width="345.00239999999997" height="79.9992" as="geometry" />
+        </mxCell>
+        <mxCell id="bi" value="BI / ML платформы&#10;[Software System]&#10;Только допущенная версия и цель" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#64748b;strokeColor=#64748b;fontColor=#ffffff;fontSize=13;">
+          <mxGeometry x="785.5004" y="1500.5298800000003" width="268.9992" height="66.00024" as="geometry" />
+        </mxCell>
+        <mxCell id="receiver" value="Приём пакетов&#10;[Container]&#10;Java API / TLS&#10;Источник, цель, формат и размер" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceeff;strokeColor=#64748b;fontColor=#172554;fontSize=13;">
+          <mxGeometry x="1571.4988" y="677.5004" width="264.0024" height="79.9992" as="geometry" />
+        </mxCell>
+        <mxCell id="staging" value="Q0: приём и карантин&#10;[Container]&#10;S3 / отдельный ключ&#10;incoming / quarantine;&#10;не доступен BI или ML" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dcfce7;strokeColor=#64748b;fontColor=#172554;fontSize=13;">
+          <mxGeometry x="2213.4984" y="523.4984" width="184.0032" height="94.0032" as="geometry" />
+        </mxCell>
+        <mxCell id="coordinator" value="Координатор&#10;[Container]&#10;Java&#10;Задания, лимиты, lease и повторы" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceeff;strokeColor=#64748b;fontColor=#172554;fontSize=13;">
+          <mxGeometry x="786.0008" y="666.5004" width="267.9984" height="79.9992" as="geometry" />
+        </mxCell>
+        <mxCell id="registry" value="Реестр заданий и схем&#10;[Container]&#10;PostgreSQL&#10;Манифесты, fingerprints,&#10;решения, версии и состояния" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceeff;strokeColor=#64748b;fontColor=#172554;fontSize=13;">
+          <mxGeometry x="2188.5" y="872.4984" width="234.0" height="94.0032" as="geometry" />
+        </mxCell>
+        <mxCell id="classifier" value="Анализаторы&#10;[Container]&#10;Python / пул работников&#10;Структура + содержимое + контекст;&#10;UNKNOWN → карантин" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ede9fe;strokeColor=#64748b;fontColor=#172554;fontSize=13;">
+          <mxGeometry x="1556.0008" y="403.4984" width="294.9984" height="94.0032" as="geometry" />
+        </mxCell>
+        <mxCell id="transformer" value="Преобразователи / валидаторы&#10;[Container]&#10;Python / отдельный пул&#10;Минимизация, псевдонимизация;&#10;проверка выхода по политике" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ede9fe;strokeColor=#64748b;fontColor=#172554;fontSize=13;">
+          <mxGeometry x="1574.0008" y="540.4984" width="258.9984" height="94.0032" as="geometry" />
+        </mxCell>
+        <mxCell id="review" value="Интерфейс проверки&#10;[Container]&#10;Web&#10;Решение владельца по спорному&#10;набору / новой структуре" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceeff;strokeColor=#64748b;fontColor=#172554;fontSize=13;">
+          <mxGeometry x="1573.5004" y="898.4984" width="259.9992" height="94.0032" as="geometry" />
+        </mxCell>
+        <mxCell id="publisher" value="Публикатор&#10;[Container]&#10;Java&#10;Проверка манифеста;&#10;активация полной версии" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ede9fe;strokeColor=#64748b;fontColor=#172554;fontSize=13;">
+          <mxGeometry x="1600.0" y="1035.5284000000001" width="207.0" height="94.0032" as="geometry" />
+        </mxCell>
+        <mxCell id="access" value="Сервис выдачи&#10;[Container]&#10;Java API / TLS&#10;Цель, права, PUBLISHED-манифест;&#10;одна версия для всего чтения" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceeff;strokeColor=#64748b;fontColor=#172554;fontSize=13;">
+          <mxGeometry x="1567.4992" y="1172.5284000000001" width="272.0016" height="94.0032" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="Легенда: тёмно-синий — человек; серый — другая система; синий — платформа / приложение;&#10;зелёный — управление защитой; фиолетовый — аналитика. Стрелка: инициатор → получатель; ответ подразумевается.&#10;Пунктирная связь — управление защитой; пунктирная рамка — граница движка. Размещение серверов не показано." vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#64748b;fontColor=#172554;fontSize=12;">
+          <mxGeometry x="538.0039999999999" y="101.99988" width="763.9920000000001" height="39.00024" as="geometry" />
+        </mxCell>
+        <mxCell id="edge0" edge="1" parent="1" source="files" target="receiver" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1145.2" y="330.8000000000002" />
+              <mxPoint x="1229.3" y="340.60000000000014" />
+              <mxPoint x="1302.0" y="363.5" />
+              <mxPoint x="1411.5" y="398.0" />
+              <mxPoint x="1460.7" y="396.8000000000002" />
+              <mxPoint x="1527.0" y="490.5" />
+              <mxPoint x="1570.0" y="551.3000000000002" />
+              <mxPoint x="1509.6" y="597.3000000000002" />
+              <mxPoint x="1556.0" y="655.5" />
+              <mxPoint x="1561.2" y="662.0" />
+              <mxPoint x="1567.2" y="667.9000000000001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label0" value="TLS / пакет и версия" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1343.0" y="356.5" width="172" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="exports" target="receiver" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128.2" y="1327.0500000000002" />
+              <mxPoint x="1225.2" y="1318.13" />
+              <mxPoint x="1302.0" y="1278.5300000000002" />
+              <mxPoint x="1437.5" y="1208.63" />
+              <mxPoint x="1464.7" y="1158.7200000000003" />
+              <mxPoint x="1527.0" y="1019.5000000000001" />
+              <mxPoint x="1568.9" y="925.9000000000001" />
+              <mxPoint x="1496.6" y="874.2" />
+              <mxPoint x="1556.0" y="790.5" />
+              <mxPoint x="1563.9" y="779.4000000000001" />
+              <mxPoint x="1574.0" y="769.8000000000002" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label1" value="TLS / цель и контракт" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1339.0" y="1002.5" width="180" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="operator" target="review" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1183.5" y="1485.7" />
+              <mxPoint x="1402.4" y="1504.3200000000002" />
+              <mxPoint x="1527.0" y="1380.5300000000002" />
+              <mxPoint x="1585.0" y="1322.8600000000001" />
+              <mxPoint x="1509.3" y="1080.7" />
+              <mxPoint x="1556.0" y="1013.5" />
+              <mxPoint x="1560.1" y="1007.7" />
+              <mxPoint x="1564.8" y="1002.3000000000002" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label2" value="Решение с основанием" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1343.0" y="1363.5300000000002" width="172" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="bi" target="access" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1184.7" y="1571.15" />
+              <mxPoint x="1382.9" y="1574.6100000000001" />
+              <mxPoint x="1527.0" y="1489.5300000000002" />
+              <mxPoint x="1609.1" y="1441.04" />
+              <mxPoint x="1659.7" y="1337.3400000000001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label3" value="TLS / разрешённый запрос" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1327.0" y="1472.5300000000002" width="204" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="receiver" target="staging" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1828.8" y="670.9000000000001" />
+              <mxPoint x="1840.5" y="663.6000000000001" />
+              <mxPoint x="1851.0" y="655.5" />
+              <mxPoint x="1867.8" y="642.5" />
+              <mxPoint x="1861.5" y="628.0" />
+              <mxPoint x="1880.0" y="617.5" />
+              <mxPoint x="1934.0" y="587.0" />
+              <mxPoint x="2098.8" y="576.3000000000002" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label4" value="TLS / закрытый оригинал" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1894.0" y="561.5" width="196" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="receiver" target="registry" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1951.7" y="766.9000000000001" />
+              <mxPoint x="2103.2" y="797.2" />
+              <mxPoint x="2104.0" y="797.5" />
+              <mxPoint x="2149.9" y="815.5" />
+              <mxPoint x="2197.3" y="843.7" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label5" value="TLS / манифест" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1930.0" y="738.5" width="124" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="coordinator" target="policy" style="endArrow=block;html=0;strokeColor=#15803d;dashed=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="615.44" y="649.6000000000001" />
+              <mxPoint x="351.69" y="567.2" />
+              <mxPoint x="418.0" y="399.5" />
+              <mxPoint x="446.68" y="327.0" />
+              <mxPoint x="468.8" y="307.5" />
+              <mxPoint x="538.0" y="271.5" />
+              <mxPoint x="617.91" y="230.0" />
+              <mxPoint x="719.25" y="217.20000000000005" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label6" value="Утверждённый пакет правил" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="316.0" y="394.5" width="212" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="coordinator" target="registry" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1294.9" y="760.4000000000001" />
+              <mxPoint x="1783.9" y="835.4000000000001" />
+              <mxPoint x="1851.0" y="876.5" />
+              <mxPoint x="1869.1" y="887.6000000000001" />
+              <mxPoint x="1861.0" y="905.0" />
+              <mxPoint x="1880.0" y="914.5" />
+              <mxPoint x="1893.4" y="921.2" />
+              <mxPoint x="2060.6" y="921.4000000000001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label7" value="TLS / состояния и версии" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1601.5" y="789.5" width="204" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="coordinator" target="classifier" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1181.0" y="621.4000000000001" />
+              <mxPoint x="1403.9" y="548.3000000000002" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label8" value="Задание / версия правил" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1331.0" y="495.5" width="196" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" edge="1" parent="1" source="coordinator" target="transformer" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1196.9" y="664.5" />
+              <mxPoint x="1422.8" y="630.1000000000001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label9" value="Задание после классификации" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1315.0" y="599.5" width="228" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" edge="1" parent="1" source="coordinator" target="publisher" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1124.0" y="805.4000000000001" />
+              <mxPoint x="1357.1" y="918.6000000000001" />
+              <mxPoint x="1556.0" y="1013.5" />
+              <mxPoint x="1568.9" y="1019.7" />
+              <mxPoint x="1582.4" y="1026.1000000000001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label10" value="Только VALIDATED" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1359.0" y="896.5" width="140" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" edge="1" parent="1" source="classifier" target="catalog" style="endArrow=block;html=0;strokeColor=#15803d;dashed=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1567.5" y="503.70000000000005" />
+              <mxPoint x="1561.2" y="510.70000000000005" />
+              <mxPoint x="1556.0" y="518.5" />
+              <mxPoint x="1523.7" y="567.6000000000001" />
+              <mxPoint x="1566.7" y="1531.3100000000002" />
+              <mxPoint x="1527.0" y="1574.5300000000002" />
+              <mxPoint x="1414.9" y="1696.5" />
+              <mxPoint x="1213.4" y="1694.77" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label11" value="Классы / версия контракта" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1323.0" y="1557.5300000000002" width="212" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" edge="1" parent="1" source="classifier" target="staging" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1961.6" y="501.9000000000001" />
+              <mxPoint x="2109.8" y="531.6000000000001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label12" value="TLS / читает закрытый источник" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1866.0" y="469.5" width="252" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge13" edge="1" parent="1" source="classifier" target="registry" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1837.0" y="503.8000000000002" />
+              <mxPoint x="1844.6" y="510.8000000000002" />
+              <mxPoint x="1851.0" y="518.5" />
+              <mxPoint x="1884.4" y="558.8000000000002" />
+              <mxPoint x="1842.1" y="596.5" />
+              <mxPoint x="1880.0" y="632.5" />
+              <mxPoint x="1953.6" y="702.5" />
+              <mxPoint x="2016.8" y="625.4000000000001" />
+              <mxPoint x="2104.0" y="677.5" />
+              <mxPoint x="2180.7" y="723.3000000000002" />
+              <mxPoint x="2241.3" y="809.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label13" value="TLS / теги, схема, решение" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1882.0" y="615.5" width="220" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge14" edge="1" parent="1" source="transformer" target="staging" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1848.8" y="560.7" />
+              <mxPoint x="1864.8" y="558.8000000000002" />
+              <mxPoint x="1880.0" y="557.5" />
+              <mxPoint x="1991.5" y="548.1000000000001" />
+              <mxPoint x="2119.9" y="554.4000000000001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label14" value="TLS / источник и закрытый результат" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1846.0" y="536.5" width="292" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge15" edge="1" parent="1" source="transformer" target="registry" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1830.9" y="641.0" />
+              <mxPoint x="1841.4" y="647.9000000000001" />
+              <mxPoint x="1851.0" y="655.5" />
+              <mxPoint x="1867.4" y="668.5" />
+              <mxPoint x="1862.2" y="681.6000000000001" />
+              <mxPoint x="1880.0" y="692.5" />
+              <mxPoint x="1966.5" y="745.8000000000002" />
+              <mxPoint x="2013.4" y="691.7" />
+              <mxPoint x="2104.0" y="737.5" />
+              <mxPoint x="2166.4" y="769.0" />
+              <mxPoint x="2223.9" y="825.3000000000002" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label15" value="TLS / контроль качества" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1894.0" y="675.5" width="196" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge16" edge="1" parent="1" source="review" target="iam" style="endArrow=block;html=0;strokeColor=#15803d;dashed=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1567.6" y="998.8000000000002" />
+              <mxPoint x="1561.2" y="1005.7" />
+              <mxPoint x="1556.0" y="1013.5" />
+              <mxPoint x="1513.0" y="1077.89" />
+              <mxPoint x="1580.7" y="1653.8300000000002" />
+              <mxPoint x="1527.0" y="1709.5300000000002" />
+              <mxPoint x="1493.9" y="1743.7800000000002" />
+              <mxPoint x="1206.4" y="1753.1000000000001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label16" value="Вход / роль" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1379.0" y="1692.5300000000002" width="100" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge17" edge="1" parent="1" source="review" target="staging" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1816.0" y="883.5" />
+              <mxPoint x="1848.7" y="868.3000000000002" />
+              <mxPoint x="1880.0" y="857.5" />
+              <mxPoint x="1976.0" y="824.5" />
+              <mxPoint x="2016.8" y="864.6000000000001" />
+              <mxPoint x="2104.0" y="812.5" />
+              <mxPoint x="2180.7" y="766.7" />
+              <mxPoint x="2241.3" y="680.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label17" value="TLS / ограниченная проверка" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1878.0" y="795.5" width="228" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge18" edge="1" parent="1" source="review" target="registry" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1912.0" y="948.7" />
+              <mxPoint x="2013.8" y="948.0" />
+              <mxPoint x="2104.0" y="942.5" />
+              <mxPoint x="2129.0" y="941.0" />
+              <mxPoint x="2155.7" y="938.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label18" value="TLS / решение и новая версия" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1874.0" y="925.5" width="236" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge19" edge="1" parent="1" source="publisher" target="keys" style="endArrow=block;html=0;strokeColor=#15803d;dashed=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1582.6" y="1121.91" />
+              <mxPoint x="1566.8" y="1134.33" />
+              <mxPoint x="1556.0" y="1150.5300000000002" />
+              <mxPoint x="1514.3" y="1212.83" />
+              <mxPoint x="1579.3" y="1770.88" />
+              <mxPoint x="1527.0" y="1824.5300000000002" />
+              <mxPoint x="1494.7" y="1857.5900000000001" />
+              <mxPoint x="1222.7" y="1864.6000000000001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label19" value="TLS / ключи зон" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1363.0" y="1807.5300000000002" width="132" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge20" edge="1" parent="1" source="publisher" target="audit" style="endArrow=block;html=0;strokeColor=#15803d;dashed=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1582.5" y="1121.89" />
+              <mxPoint x="1566.8" y="1134.31" />
+              <mxPoint x="1556.0" y="1150.5300000000002" />
+              <mxPoint x="1511.1" y="1217.88" />
+              <mxPoint x="1580.0" y="1817.29" />
+              <mxPoint x="1527.0" y="1878.5300000000002" />
+              <mxPoint x="1496.3" y="1914.0700000000002" />
+              <mxPoint x="1220.0" y="1946.227" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label20" value="Решение до активации" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1343.0" y="1861.5300000000002" width="172" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge21" edge="1" parent="1" source="publisher" target="lake" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1822.9" y="1129.29" />
+              <mxPoint x="1838.1" y="1139.14" />
+              <mxPoint x="1851.0" y="1150.5300000000002" />
+              <mxPoint x="1869.1" y="1166.4900000000002" />
+              <mxPoint x="1860.9" y="1181.71" />
+              <mxPoint x="1880.0" y="1196.5300000000002" />
+              <mxPoint x="1962.6" y="1260.6100000000001" />
+              <mxPoint x="2004.8" y="1235.48" />
+              <mxPoint x="2104.0" y="1268.5300000000002" />
+              <mxPoint x="2116.9" y="1272.83" />
+              <mxPoint x="2119.9" y="1274.6100000000001" />
+              <mxPoint x="2133.0" y="1278.5300000000002" />
+              <mxPoint x="2146.4" y="1282.5500000000002" />
+              <mxPoint x="2160.5" y="1286.54" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label21" value="TLS / L1 либо L2 по политике" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1874.0" y="1179.5300000000002" width="236" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge22" edge="1" parent="1" source="publisher" target="warehouse" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1824.1" y="1123.52" />
+              <mxPoint x="1839.6" y="1135.4" />
+              <mxPoint x="1851.0" y="1150.5300000000002" />
+              <mxPoint x="1901.8" y="1218.1000000000001" />
+              <mxPoint x="1823.1" y="1276.0100000000002" />
+              <mxPoint x="1880.0" y="1338.5300000000002" />
+              <mxPoint x="1888.9" y="1348.31" />
+              <mxPoint x="2013.9" y="1379.14" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label22" value="TLS / L3, затем активация" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1886.0" y="1321.5300000000002" width="212" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge23" edge="1" parent="1" source="publisher" target="staging" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1823.4" y="1038.7" />
+              <mxPoint x="1838.9" y="1027.4" />
+              <mxPoint x="1851.0" y="1013.5" />
+              <mxPoint x="1879.4" y="980.9000000000001" />
+              <mxPoint x="1848.0" y="949.7" />
+              <mxPoint x="1880.0" y="920.5" />
+              <mxPoint x="1955.2" y="851.9000000000001" />
+              <mxPoint x="2019.8" y="929.8000000000002" />
+              <mxPoint x="2104.0" y="872.5" />
+              <mxPoint x="2194.7" y="810.8000000000002" />
+              <mxPoint x="2254.9" y="693.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label23" value="TLS / проверенная версия" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1890.0" y="855.5" width="204" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge24" edge="1" parent="1" source="publisher" target="registry" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1911.0" y="1026.4" />
+              <mxPoint x="2071.2" y="982.9000000000001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label24" value="TLS / манифест и состояние" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1882.0" y="960.5" width="220" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge25" edge="1" parent="1" source="access" target="iam" style="endArrow=block;html=0;strokeColor=#15803d;dashed=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1673.4" y="1389.13" />
+              <mxPoint x="1610.6" y="1709.43" />
+              <mxPoint x="1527.0" y="1770.5300000000002" />
+              <mxPoint x="1452.2" y="1825.2" />
+              <mxPoint x="1193.6" y="1798.04" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label25" value="Вход / область доступа" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1335.0" y="1753.5300000000002" width="188" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge26" edge="1" parent="1" source="access" target="audit" style="endArrow=block;html=0;strokeColor=#15803d;dashed=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1685.4" y="1415.3600000000001" />
+              <mxPoint x="1636.5" y="1870.75" />
+              <mxPoint x="1527.0" y="1959.526" />
+              <mxPoint x="1388.9" y="2071.53" />
+              <mxPoint x="1169.1" y="2042.2097" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label26" value="Чтение опубликованного набора" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1307.0" y="1942.526" width="244" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge27" edge="1" parent="1" source="access" target="lake" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1835.5" y="1274.44" />
+              <mxPoint x="1858.2" y="1281.5500000000002" />
+              <mxPoint x="1880.0" y="1286.5300000000002" />
+              <mxPoint x="1977.1" y="1308.7200000000003" />
+              <mxPoint x="2089.6" y="1317.5300000000002" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label27" value="TLS / допущенная версия L1 либо L2" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1850.0" y="1269.5300000000002" width="284" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge28" edge="1" parent="1" source="access" target="warehouse" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1759.6" y="1314.88" />
+              <mxPoint x="1812.2" y="1387.2800000000002" />
+              <mxPoint x="1880.0" y="1420.5300000000002" />
+              <mxPoint x="1955.0" y="1457.3200000000002" />
+              <mxPoint x="2046.7" y="1466.4700000000003" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label28" value="TLS / версия L3" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1926.0" y="1403.5300000000002" width="132" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="edge29" edge="1" parent="1" source="access" target="registry" style="endArrow=block;html=0;strokeColor=#475569;dashed=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1918.5" y="1143.17" />
+              <mxPoint x="2019.1" y="1102.2" />
+              <mxPoint x="2104.0" y="1056.5300000000002" />
+              <mxPoint x="2150.3" y="1031.6000000000001" />
+              <mxPoint x="2199.2" y="998.4000000000001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label29" value="TLS / опубликованный манифест" vertex="1" parent="1" style="text;html=0;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;strokeColor=none;">
+          <mxGeometry x="1870.0" y="1039.5300000000002" width="244" height="24" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
