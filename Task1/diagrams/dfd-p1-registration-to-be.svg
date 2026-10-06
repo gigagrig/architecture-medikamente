@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1428" height="310" viewBox="0 0 1428 310" role="img" aria-labelledby="title description">
+  <title id="title">1. Регистрация — To-Be</title>
+  <desc id="description">Минимум полей; документы доступны через приложение</desc>
+  <rect width="1428" height="310" fill="white" />
+  <text x="28" y="32" font-family="DejaVu Sans" font-size="22" fill="#0f172a" font-weight="700">1. Регистрация — To-Be</text>
+  <text x="28" y="60" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Минимум полей; документы доступны через приложение</text>
+  <text x="28" y="89" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Стрелка: направление передачи данных. Красный: уязвимость. Зелёный: мера защиты. Синий: внешний участник.</text>
+  <g id="graph0" class="graph" transform="translate(28,278.0)">
+    <title>DFD</title>
+    <polygon fill="white" stroke="transparent" points="-8.64,8.64 -8.64,-143.64 1380.64,-143.64 1380.64,8.64 -8.64,8.64" />
+    <g id="node1" class="node">
+      <title>E1</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-113 0,-113 0,-22 294,-22 294,-113" />
+      <text text-anchor="start" x="65.5" y="-88.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E1</text>
+      <text text-anchor="start" x="47.5" y="-63.9" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Пациент / ресепшен</text>
+      <text text-anchor="start" x="53.5" y="-38.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Личный кабинет / портал</text>
+    </g>
+    <g id="node2" class="node">
+      <title>1.1</title>
+      <path fill="#f0fdf4" stroke="#166534" stroke-width="2" d="M813,-120.5C813,-120.5 543,-120.5 543,-120.5 537,-120.5 531,-114.5 531,-108.5 531,-108.5 531,-26.5 531,-26.5 531,-20.5 537,-14.5 543,-14.5 543,-14.5 813,-14.5 813,-14.5 819,-14.5 825,-20.5 825,-26.5 825,-26.5 825,-108.5 825,-108.5 825,-114.5 819,-120.5 813,-120.5" />
+      <text text-anchor="start" x="634" y="-96.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 1.1</text>
+      <text text-anchor="start" x="578" y="-71.9" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Оформить пациента</text>
+      <text text-anchor="start" x="574.5" y="-46.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Проверка роли и владельца</text>
+      <text text-anchor="start" x="615.5" y="-31.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Метка PERSONAL</text>
+    </g>
+    <g id="flow_0" class="edge">
+      <title>E1-&gt;1.1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M294.21,-67.5C365.14,-67.5 450.23,-67.5 522.25,-67.5" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="522.47,-70.48 530.97,-67.5 522.47,-64.53 522.47,-70.48" />
+      <rect x="320.5" y="-105.3" width="184.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="412.5" y="-89.3" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Контакты и документы</text>
+      <text text-anchor="middle" x="412.5" y="-74.3" font-family="DejaVu Sans" font-size="14.00" fill="#166534">HTTPS</text>
+    </g>
+    <g id="flow_3" class="edge">
+      <title>1.1-&gt;E1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M530.82,-39.05C517.39,-37.21 503.97,-35.64 491,-34.5 421.49,-28.41 403.51,-28.41 334,-34.5 323.76,-35.4 313.25,-36.56 302.67,-37.92" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="302.22,-34.98 294.18,-39.05 303,-40.88 302.22,-34.98" />
+      <rect x="328.0" y="-69.3" width="169.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="412.5" y="-53.3" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Разрешённые поля</text>
+      <text text-anchor="middle" x="412.5" y="-38.3" font-family="DejaVu Sans" font-size="14.00" fill="#166534">HTTPS, аудит выдачи</text>
+    </g>
+    <g id="node3" class="node">
+      <title>D1</title>
+      <polygon fill="#f0fdf4" stroke="transparent" points="1078,0 1078,-135 1372,-135 1372,0 1078,0" />
+      <text text-anchor="start" x="1170.5" y="-107.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D1</text>
+      <text text-anchor="start" x="1108.5" y="-82.9" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Пациенты и документы</text>
+      <text text-anchor="start" x="1111.5" y="-57.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">PostgreSQL + закрытые файлы</text>
+      <text text-anchor="start" x="1122" y="-42.3" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Шифрование томов и копий</text>
+      <text text-anchor="start" x="1159" y="-20.3" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Личные данные</text>
+      <polyline fill="none" stroke="#166534" stroke-width="2" points="1371,-134 1079,-134 1079,-1 1371,-1 " />
+    </g>
+    <g id="flow_2" class="edge">
+      <title>1.1-&gt;D1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M825.34,-51.53C836.21,-50.72 847.02,-50.02 857.5,-49.5 940.95,-45.33 962.05,-45.33 1045.5,-49.5 1053.2,-49.88 1061.07,-50.36 1069.02,-50.91" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="1068.97,-53.89 1077.66,-51.53 1069.4,-47.95 1068.97,-53.89" />
+      <rect x="851.5" y="-69.3" width="200.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="951.5" y="-53.3" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Данные, метки и история</text>
+    </g>
+    <g id="flow_1" class="edge">
+      <title>D1-&gt;1.1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M1077.91,-67.5C1002.53,-67.5 910.72,-67.5 834.1,-67.5" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="833.81,-64.53 825.31,-67.5 833.81,-70.48 833.81,-64.53" />
+      <rect x="851.5" y="-90.3" width="200.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="951.5" y="-74.3" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Существующие сведения</text>
+    </g>
+  </g>
+</svg>

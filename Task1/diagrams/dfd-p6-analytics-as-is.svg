@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1473" height="554" viewBox="0 0 1473 554" role="img" aria-labelledby="title description">
+  <title id="title">6. Аналитика — As-Is</title>
+  <desc id="description">Ручные отчёты; состав копий и права аналитика не контролируются</desc>
+  <rect width="1473" height="554" fill="white" />
+  <text x="28" y="32" font-family="DejaVu Sans" font-size="22" fill="#0f172a" font-weight="700">6. Аналитика — As-Is</text>
+  <text x="28" y="60" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Ручные отчёты; состав копий и права аналитика не контролируются</text>
+  <text x="28" y="89" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Стрелка: направление передачи данных. Красный: уязвимость. Зелёный: мера защиты. Синий: внешний участник.</text>
+  <g id="graph0" class="graph" transform="translate(28,521.22)">
+    <title>DFD</title>
+    <polygon fill="white" stroke="transparent" points="-8.64,8.64 -8.64,-386.86 1425.64,-386.86 1425.64,8.64 -8.64,8.64" />
+    <g id="node1" class="node">
+      <title>E1</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-345.72 0,-345.72 0,-277.72 294,-277.72 294,-345.72" />
+      <text text-anchor="start" x="65.5" y="-321.52" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E1</text>
+      <text text-anchor="start" x="99.5" y="-297.12" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Аналитик</text>
+    </g>
+    <g id="node3" class="node">
+      <title>6.1</title>
+      <path fill="#fff1f2" stroke="#b91c1c" stroke-width="2" d="M826,-364.72C826,-364.72 556,-364.72 556,-364.72 550,-364.72 544,-358.72 544,-352.72 544,-352.72 544,-270.72 544,-270.72 544,-264.72 550,-258.72 556,-258.72 556,-258.72 826,-258.72 826,-258.72 832,-258.72 838,-264.72 838,-270.72 838,-270.72 838,-352.72 838,-352.72 838,-358.72 832,-364.72 826,-364.72" />
+      <text text-anchor="start" x="647" y="-340.52" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 6.1</text>
+      <text text-anchor="start" x="597.5" y="-316.12" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Подготовить отчёт</text>
+      <text text-anchor="start" x="612" y="-290.52" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Excel, Jupyter / Python</text>
+      <text text-anchor="start" x="609" y="-275.52" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Без аудита обработки</text>
+    </g>
+    <g id="flow_0" class="edge">
+      <title>E1-&gt;6.1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M294.22,-285.22C308.3,-283.39 322.4,-281.83 336,-280.72 409.53,-274.7 428.47,-274.7 502,-280.72 512.84,-281.61 523.99,-282.78 535.2,-284.14" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="534.98,-287.11 543.78,-285.22 535.72,-281.21 534.98,-287.11" />
+      <rect x="340.0" y="-300.52" width="158.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="419" y="-284.52" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Параметры расчёта</text>
+    </g>
+    <g id="node2" class="node">
+      <title>E2</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-210.72 0,-210.72 0,-142.72 294,-142.72 294,-210.72" />
+      <text text-anchor="start" x="65.5" y="-186.52" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E2</text>
+      <text text-anchor="start" x="84" y="-162.12" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Руководство</text>
+    </g>
+    <g id="flow_4" class="edge">
+      <title>6.1-&gt;E2</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M548.3,-258.64C532.78,-253.6 517.13,-248.84 502,-244.72 437.56,-227.16 365.32,-212.42 302.98,-201.2" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="303.15,-198.21 294.25,-199.64 302.1,-204.07 303.15,-198.21" />
+      <rect x="330.0" y="-264.52" width="178.0" height="20.99999999999997" rx="4" fill="white" />
+      <text text-anchor="middle" x="419" y="-248.52" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Управленческий отчёт</text>
+    </g>
+    <g id="node4" class="node">
+      <title>D1</title>
+      <polygon fill="#fff1f2" stroke="transparent" points="1123,-245.22 1123,-378.22 1417,-378.22 1417,-245.22 1123,-245.22" />
+      <text text-anchor="start" x="1215.5" y="-350.52" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D1</text>
+      <text text-anchor="start" x="1163" y="-326.12" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Рабочие Excel-файлы</text>
+      <text text-anchor="start" x="1191.5" y="-300.52" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Общий диск клиники</text>
+      <text text-anchor="start" x="1171" y="-278.52" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Личные / медицинские /</text>
+      <text text-anchor="start" x="1218.5" y="-264.52" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">финансовые</text>
+      <polyline fill="none" stroke="#b91c1c" stroke-width="2" points="1416,-377.22 1124,-377.22 1124,-246.22 1416,-246.22 " />
+    </g>
+    <g id="node5" class="node">
+      <title>D2</title>
+      <polygon fill="#fff1f2" stroke="transparent" points="1123,-23.72 1123,-171.72 1417,-171.72 1417,-23.72 1123,-23.72" />
+      <text text-anchor="start" x="1215.5" y="-144.52" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D2</text>
+      <text text-anchor="start" x="1155" y="-120.12" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Промежуточные копии</text>
+      <text text-anchor="start" x="1147" y="-94.52" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Возможное неучтённое хранение</text>
+      <text text-anchor="start" x="1172" y="-79.52" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Наличие нужно проверить</text>
+      <text text-anchor="start" x="1171" y="-57.52" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Личные / медицинские /</text>
+      <text text-anchor="start" x="1218.5" y="-43.52" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">финансовые</text>
+      <polyline fill="none" stroke="#b91c1c" stroke-width="2" points="1416,-170.72 1124,-170.72 1124,-24.72 1416,-24.72 " />
+    </g>
+    <g id="flow_2" class="edge">
+      <title>6.1-&gt;D2</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M835,-258.68C920.04,-227.14 1027.92,-187.13 1114.85,-154.89" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="1115.99,-157.64 1122.93,-151.89 1113.92,-152.06 1115.99,-157.64" />
+      <rect x="894.5" y="-256.52" width="172.0" height="20.99999999999997" rx="4" fill="white" />
+      <text text-anchor="middle" x="980.5" y="-240.52" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Возможные выгрузки</text>
+    </g>
+    <g id="flow_1" class="edge">
+      <title>D1-&gt;6.1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M1162.85,-245.06C1148.13,-232.62 1134.23,-218.74 1123,-203.72 1090.42,-160.14 1125.59,-119.9 1081,-88.72 1007.79,-37.52 961.01,-51.06 880,-88.72 808.52,-121.95 754.45,-197.23 723.05,-251.13" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="720.42,-249.73 718.77,-258.59 725.58,-252.7 720.42,-249.73" />
+      <rect x="874.0" y="-108.52" width="213.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="980.5" y="-92.52" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Данные пациентов и оплат</text>
+    </g>
+    <g id="flow_3" class="edge">
+      <title>D2-&gt;6.1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M1122.85,-26.38C1046.68,0.24 954.2,15.38 880,-24.72 791.88,-72.34 738.41,-181.24 712.09,-250.36" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="709.2,-249.58 709.01,-258.59 714.77,-251.67 709.2,-249.58" />
+      <rect x="901.0" y="-44.519999999999996" width="159.0" height="20.999999999999996" rx="4" fill="white" />
+      <text text-anchor="middle" x="980.5" y="-28.52" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Повторные расчёты</text>
+    </g>
+  </g>
+</svg>

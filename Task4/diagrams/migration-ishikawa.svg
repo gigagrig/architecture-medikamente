@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2280" height="1360" viewBox="0 0 2280 1360">
+  <title>Исикава: причины деградации при миграции Медикаменте</title>
+  <desc>Шесть категорий, восемнадцать причин; идентификаторы связаны с реестром migration-risks.md.</desc>
+  <rect width="2280" height="1360" fill="#ffffff" />
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#334155" />
+    </marker>
+  </defs>
+  <text x="77" y="63" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="30" font-weight="bold">
+    <tspan x="77" dy="0">МЕДИКАМЕНТЕ · Причины деградации при миграции</tspan>
+  </text>
+  <text x="77" y="112" fill="#475569" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="normal">
+    <tspan x="77" dy="0">Диаграмма Исикавы: факты исходного устройства и проверяемые гипотезы. Коды раскрыты в реестре рисков.</tspan>
+  </text>
+  <line x1="70" y1="680" x2="2010" y2="680" stroke="#334155" stroke-width="5" marker-end="url(#arrow)" />
+  <rect x="2020" y="584" width="235" height="190" fill="#fff1f2" stroke="#991b1b" rx="10" stroke-width="2" />
+  <text x="2032" y="613" fill="#991b1b" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="bold">
+    <tspan x="2032" dy="0">Деградация</tspan>
+    <tspan x="2032" dy="28">обслуживания</tspan>
+    <tspan x="2032" dy="28">при миграции</tspan>
+    <tspan x="2032" dy="28">и росте данных</tspan>
+  </text>
+  <rect x="70" y="145" width="510" height="64" fill="#f8fafc" stroke="#0369a1" rx="10" stroke-width="2" />
+  <text x="82" y="176" fill="#0369a1" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="bold">
+    <tspan x="82" dy="0">Инфраструктура</tspan>
+  </text>
+  <line x1="500" y1="220" x2="620" y2="680" stroke="#0369a1" stroke-width="4" />
+  <text x="90" y="316" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="90" dy="0">INF-01</tspan>
+    <tspan x="90" dy="25">Конкуренция служб одного сервера</tspan>
+  </text>
+  <line x1="88" y1="368" x2="538.6086956521739" y2="368" stroke="#0369a1" stroke-width="2" />
+  <text x="90" y="436" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="90" dy="0">INF-02</tspan>
+    <tspan x="90" dy="25">Ограничения каналов филиалов</tspan>
+  </text>
+  <line x1="88" y1="488" x2="569.9130434782609" y2="488" stroke="#0369a1" stroke-width="2" />
+  <text x="90" y="556" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="90" dy="0">INF-03</tspan>
+    <tspan x="90" dy="25">Зависимость восстановления от узла</tspan>
+  </text>
+  <line x1="88" y1="608" x2="601.2173913043479" y2="608" stroke="#0369a1" stroke-width="2" />
+  <rect x="690" y="145" width="510" height="64" fill="#f8fafc" stroke="#7c3aed" rx="10" stroke-width="2" />
+  <text x="702" y="176" fill="#7c3aed" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="bold">
+    <tspan x="702" dy="0">Данные</tspan>
+  </text>
+  <line x1="1120" y1="220" x2="1240" y2="680" stroke="#7c3aed" stroke-width="4" />
+  <text x="710" y="316" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="710" dy="0">DAT-01</tspan>
+    <tspan x="710" dy="25">Дубли и несвязанные документы</tspan>
+  </text>
+  <line x1="708" y1="368" x2="1158.608695652174" y2="368" stroke="#7c3aed" stroke-width="2" />
+  <text x="710" y="436" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="710" dy="0">DAT-02</tspan>
+    <tspan x="710" dy="25">Большой импорт и временные файлы</tspan>
+  </text>
+  <line x1="708" y1="488" x2="1189.913043478261" y2="488" stroke="#7c3aed" stroke-width="2" />
+  <text x="710" y="556" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="710" dy="0">DAT-03</tspan>
+    <tspan x="710" dy="25">Изменения источника при переносе</tspan>
+  </text>
+  <line x1="708" y1="608" x2="1221.2173913043478" y2="608" stroke="#7c3aed" stroke-width="2" />
+  <rect x="1310" y="145" width="510" height="64" fill="#f8fafc" stroke="#0f766e" rx="10" stroke-width="2" />
+  <text x="1322" y="176" fill="#0f766e" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="bold">
+    <tspan x="1322" dy="0">Интеграции</tspan>
+  </text>
+  <line x1="1740" y1="220" x2="1860" y2="680" stroke="#0f766e" stroke-width="4" />
+  <text x="1330" y="316" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="1330" dy="0">INT-01</tspan>
+    <tspan x="1330" dy="25">Блокировки файловой 1С / ККМ</tspan>
+  </text>
+  <line x1="1328" y1="368" x2="1778.608695652174" y2="368" stroke="#0f766e" stroke-width="2" />
+  <text x="1330" y="436" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="1330" dy="0">INT-02</tspan>
+    <tspan x="1330" dy="25">Таймауты, лимиты и повторы API</tspan>
+  </text>
+  <line x1="1328" y1="488" x2="1809.913043478261" y2="488" stroke="#0f766e" stroke-width="2" />
+  <text x="1330" y="556" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="1330" dy="0">INT-03</tspan>
+    <tspan x="1330" dy="25">Избыточные / несовместимые события</tspan>
+  </text>
+  <line x1="1328" y1="608" x2="1841.2173913043478" y2="608" stroke="#0f766e" stroke-width="2" />
+  <rect x="70" y="1185" width="510" height="64" fill="#f8fafc" stroke="#b45309" rx="10" stroke-width="2" />
+  <text x="82" y="1216" fill="#b45309" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="bold">
+    <tspan x="82" dy="0">Приложение и защита</tspan>
+  </text>
+  <line x1="500" y1="1140" x2="620" y2="680" stroke="#b45309" stroke-width="4" />
+  <text x="90" y="816" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="90" dy="0">APP-01</tspan>
+    <tspan x="90" dy="25">Индексы и конфликтующие брони</tspan>
+  </text>
+  <line x1="88" y1="868" x2="570.9565217391305" y2="868" stroke="#b45309" stroke-width="2" />
+  <text x="90" y="936" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="90" dy="0">APP-02</tspan>
+    <tspan x="90" dy="25">Синхронные зависимости защиты</tspan>
+  </text>
+  <line x1="88" y1="988" x2="539.6521739130435" y2="988" stroke="#b45309" stroke-width="2" />
+  <text x="90" y="1056" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="90" dy="0">APP-03</tspan>
+    <tspan x="90" dy="25">Дробление сервисов / тяжёлые отчёты</tspan>
+  </text>
+  <line x1="88" y1="1108" x2="508.3478260869565" y2="1108" stroke="#b45309" stroke-width="2" />
+  <rect x="690" y="1185" width="510" height="64" fill="#f8fafc" stroke="#be185d" rx="10" stroke-width="2" />
+  <text x="702" y="1216" fill="#be185d" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="bold">
+    <tspan x="702" dy="0">Персонал</tspan>
+  </text>
+  <line x1="1120" y1="1140" x2="1240" y2="680" stroke="#be185d" stroke-width="4" />
+  <text x="710" y="816" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="710" dy="0">PEO-01</tspan>
+    <tspan x="710" dy="25">Недостаток владельцев и дежурства</tspan>
+  </text>
+  <line x1="708" y1="868" x2="1190.9565217391305" y2="868" stroke="#be185d" stroke-width="2" />
+  <text x="710" y="936" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="710" dy="0">PEO-02</tspan>
+    <tspan x="710" dy="25">Привычный ввод в старые Excel</tspan>
+  </text>
+  <line x1="708" y1="988" x2="1159.6521739130435" y2="988" stroke="#be185d" stroke-width="2" />
+  <text x="710" y="1056" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="710" dy="0">PEO-03</tspan>
+    <tspan x="710" dy="25">Ошибки назначения прав и обучения</tspan>
+  </text>
+  <line x1="708" y1="1108" x2="1128.3478260869565" y2="1108" stroke="#be185d" stroke-width="2" />
+  <rect x="1310" y="1185" width="510" height="64" fill="#f8fafc" stroke="#4338ca" rx="10" stroke-width="2" />
+  <text x="1322" y="1216" fill="#4338ca" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="bold">
+    <tspan x="1322" dy="0">Процессы и контроль</tspan>
+  </text>
+  <line x1="1740" y1="1140" x2="1860" y2="680" stroke="#4338ca" stroke-width="4" />
+  <text x="1330" y="816" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="1330" dy="0">PRO-01</tspan>
+    <tspan x="1330" dy="25">Нет исходных метрик и оповещений</tspan>
+  </text>
+  <line x1="1328" y1="868" x2="1810.9565217391305" y2="868" stroke="#4338ca" stroke-width="2" />
+  <text x="1330" y="936" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="1330" dy="0">PRO-02</tspan>
+    <tspan x="1330" dy="25">Непроверенная заморозка / возврат</tspan>
+  </text>
+  <line x1="1328" y1="988" x2="1779.6521739130435" y2="988" stroke="#4338ca" stroke-width="2" />
+  <text x="1330" y="1056" fill="#172554" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="1330" dy="0">PRO-03</tspan>
+    <tspan x="1330" dy="25">Несколько изменений одновременно</tspan>
+  </text>
+  <line x1="1328" y1="1108" x2="1748.3478260869565" y2="1108" stroke="#4338ca" stroke-width="2" />
+  <text x="77" y="1316" fill="#475569" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal">
+    <tspan x="77" dy="0">Главная ось → последствие. Наклонные ветви → категории. Горизонтальные ветви → возможные причины.</tspan>
+    <tspan x="77" dy="25">Наличие причины не означает измеренную деградацию; подтверждение и приоритет мер — в migration-risks.md.</tspan>
+  </text>
+</svg>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="514" viewBox="0 0 1400 514" role="img" aria-labelledby="title description">
+  <title id="title">2. Запись на приём — To-Be</title>
+  <desc id="description">Свободные слоты без ФИО; личные записи — по правам</desc>
+  <rect width="1400" height="514" fill="white" />
+  <text x="28" y="32" font-family="DejaVu Sans" font-size="22" fill="#0f172a" font-weight="700">2. Запись на приём — To-Be</text>
+  <text x="28" y="60" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Свободные слоты без ФИО; личные записи — по правам</text>
+  <text x="28" y="89" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Стрелка: направление передачи данных. Красный: уязвимость. Зелёный: мера защиты. Синий: внешний участник.</text>
+  <g id="graph0" class="graph" transform="translate(28,481.17)">
+    <title>DFD</title>
+    <polygon fill="white" stroke="transparent" points="-8.64,8.64 -8.64,-346.81 1352.64,-346.81 1352.64,8.64 -8.64,8.64" />
+    <g id="node1" class="node">
+      <title>E1</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-304.67 0,-304.67 0,-236.67 294,-236.67 294,-304.67" />
+      <text text-anchor="start" x="65.5" y="-280.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E1</text>
+      <text text-anchor="start" x="105" y="-256.07" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Пациент</text>
+    </g>
+    <g id="node3" class="node">
+      <title>2.1</title>
+      <path fill="#f0fdf4" stroke="#166534" stroke-width="2" d="M839,-323.67C839,-323.67 569,-323.67 569,-323.67 563,-323.67 557,-317.67 557,-311.67 557,-311.67 557,-229.67 557,-229.67 557,-223.67 563,-217.67 569,-217.67 569,-217.67 839,-217.67 839,-217.67 845,-217.67 851,-223.67 851,-229.67 851,-229.67 851,-311.67 851,-311.67 851,-317.67 845,-323.67 839,-323.67" />
+      <text text-anchor="start" x="660" y="-299.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 2.1</text>
+      <text text-anchor="start" x="608.5" y="-275.07" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Управлять записью</text>
+      <text text-anchor="start" x="608" y="-249.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Роль + связь с пациентом</text>
+      <text text-anchor="start" x="621" y="-234.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Аудит, метка MEDICAL</text>
+    </g>
+    <g id="flow_0" class="edge">
+      <title>E1-&gt;2.1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M268.57,-236.66C290.82,-231.67 313.98,-227.33 336,-224.67 414.98,-215.15 436.02,-215.15 515,-224.67 525.9,-225.99 537.08,-227.71 548.29,-229.73" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="547.96,-232.69 556.86,-231.32 549.05,-226.84 547.96,-232.69" />
+      <rect x="360.5" y="-259.47" width="130.0" height="36.00000000000003" rx="4" fill="white" />
+      <text text-anchor="middle" x="425.5" y="-243.47" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Запись / отмена</text>
+      <text text-anchor="middle" x="425.5" y="-228.47" font-family="DejaVu Sans" font-size="14.00" fill="#166534">HTTPS</text>
+    </g>
+    <g id="node2" class="node">
+      <title>E2</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-104.67 0,-104.67 0,-36.67 294,-36.67 294,-104.67" />
+      <text text-anchor="start" x="65.5" y="-80.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E2</text>
+      <text text-anchor="start" x="65.5" y="-56.07" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Ресепшен / врач</text>
+    </g>
+    <g id="flow_1" class="edge">
+      <title>E2-&gt;2.1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M294.21,-66.43C363.58,-69.3 446.16,-79.99 515,-109.67 567.57,-132.33 616.33,-175 651.02,-210.72" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="649.3,-213.23 657.33,-217.31 653.59,-209.11 649.3,-213.23" />
+      <rect x="349.0" y="-144.47" width="153.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="425.5" y="-128.47" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Запрос расписания</text>
+      <text text-anchor="middle" x="425.5" y="-113.47" font-family="DejaVu Sans" font-size="14.00" fill="#166534">HTTPS</text>
+    </g>
+    <g id="flow_4" class="edge">
+      <title>2.1-&gt;E1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M623.71,-217.41C591.42,-198.75 552.84,-180.11 515,-170.67 437.81,-151.42 413.19,-151.42 336,-170.67 288.28,-182.57 239.39,-209.11 203.43,-231.86" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="201.5,-229.56 195.95,-236.65 204.71,-234.57 201.5,-229.56" />
+      <rect x="343.0" y="-205.47" width="165.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="425.5" y="-189.47" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Слоты и свои записи</text>
+      <text text-anchor="middle" x="425.5" y="-174.47" font-family="DejaVu Sans" font-size="14.00" fill="#166534">HTTPS</text>
+    </g>
+    <g id="flow_5" class="edge">
+      <title>2.1-&gt;E2</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M680.38,-217.43C651.74,-157.69 596.12,-63.87 515,-23.67 426.15,20.36 311,-5.8 233.58,-33.52" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="232.24,-30.84 225.27,-36.55 234.28,-36.43 232.24,-30.84" />
+      <rect x="330.0" y="-58.47" width="191.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="425.5" y="-42.47" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Записи в пределах роли</text>
+      <text text-anchor="middle" x="425.5" y="-27.47" font-family="DejaVu Sans" font-size="14.00" fill="#166534">HTTPS</text>
+    </g>
+    <g id="node4" class="node">
+      <title>D1</title>
+      <polygon fill="#f0fdf4" stroke="transparent" points="1050,-203.17 1050,-338.17 1344,-338.17 1344,-203.17 1050,-203.17" />
+      <text text-anchor="start" x="1142.5" y="-310.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D1</text>
+      <text text-anchor="start" x="1094.5" y="-286.07" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Расписание и записи</text>
+      <text text-anchor="start" x="1157" y="-260.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">PostgreSQL</text>
+      <text text-anchor="start" x="1078" y="-245.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Шифрование и резервная копия</text>
+      <text text-anchor="start" x="1103" y="-223.47" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Личные / медицинские</text>
+      <polyline fill="none" stroke="#166534" stroke-width="2" points="1343,-337.17 1051,-337.17 1051,-204.17 1343,-204.17 " />
+    </g>
+    <g id="flow_3" class="edge">
+      <title>2.1-&gt;D1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M851.22,-244.18C865.3,-242.35 879.4,-240.79 893,-239.67 943.94,-235.5 957.06,-235.5 1008,-239.67 1018.84,-240.56 1029.99,-241.73 1041.2,-243.1" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="1040.98,-246.07 1049.78,-244.18 1041.72,-240.16 1040.98,-246.07" />
+      <rect x="889.0" y="-259.47" width="123.0" height="21.00000000000003" rx="4" fill="white" />
+      <text text-anchor="middle" x="950.5" y="-243.47" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Бронь / отмена</text>
+    </g>
+    <g id="flow_2" class="edge">
+      <title>D1-&gt;2.1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M1129.69,-203.16C1096.27,-173.92 1053.27,-142.93 1008,-127.67 959.57,-111.35 941.43,-111.35 893,-127.67 843.25,-144.44 796.24,-180.21 761.67,-211.77" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="759.58,-209.65 755.36,-217.61 763.62,-214.02 759.58,-209.65" />
+      <rect x="887.0" y="-147.47" width="127.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="950.5" y="-131.47" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Слоты и записи</text>
+    </g>
+  </g>
+</svg>

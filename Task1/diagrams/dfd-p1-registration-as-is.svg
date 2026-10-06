@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1465" height="462" viewBox="0 0 1465 462" role="img" aria-labelledby="title description">
+  <title id="title">1. Регистрация — As-Is</title>
+  <desc id="description">Ручной ввод и общий доступ к анкетам и сканам</desc>
+  <rect width="1465" height="462" fill="white" />
+  <text x="28" y="32" font-family="DejaVu Sans" font-size="22" fill="#0f172a" font-weight="700">1. Регистрация — As-Is</text>
+  <text x="28" y="60" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Ручной ввод и общий доступ к анкетам и сканам</text>
+  <text x="28" y="89" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Стрелка: направление передачи данных. Красный: уязвимость. Зелёный: мера защиты. Синий: внешний участник.</text>
+  <g id="graph0" class="graph" transform="translate(28,429.5)">
+    <title>DFD</title>
+    <polygon fill="white" stroke="transparent" points="-8.64,8.64 -8.64,-295.14 1417.64,-295.14 1417.64,8.64 -8.64,8.64" />
+    <g id="node1" class="node">
+      <title>E1</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-253 0,-253 0,-185 294,-185 294,-253" />
+      <text text-anchor="start" x="65.5" y="-228.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E1</text>
+      <text text-anchor="start" x="105" y="-204.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Пациент</text>
+    </g>
+    <g id="node3" class="node">
+      <title>1.1</title>
+      <path fill="#fff1f2" stroke="#b91c1c" stroke-width="2" d="M850,-264.5C850,-264.5 580,-264.5 580,-264.5 574,-264.5 568,-258.5 568,-252.5 568,-252.5 568,-185.5 568,-185.5 568,-179.5 574,-173.5 580,-173.5 580,-173.5 850,-173.5 850,-173.5 856,-173.5 862,-179.5 862,-185.5 862,-185.5 862,-252.5 862,-252.5 862,-258.5 856,-264.5 850,-264.5" />
+      <text text-anchor="start" x="671" y="-239.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 1.1</text>
+      <text text-anchor="start" x="615" y="-215.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Оформить пациента</text>
+      <text text-anchor="start" x="608" y="-189.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Ввод анкеты и сканирование</text>
+    </g>
+    <g id="flow_0" class="edge">
+      <title>E1-&gt;1.1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M268.57,-184.98C290.82,-180 313.98,-175.65 336,-173 419.84,-162.89 442.16,-162.89 526,-173 536.9,-174.31 548.08,-176.04 559.29,-178.06" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="558.96,-181.02 567.86,-179.65 560.05,-175.17 558.96,-181.02" />
+      <rect x="331.0" y="-207.8" width="200.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="431" y="-191.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Контакты и расширенная</text>
+      <text text-anchor="middle" x="431" y="-176.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">анкета</text>
+    </g>
+    <g id="node2" class="node">
+      <title>E2</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-68 0,-68 0,0 294,0 294,-68" />
+      <text text-anchor="start" x="65.5" y="-43.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E2</text>
+      <text text-anchor="start" x="97.5" y="-19.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Ресепшен</text>
+    </g>
+    <g id="flow_1" class="edge">
+      <title>E2-&gt;1.1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M294.26,-39.62C366.08,-46.26 452.71,-60.17 526,-89 573.26,-107.59 620.25,-140.08 655.43,-167.92" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="653.81,-170.44 662.3,-173.43 657.52,-165.79 653.81,-170.44" />
+      <rect x="347.5" y="-108.8" width="167.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="431" y="-92.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Введённые сведения</text>
+    </g>
+    <g id="flow_4" class="edge">
+      <title>1.1-&gt;E1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M633.31,-173.44C601,-157.65 562.77,-141.93 526,-134 443.45,-116.21 418.55,-116.21 336,-134 293.52,-143.16 249.08,-162.73 214.08,-180.78" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="212.45,-178.27 206.3,-184.85 215.21,-183.54 212.45,-178.27" />
+      <rect x="330.0" y="-153.8" width="202.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="431" y="-137.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Документы для пациента</text>
+    </g>
+    <g id="node4" class="node">
+      <title>D1</title>
+      <polygon fill="#fff1f2" stroke="transparent" points="1115,-151.5 1115,-286.5 1409,-286.5 1409,-151.5 1115,-151.5" />
+      <text text-anchor="start" x="1207.5" y="-258.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D1</text>
+      <text text-anchor="start" x="1183.5" y="-234.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Анкеты и сканы</text>
+      <text text-anchor="start" x="1216.5" y="-208.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Общий диск</text>
+      <text text-anchor="start" x="1168" y="-193.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Нет ограничений по роли</text>
+      <text text-anchor="start" x="1168" y="-171.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Личные / медицинские</text>
+      <polyline fill="none" stroke="#b91c1c" stroke-width="2" points="1408,-285.5 1116,-285.5 1116,-152.5 1408,-152.5 " />
+    </g>
+    <g id="flow_2" class="edge">
+      <title>1.1-&gt;D1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M862.22,-192.51C876.3,-190.67 890.4,-189.11 904,-188 978.86,-181.87 998.14,-181.87 1073,-188 1083.84,-188.89 1094.99,-190.06 1106.2,-191.42" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="1105.98,-194.39 1114.78,-192.51 1106.72,-188.49 1105.98,-194.39" />
+      <rect x="904.5" y="-207.8" width="168.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="988.5" y="-191.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Строка Excel и сканы</text>
+    </g>
+    <g id="flow_3" class="edge">
+      <title>D1-&gt;1.1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M1114.76,-161.51C1100.81,-157.66 1086.74,-154.38 1073,-152 998.99,-139.21 978.01,-139.21 904,-152 880.33,-156.09 855.69,-162.88 832.35,-170.61" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="831.25,-167.84 824.15,-173.38 833.15,-173.47 831.25,-167.84" />
+      <rect x="898.0" y="-171.8" width="181.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="988.5" y="-155.8" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Существующая анкета</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1509" height="653" viewBox="0 0 1509 653" role="img" aria-labelledby="title description">
+  <title id="title">4. Лаборатория — To-Be</title>
+  <desc id="description">HTTPS API; отдельные учётные данные и минимум полей</desc>
+  <rect width="1509" height="653" fill="white" />
+  <text x="28" y="32" font-family="DejaVu Sans" font-size="22" fill="#0f172a" font-weight="700">4. Лаборатория — To-Be</text>
+  <text x="28" y="60" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">HTTPS API; отдельные учётные данные и минимум полей</text>
+  <text x="28" y="89" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Стрелка: направление передачи данных. Красный: уязвимость. Зелёный: мера защиты. Синий: внешний участник.</text>
+  <g id="graph0" class="graph" transform="translate(28,620.4300000000001)">
+    <title>DFD</title>
+    <polygon fill="white" stroke="transparent" points="-8.64,8.64 -8.64,-486.07 1461.64,-486.07 1461.64,8.64 -8.64,8.64" />
+    <g id="node1" class="node">
+      <title>E1</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-455.43 0,-455.43 0,-364.43 294,-364.43 294,-455.43" />
+      <text text-anchor="start" x="65.5" y="-430.73" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E1</text>
+      <text text-anchor="start" x="122.5" y="-406.33" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Врач</text>
+      <text text-anchor="start" x="63" y="-380.73" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Доступ по назначению</text>
+    </g>
+    <g id="node3" class="node">
+      <title>4.1</title>
+      <path fill="#f0fdf4" stroke="#166534" stroke-width="2" d="M867,-462.93C867,-462.93 597,-462.93 597,-462.93 591,-462.93 585,-456.93 585,-450.93 585,-450.93 585,-368.93 585,-368.93 585,-362.93 591,-356.93 597,-356.93 597,-356.93 867,-356.93 867,-356.93 873,-356.93 879,-362.93 879,-368.93 879,-368.93 879,-450.93 879,-450.93 879,-456.93 873,-462.93 867,-462.93" />
+      <text text-anchor="start" x="688" y="-438.73" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 4.1</text>
+      <text text-anchor="start" x="602.5" y="-414.33" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Обменяться результатами</text>
+      <text text-anchor="start" x="640" y="-388.73" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Проверка заказа и полей</text>
+      <text text-anchor="start" x="649" y="-373.73" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Аудит, метка MEDICAL</text>
+    </g>
+    <g id="flow_0" class="edge">
+      <title>E1-&gt;4.1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M294.14,-370.58C308.2,-367.88 322.32,-365.58 336,-363.93 427.34,-352.92 451.66,-352.92 543,-363.93 553.9,-365.25 565.08,-366.98 576.29,-368.99" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="575.96,-371.96 584.86,-370.58 577.05,-366.11 575.96,-371.96" />
+      <rect x="385.0" y="-398.73" width="109.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="439.5" y="-382.73" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Направление</text>
+      <text text-anchor="middle" x="439.5" y="-367.73" font-family="DejaVu Sans" font-size="14.00" fill="#166534">HTTPS</text>
+    </g>
+    <g id="node2" class="node">
+      <title>E2</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-243.43 0,-243.43 0,-152.43 294,-152.43 294,-243.43" />
+      <text text-anchor="start" x="65.5" y="-218.73" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E2</text>
+      <text text-anchor="start" x="82" y="-194.33" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Лаборатория</text>
+      <text text-anchor="start" x="61" y="-168.73" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Только заказы клиники</text>
+    </g>
+    <g id="flow_2" class="edge">
+      <title>E2-&gt;4.1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M294.22,-195.34C371.17,-198.92 465.39,-211.35 543,-245.93 596.29,-269.68 645.56,-313.84 680.27,-350.36" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="678.16,-352.46 686.15,-356.62 682.5,-348.39 678.16,-352.46" />
+      <rect x="362.5" y="-280.73" width="154.0" height="36.00000000000003" rx="4" fill="white" />
+      <text text-anchor="middle" x="439.5" y="-264.73" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Код и результат</text>
+      <text text-anchor="middle" x="439.5" y="-249.73" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Ответ API по HTTPS</text>
+    </g>
+    <g id="flow_5" class="edge">
+      <title>4.1-&gt;E1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M652.69,-356.68C620.23,-337.66 581.27,-318.56 543,-308.93 453.78,-286.49 425.22,-286.49 336,-308.93 295.58,-319.1 254.38,-339.84 220.89,-359.89" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="219.15,-357.47 213.43,-364.42 222.24,-362.55 219.15,-357.47" />
+      <rect x="332.5" y="-343.73" width="214.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="439.5" y="-327.73" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Результат своего пациента</text>
+      <text text-anchor="middle" x="439.5" y="-312.73" font-family="DejaVu Sans" font-size="14.00" fill="#166534">HTTPS</text>
+    </g>
+    <g id="flow_1" class="edge">
+      <title>4.1-&gt;E2</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M722.63,-356.92C705.86,-270.83 659.25,-103.04 543,-30.93 464.82,17.56 422,1.75 336,-30.93 276.01,-53.73 222.93,-105.41 188.6,-145.28" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="186.07,-143.67 182.83,-152.08 190.6,-147.52 186.07,-143.67" />
+      <rect x="330.0" y="-65.72999999999999" width="219.0" height="35.99999999999999" rx="4" fill="white" />
+      <text text-anchor="middle" x="439.5" y="-49.73" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Код заказа, виды анализов</text>
+      <text text-anchor="middle" x="439.5" y="-34.73" font-family="DejaVu Sans" font-size="14.00" fill="#166534">HTTPS + секрет интеграции</text>
+    </g>
+    <g id="node4" class="node">
+      <title>D1</title>
+      <polygon fill="#f0fdf4" stroke="transparent" points="1159,-342.43 1159,-477.43 1453,-477.43 1453,-342.43 1159,-342.43" />
+      <text text-anchor="start" x="1251.5" y="-449.73" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D1</text>
+      <text text-anchor="start" x="1202" y="-425.33" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Заказы и результаты</text>
+      <text text-anchor="start" x="1217" y="-399.73" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Связь кода с пациентом</text>
+      <text text-anchor="start" x="1187" y="-384.73" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Шифрование и резервная копия</text>
+      <text text-anchor="start" x="1212" y="-362.73" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Личные / медицинские</text>
+      <polyline fill="none" stroke="#166534" stroke-width="2" points="1452,-476.43 1160,-476.43 1160,-343.43 1452,-343.43 " />
+    </g>
+    <g id="flow_4" class="edge">
+      <title>4.1-&gt;D1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M879.22,-383.44C893.3,-381.61 907.4,-380.05 921,-378.93 1007.82,-371.82 1030.18,-371.82 1117,-378.93 1127.84,-379.82 1138.99,-380.99 1150.2,-382.36" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="1149.98,-385.33 1158.78,-383.44 1150.72,-379.43 1149.98,-385.33" />
+      <rect x="923.0" y="-398.73" width="192.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="1019" y="-382.73" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Проверенный результат</text>
+    </g>
+    <g id="flow_3" class="edge">
+      <title>D1-&gt;4.1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M1238.69,-342.42C1205.27,-313.18 1162.27,-282.19 1117,-266.93 1034.45,-239.11 1003.55,-239.11 921,-266.93 871.25,-283.71 824.24,-319.47 789.67,-351.03" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="787.58,-348.91 783.36,-356.87 791.62,-353.28 787.58,-348.91" />
+      <rect x="915.0" y="-286.73" width="208.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="1019" y="-270.73" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Заказ и связь с пациентом</text>
+    </g>
+  </g>
+</svg>

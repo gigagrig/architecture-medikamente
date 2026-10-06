@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1449" height="634" viewBox="0 0 1449 634" role="img" aria-labelledby="title description">
+  <title id="title">5. Оплата — As-Is</title>
+  <desc id="description">Кассир дублирует учёт; доступ к файлам не разделён</desc>
+  <rect width="1449" height="634" fill="white" />
+  <text x="28" y="32" font-family="DejaVu Sans" font-size="22" fill="#0f172a" font-weight="700">5. Оплата — As-Is</text>
+  <text x="28" y="60" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Кассир дублирует учёт; доступ к файлам не разделён</text>
+  <text x="28" y="89" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Стрелка: направление передачи данных. Красный: уязвимость. Зелёный: мера защиты. Синий: внешний участник.</text>
+  <g id="graph0" class="graph" transform="translate(28,601.6700000000001)">
+    <title>DFD</title>
+    <polygon fill="white" stroke="transparent" points="-8.64,8.64 -8.64,-467.31 1401.64,-467.31 1401.64,8.64 -8.64,8.64" />
+    <g id="node1" class="node">
+      <title>E1</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-432.67 0,-432.67 0,-364.67 294,-364.67 294,-432.67" />
+      <text text-anchor="start" x="65.5" y="-408.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E1</text>
+      <text text-anchor="start" x="63" y="-384.07" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Пациент / кассир</text>
+    </g>
+    <g id="node3" class="node">
+      <title>5.1</title>
+      <path fill="#fff1f2" stroke="#b91c1c" stroke-width="2" d="M823,-444.17C823,-444.17 553,-444.17 553,-444.17 547,-444.17 541,-438.17 541,-432.17 541,-432.17 541,-365.17 541,-365.17 541,-359.17 547,-353.17 553,-353.17 553,-353.17 823,-353.17 823,-353.17 829,-353.17 835,-359.17 835,-365.17 835,-365.17 835,-432.17 835,-432.17 835,-438.17 829,-444.17 823,-444.17" />
+      <text text-anchor="start" x="644" y="-419.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 5.1</text>
+      <text text-anchor="start" x="617" y="-395.07" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Учесть оплату</text>
+      <text text-anchor="start" x="597.5" y="-369.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Ручной ввод в Excel и 1С</text>
+    </g>
+    <g id="flow_0" class="edge">
+      <title>E1-&gt;5.1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M294.22,-372.18C308.3,-370.34 322.4,-368.78 336,-367.67 408.2,-361.76 426.8,-361.76 499,-367.67 509.84,-368.56 520.99,-369.73 532.2,-371.1" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="531.98,-374.07 540.78,-372.18 532.72,-368.16 531.98,-374.07" />
+      <rect x="352.0" y="-387.47" width="131.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="417.5" y="-371.47" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Услуги и оплата</text>
+    </g>
+    <g id="node2" class="node">
+      <title>E2</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-260.17 0,-260.17 0,-169.17 294,-169.17 294,-260.17" />
+      <text text-anchor="start" x="65.5" y="-235.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E2</text>
+      <text text-anchor="start" x="118.5" y="-211.07" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Касса</text>
+      <text text-anchor="start" x="38.5" y="-185.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Связь с 1С через TCP/IP и OLE</text>
+    </g>
+    <g id="flow_6" class="edge">
+      <title>E2-&gt;5.1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M294.32,-236.57C358.44,-248.75 433.77,-266.62 499,-291.67 537.62,-306.5 577.82,-328.39 611.08,-348.5" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="609.7,-351.15 618.51,-353.03 612.8,-346.07 609.7,-351.15" />
+      <rect x="367.5" y="-311.47" width="100.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="417.5" y="-295.47" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Чек / статус</text>
+    </g>
+    <g id="flow_7" class="edge">
+      <title>5.1-&gt;E1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M578.85,-353.05C553.13,-344.19 525.46,-336.25 499,-331.67 427.61,-319.33 407.39,-319.33 336,-331.67 301.22,-337.68 264.35,-349.52 232.56,-361.59" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="231.46,-358.83 224.59,-364.66 233.6,-364.38 231.46,-358.83" />
+      <rect x="330.0" y="-351.47" width="175.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="417.5" y="-335.47" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Подтверждение и чек</text>
+    </g>
+    <g id="flow_5" class="edge">
+      <title>5.1-&gt;E2</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M675.19,-353.13C653.79,-281.17 601.06,-143.43 499,-85.67 402.25,-30.92 277.9,-107.12 206.15,-163.59" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="204.17,-161.37 199.37,-168.99 207.88,-166.02 204.17,-161.37" />
+      <rect x="364.0" y="-105.47" width="107.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="417.5" y="-89.47" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Данные чека</text>
+    </g>
+    <g id="node4" class="node">
+      <title>D1</title>
+      <polygon fill="#fff1f2" stroke="transparent" points="1099,-338.67 1099,-458.67 1393,-458.67 1393,-338.67 1099,-338.67" />
+      <text text-anchor="start" x="1191.5" y="-431.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D1</text>
+      <text text-anchor="start" x="1165.5" y="-407.07" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Платежи в Excel</text>
+      <text text-anchor="start" x="1150.5" y="-381.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Общий диск, дубли учёта</text>
+      <text text-anchor="start" x="1155.5" y="-359.47" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Личные / финансовые</text>
+      <polyline fill="none" stroke="#b91c1c" stroke-width="2" points="1392,-457.67 1100,-457.67 1100,-339.67 1392,-339.67 " />
+    </g>
+    <g id="flow_1" class="edge">
+      <title>5.1-&gt;D1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M835.22,-372.18C849.3,-370.34 863.4,-368.78 877,-367.67 956.73,-361.14 977.27,-361.14 1057,-367.67 1067.84,-368.56 1078.99,-369.73 1090.2,-371.1" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="1089.98,-374.07 1098.78,-372.18 1090.72,-368.16 1089.98,-374.07" />
+      <rect x="900.5" y="-387.47" width="133.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="967" y="-371.47" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Кассовая запись</text>
+    </g>
+    <g id="node5" class="node">
+      <title>D2</title>
+      <polygon fill="#fff1f2" stroke="transparent" points="1099,-81.17 1099,-216.17 1393,-216.17 1393,-81.17 1099,-81.17" />
+      <text text-anchor="start" x="1191.5" y="-188.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D2</text>
+      <text text-anchor="start" x="1192" y="-164.07" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Данные 1С</text>
+      <text text-anchor="start" x="1151" y="-138.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Бухгалтерия, кадры, ТМЦ</text>
+      <text text-anchor="start" x="1181" y="-123.47" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Файловый режим</text>
+      <text text-anchor="start" x="1155.5" y="-101.47" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Личные / финансовые</text>
+      <polyline fill="none" stroke="#b91c1c" stroke-width="2" points="1392,-215.17 1100,-215.17 1100,-82.17 1392,-82.17 " />
+    </g>
+    <g id="flow_3" class="edge">
+      <title>5.1-&gt;D2</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M790.33,-353.11C874.27,-315.37 994.88,-261.13 1090.8,-218.01" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="1092.29,-220.6 1098.83,-214.4 1089.85,-215.17 1092.29,-220.6" />
+      <rect x="871.0" y="-330.47" width="192.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="967" y="-314.47" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Повторный ввод оплаты</text>
+    </g>
+    <g id="flow_2" class="edge">
+      <title>D1-&gt;5.1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M1172.08,-338.38C1145.65,-313.13 1117.72,-281.92 1099,-248.67 1062.51,-183.86 1115.83,-132.19 1057,-86.67 993.73,-37.71 946.65,-47.32 877,-86.67 779.05,-142.01 726.45,-271.1 703.47,-344.72" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="700.58,-343.98 700.94,-352.97 706.27,-345.72 700.58,-343.98" />
+      <rect x="891.5" y="-106.47" width="151.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="967" y="-90.47" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Записи для сверки</text>
+    </g>
+    <g id="flow_4" class="edge">
+      <title>D2-&gt;5.1</title>
+      <path fill="none" stroke="#b91c1c" stroke-width="1.8" d="M1161.81,-80.92C1084.04,-26.38 966.76,32.8 877,-22.67 762.06,-93.71 715.04,-258.66 697.82,-344.53" />
+      <polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="1.8" points="694.86,-344.17 696.15,-353.09 700.7,-345.31 694.86,-344.17" />
+      <rect x="900.0" y="-42.47" width="134.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="967" y="-26.47" font-family="DejaVu Sans" font-size="14.00" fill="#b91c1c">Учётные данные</text>
+    </g>
+  </g>
+</svg>
