@@ -1,148 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1519" height="979" viewBox="0 0 1519 979" role="img" aria-labelledby="title description">
-  <title id="title">DFD Процесс 3 (To-Be): Защищенная электронная медицинская карта (ЭМК / EHR)</title>
-  <desc id="description">Целевое состояние: ABAC (доступ только на время визита), УКЭП врача, стандарты FHIR, S3 WORM, SIEM-аудит</desc>
-  <rect width="1519" height="979" fill="white" />
-  <text x="28" y="32" font-family="DejaVu Sans" font-size="22" fill="#0f172a" font-weight="700">DFD Процесс 3 (To-Be): Защищенная электронная медицинская карта (ЭМК / EHR)</text>
-  <text x="28" y="60" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Целевое состояние: ABAC (доступ только на время визита), УКЭП врача, стандарты FHIR, S3 WORM, SIEM-аудит</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1508" height="525" viewBox="0 0 1508 525" role="img" aria-labelledby="title description">
+  <title id="title">3. Медицинский приём — To-Be</title>
+  <desc id="description">Доступ назначенного врача и пациента; история изменений</desc>
+  <rect width="1508" height="525" fill="white" />
+  <text x="28" y="32" font-family="DejaVu Sans" font-size="22" fill="#0f172a" font-weight="700">3. Медицинский приём — To-Be</text>
+  <text x="28" y="60" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Доступ назначенного врача и пациента; история изменений</text>
   <text x="28" y="89" font-family="DejaVu Sans" font-size="14" fill="#334155" font-weight="400">Стрелка: направление передачи данных. Красный: уязвимость. Зелёный: мера защиты. Синий: внешний участник.</text>
-  <g id="graph0" class="graph" transform="translate(28,791.0)">
+  <g id="graph0" class="graph" transform="translate(28,492.82)">
     <title>DFD</title>
-    <polygon fill="white" stroke="transparent" points="-8.64,8.64 -8.64,-656.64 1471.64,-656.64 1471.64,8.64 -8.64,8.64" />
+    <polygon fill="white" stroke="transparent" points="-8.64,8.64 -8.64,-358.46 1460.64,-358.46 1460.64,8.64 -8.64,8.64" />
     <g id="node1" class="node">
       <title>E1</title>
-      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-626 0,-626 0,-520 294,-520 294,-626" />
-      <text text-anchor="start" x="65.5" y="-601.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E1</text>
-      <text text-anchor="start" x="60" y="-577.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Пациент (Patient)</text>
-      <text text-anchor="start" x="98.5" y="-551.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Субъект ПДн</text>
-      <text text-anchor="start" x="68.5" y="-536.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Личный кабинет (ЛК)</text>
-    </g>
-    <g id="node2" class="node">
-      <title>E2</title>
-      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="428,-377 134,-377 134,-271 428,-271 428,-377" />
-      <text text-anchor="start" x="199.5" y="-352.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E2</text>
-      <text text-anchor="start" x="214" y="-328.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Врач (Doctor)</text>
-      <text text-anchor="start" x="242.5" y="-302.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">АРМ врача</text>
-      <text text-anchor="start" x="190.5" y="-287.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Аппаратный токен УКЭП</text>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-316.32 0,-316.32 0,-248.32 294,-248.32 294,-316.32" />
+      <text text-anchor="start" x="65.5" y="-292.12" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E1</text>
+      <text text-anchor="start" x="105" y="-267.72" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Пациент</text>
     </g>
     <g id="node3" class="node">
       <title>3.1</title>
-      <path fill="#f0fdf4" stroke="#166534" stroke-width="2" d="M843.5,-645C843.5,-645 566.5,-645 566.5,-645 560.5,-645 554.5,-639 554.5,-633 554.5,-633 554.5,-513 554.5,-513 554.5,-507 560.5,-501 566.5,-501 566.5,-501 843.5,-501 843.5,-501 849.5,-501 855.5,-507 855.5,-513 855.5,-513 855.5,-633 855.5,-633 855.5,-639 849.5,-645 843.5,-645" />
-      <text text-anchor="start" x="661.5" y="-620.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 3.1</text>
-      <text text-anchor="start" x="571" y="-596.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">ABAC авторизация доступа</text>
-      <text text-anchor="start" x="640.5" y="-570.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">OPA Policy Engine:</text>
-      <text text-anchor="start" x="587.5" y="-555.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">доступ к медкарте ТОЛЬКО при</text>
-      <text text-anchor="start" x="574.5" y="-540.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">наличии активной записи на прием</text>
-      <text text-anchor="start" x="660.5" y="-518.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Strict ABAC</text>
+      <path fill="#f0fdf4" stroke="#166534" stroke-width="2" d="M880,-335.32C880,-335.32 610,-335.32 610,-335.32 604,-335.32 598,-329.32 598,-323.32 598,-323.32 598,-241.32 598,-241.32 598,-235.32 604,-229.32 610,-229.32 610,-229.32 880,-229.32 880,-229.32 886,-229.32 892,-235.32 892,-241.32 892,-241.32 892,-323.32 892,-323.32 892,-329.32 886,-335.32 880,-335.32" />
+      <text text-anchor="start" x="701" y="-311.12" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 3.1</text>
+      <text text-anchor="start" x="666.5" y="-286.72" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Вести медкарту</text>
+      <text text-anchor="start" x="651.5" y="-261.12" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Проверка доступа, аудит</text>
+      <text text-anchor="start" x="688.5" y="-246.12" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Метка MEDICAL</text>
     </g>
     <g id="flow_0" class="edge">
-      <title>E2-&gt;3.1</title>
-      <path fill="none" stroke="#166534" stroke-width="1.8" d="M352.86,-377.07C388.57,-402.08 432.79,-431.81 474,-456 497.67,-469.9 523.22,-483.78 548.4,-496.85" />
-      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="547.28,-499.62 556.2,-500.89 550.02,-494.34 547.28,-499.62" />
-      <rect x="468.0" y="-460.8" width="227.0" height="21.0" rx="4" fill="white" />
-      <text text-anchor="middle" x="581.5" y="-444.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Запрос ЭМК пациента (mTLS)</text>
+      <title>E1-&gt;3.1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M268.57,-248.31C290.82,-243.32 313.98,-238.98 336,-236.32 433.07,-224.62 458.93,-224.62 556,-236.32 566.9,-237.64 578.08,-239.37 589.29,-241.38" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="588.96,-244.35 597.86,-242.98 590.05,-238.5 588.96,-244.35" />
+      <rect x="330.0" y="-271.12" width="232.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="446" y="-255.12" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Жалобы / запрос своей карты</text>
+      <text text-anchor="middle" x="446" y="-240.12" font-family="DejaVu Sans" font-size="14.00" fill="#166534">В кабинете / HTTPS</text>
     </g>
-    <g id="node4" class="node">
-      <title>3.2</title>
-      <path fill="#f0fdf4" stroke="#166534" stroke-width="2" d="M840,-396C840,-396 570,-396 570,-396 564,-396 558,-390 558,-384 558,-384 558,-264 558,-264 558,-258 564,-252 570,-252 570,-252 840,-252 840,-252 846,-252 852,-258 852,-264 852,-264 852,-384 852,-384 852,-390 846,-396 840,-396" />
-      <text text-anchor="start" x="661" y="-371.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 3.2</text>
-      <text text-anchor="start" x="577.5" y="-347.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Ведение протокола (EHR)</text>
-      <text text-anchor="start" x="580.5" y="-321.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Структурированный формат FHIR</text>
-      <text text-anchor="start" x="597" y="-306.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Тег: PHI_SPECIAL_RESTRICTED</text>
-      <text text-anchor="start" x="590.5" y="-291.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Подписание УКЭП врача (947н)</text>
-      <text text-anchor="start" x="613" y="-269.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">УКЭП / Минздрав 947н</text>
-    </g>
-    <g id="flow_6" class="edge">
-      <title>3.1-&gt;E1</title>
-      <path fill="none" stroke="#166534" stroke-width="1.8" d="M554.4,-573C476.5,-573 381.52,-573 302.87,-573" />
-      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="302.84,-570.03 294.34,-573 302.84,-575.98 302.84,-570.03" />
-      <rect x="320.25" y="-595.8" width="208.0" height="21.0" rx="4" fill="white" />
-      <text text-anchor="middle" x="424.25" y="-579.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Доступ к своей карте в ЛК</text>
+    <g id="node2" class="node">
+      <title>E2</title>
+      <polygon fill="#f0f9ff" stroke="#0369a1" stroke-width="2" points="294,-121.82 0,-121.82 0,-30.82 294,-30.82 294,-121.82" />
+      <text text-anchor="start" x="65.5" y="-97.12" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Внешняя сущность E2</text>
+      <text text-anchor="start" x="122.5" y="-72.72" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Врач</text>
+      <text text-anchor="start" x="34.5" y="-47.12" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Назначен к лечению пациента</text>
     </g>
     <g id="flow_1" class="edge">
-      <title>3.1-&gt;3.2</title>
-      <path fill="none" stroke="#166534" stroke-width="1.8" d="M705,-500.89C705,-470.8 705,-435.61 705,-404.65" />
-      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="707.98,-404.54 705,-396.04 702.03,-404.54 707.98,-404.54" />
-      <rect x="699.0" y="-460.8" width="212.0" height="21.0" rx="4" fill="white" />
-      <text text-anchor="middle" x="805" y="-444.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Разрешение OPA (ABAC OK)</text>
-    </g>
-    <g id="node6" class="node">
-      <title>D1</title>
-      <polygon fill="#f0fdf4" stroke="transparent" points="1098,-498 1098,-648 1410,-648 1410,-498 1098,-498" />
-      <text text-anchor="start" x="1199.5" y="-620.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D1</text>
-      <text text-anchor="start" x="1114" y="-596.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">EHR Clinical DB (PostgreSQL)</text>
-      <text text-anchor="start" x="1118.5" y="-570.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Медицинские записи, диагнозы МКБ</text>
-      <text text-anchor="start" x="1156" y="-555.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Шифрование pgcrypto/TDE</text>
-      <text text-anchor="start" x="1146.5" y="-540.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Маскирование для не-врачей</text>
-      <text text-anchor="start" x="1190" y="-518.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">PostgreSQL TDE</text>
-      <polyline fill="none" stroke="#166534" stroke-width="2" points="1409,-647 1099,-647 1099,-499 1409,-499 " />
-    </g>
-    <g id="flow_2" class="edge">
-      <title>3.1-&gt;D1</title>
-      <path fill="none" stroke="#166534" stroke-width="1.8" d="M855.74,-573C928.18,-573 1015.17,-573 1089.34,-573" />
-      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="1089.35,-575.98 1097.85,-573 1089.35,-570.03 1089.35,-575.98" />
-      <rect x="881.75" y="-610.8" width="190.0" height="36.0" rx="4" fill="white" />
-      <text text-anchor="middle" x="976.75" y="-594.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Чтение медкарты (Audit</text>
-      <text text-anchor="middle" x="976.75" y="-579.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Logged)</text>
-    </g>
-    <g id="node5" class="node">
-      <title>3.3</title>
-      <path fill="#f0fdf4" stroke="#166534" stroke-width="2" d="M865.5,-147C865.5,-147 544.5,-147 544.5,-147 538.5,-147 532.5,-141 532.5,-135 532.5,-135 532.5,-15 532.5,-15 532.5,-9 538.5,-3 544.5,-3 544.5,-3 865.5,-3 865.5,-3 871.5,-3 877.5,-9 877.5,-15 877.5,-15 877.5,-135 877.5,-135 877.5,-141 871.5,-147 865.5,-147" />
-      <text text-anchor="start" x="661.5" y="-122.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Процесс 3.3</text>
-      <text text-anchor="start" x="549" y="-98.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Иммутабельное архивирование</text>
-      <text text-anchor="start" x="603.5" y="-72.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Шифрование AES-256 (TDE)</text>
-      <text text-anchor="start" x="576" y="-57.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Политика неизменяемости (WORM)</text>
-      <text text-anchor="start" x="580.5" y="-42.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Запрет скрытого редактирования</text>
-      <text text-anchor="start" x="622.5" y="-20.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">WORM / Immutability</text>
+      <title>E2-&gt;3.1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M294.06,-70.7C374.35,-72.69 474.01,-83.72 556,-119.32 609.38,-142.5 658.63,-186.42 693.33,-222.83" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="691.21,-224.92 699.2,-229.07 695.54,-220.84 691.21,-224.92" />
+      <rect x="361.0" y="-154.12" width="170.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="446" y="-138.12" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Осмотр и назначения</text>
+      <text text-anchor="middle" x="446" y="-123.12" font-family="DejaVu Sans" font-size="14.00" fill="#166534">HTTPS</text>
     </g>
     <g id="flow_4" class="edge">
-      <title>3.2-&gt;3.3</title>
-      <path fill="none" stroke="#166534" stroke-width="1.8" d="M705,-251.89C705,-221.8 705,-186.61 705,-155.65" />
-      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="707.98,-155.54 705,-147.04 702.03,-155.54 707.98,-155.54" />
-      <rect x="699.0" y="-211.8" width="183.0" height="21.0" rx="4" fill="white" />
-      <text text-anchor="middle" x="790.5" y="-195.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Блокировка изменений</text>
-    </g>
-    <g id="node7" class="node">
-      <title>D2</title>
-      <polygon fill="#f0fdf4" stroke="transparent" points="1144.5,-249 1144.5,-399 1449.5,-399 1449.5,-249 1144.5,-249" />
-      <text text-anchor="start" x="1243" y="-371.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D2</text>
-      <text text-anchor="start" x="1161" y="-347.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Medical Docs (MinIO S3 SSE)</text>
-      <text text-anchor="start" x="1175" y="-321.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Подписанные PDF/A, снимки, ЭКГ</text>
-      <text text-anchor="start" x="1208.5" y="-306.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">KMS Envelope Encryption</text>
-      <text text-anchor="start" x="1205.5" y="-291.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Object Lock (Immutability)</text>
-      <text text-anchor="start" x="1229" y="-269.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">SSE-KMS / WORM</text>
-      <polyline fill="none" stroke="#166534" stroke-width="2" points="1448.5,-398 1145.5,-398 1145.5,-250 1448.5,-250 " />
-    </g>
-    <g id="flow_3" class="edge">
-      <title>3.2-&gt;D2</title>
-      <path fill="none" stroke="#166534" stroke-width="1.8" d="M852.1,-324C938.35,-324 1047.41,-324 1135.96,-324" />
-      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="1135.97,-326.98 1144.47,-324 1135.97,-321.03 1135.97,-326.98" />
-      <rect x="878.25" y="-346.8" width="240.0" height="21.0" rx="4" fill="white" />
-      <text text-anchor="middle" x="998.25" y="-330.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Сохранение протокола + УКЭП</text>
-    </g>
-    <g id="node8" class="node">
-      <title>D3</title>
-      <polygon fill="#f0fdf4" stroke="transparent" points="1102.5,0 1102.5,-150 1397.5,-150 1397.5,0 1102.5,0" />
-      <text text-anchor="start" x="1196" y="-122.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D3</text>
-      <text text-anchor="start" x="1160" y="-98.4" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">SIEM &amp; Audit Vault</text>
-      <text text-anchor="start" x="1121" y="-72.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Полная фиксация каждого чтения!</text>
-      <text text-anchor="start" x="1136.5" y="-57.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Vector -&gt; OpenSearch -&gt; Wazuh</text>
-      <text text-anchor="start" x="1151" y="-42.8" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Срок хранения логов 5 лет</text>
-      <text text-anchor="start" x="1119" y="-20.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Неотслеживаемость исключена</text>
-      <polyline fill="none" stroke="#166534" stroke-width="2" points="1396.5,-149 1103.5,-149 1103.5,-1 1396.5,-1 " />
+      <title>3.1-&gt;E1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M664.71,-229.06C632.42,-210.41 593.84,-191.76 556,-182.32 461.13,-158.66 430.87,-158.66 336,-182.32 288.28,-194.23 239.39,-220.76 203.43,-243.51" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="201.5,-241.21 195.95,-248.3 204.71,-246.22 201.5,-241.21" />
+      <rect x="376.5" y="-217.12" width="139.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="446" y="-201.12" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Своё заключение</text>
+      <text text-anchor="middle" x="446" y="-186.12" font-family="DejaVu Sans" font-size="14.00" fill="#166534">HTTPS</text>
     </g>
     <g id="flow_5" class="edge">
-      <title>3.3-&gt;D3</title>
-      <path fill="none" stroke="#166534" stroke-width="1.8" d="M877.82,-75C947.03,-75 1026.2,-75 1093.67,-75" />
-      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="1093.76,-77.98 1102.26,-75 1093.76,-72.03 1093.76,-77.98" />
-      <rect x="904.0" y="-97.8" width="172.0" height="21.0" rx="4" fill="white" />
-      <text text-anchor="middle" x="990" y="-81.8" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Отправка лога в SIEM</text>
+      <title>3.1-&gt;E2</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M722.61,-229.06C694.65,-167.52 639.21,-69.36 556,-27.32 466.09,18.09 351.24,-1.49 266.32,-28.2" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="265.38,-25.37 258.2,-30.8 267.2,-31.04 265.38,-25.37" />
+      <rect x="354.0" y="-62.12" width="184.0" height="36.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="446" y="-46.12" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Разрешённая медкарта</text>
+      <text text-anchor="middle" x="446" y="-31.12" font-family="DejaVu Sans" font-size="14.00" fill="#166534">HTTPS</text>
+    </g>
+    <g id="node4" class="node">
+      <title>D1</title>
+      <polygon fill="#f0fdf4" stroke="transparent" points="1158,-214.82 1158,-349.82 1452,-349.82 1452,-214.82 1158,-214.82" />
+      <text text-anchor="start" x="1250.5" y="-322.12" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Хранилище D1</text>
+      <text text-anchor="start" x="1187" y="-297.72" font-family="DejaVu Sans" font-weight="bold" font-size="17.00" fill="#0f172a">Медкарты и документы</text>
+      <text text-anchor="start" x="1191.5" y="-272.12" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">PostgreSQL + закрытые файлы</text>
+      <text text-anchor="start" x="1201" y="-257.12" font-family="DejaVu Sans" font-size="14.00" fill="#0f172a">Версии, шифрование, копии</text>
+      <text text-anchor="start" x="1211" y="-235.12" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#0f172a">Личные / медицинские</text>
+      <polyline fill="none" stroke="#166534" stroke-width="2" points="1451,-348.82 1159,-348.82 1159,-215.82 1451,-215.82 " />
+    </g>
+    <g id="flow_3" class="edge">
+      <title>3.1-&gt;D1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M892.22,-255.83C906.3,-254 920.4,-252.44 934,-251.32 1014.62,-244.72 1035.38,-244.72 1116,-251.32 1126.84,-252.21 1137.99,-253.38 1149.2,-254.75" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="1148.98,-257.72 1157.78,-255.83 1149.72,-251.82 1148.98,-257.72" />
+      <rect x="928.0" y="-271.12" width="194.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="1025" y="-255.12" font-family="DejaVu Sans" font-size="14.00" fill="#166534">Новая версия документа</text>
+    </g>
+    <g id="flow_2" class="edge">
+      <title>D1-&gt;3.1</title>
+      <path fill="none" stroke="#166534" stroke-width="1.8" d="M1237.69,-214.81C1204.27,-185.57 1161.27,-154.59 1116,-139.32 1039.35,-113.49 1010.65,-113.49 934,-139.32 884.25,-156.1 837.24,-191.86 802.67,-223.42" />
+      <polygon fill="#166534" stroke="#166534" stroke-width="1.8" points="800.58,-221.3 796.36,-229.26 804.62,-225.67 800.58,-221.3" />
+      <rect x="936.0" y="-159.12" width="178.0" height="21.0" rx="4" fill="white" />
+      <text text-anchor="middle" x="1025" y="-143.12" font-family="DejaVu Sans" font-size="14.00" fill="#166534">История и результаты</text>
     </g>
   </g>
-  <rect x="20" y="810.0" width="1479" height="142" rx="8" fill="#f0fdf4" stroke="#166534" />
-  <text x="32" y="831.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="700">Гарантии безопасности</text>
-  <text x="32" y="852.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="400">• Врач другой специальности НЕ МОЖЕТ открыть карту</text>
-  <text x="32" y="873.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="400">• Каждая запись подписана личной УКЭП врача</text>
-  <text x="32" y="894.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="400">• Невозможно подделать или удалить историю болезни</text>
-  <text x="32" y="915.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="400">• 100% аудит просмотров</text>
-  <text x="32" y="936.0" font-family="DejaVu Sans" font-size="14" fill="#14532d" font-weight="400">• Полное соответствие 323-ФЗ</text>
 </svg>

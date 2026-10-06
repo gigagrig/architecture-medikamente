@@ -37,9 +37,10 @@ def node_html(element):
                "store": "Хранилище"}[kind] + " " + identifier
     rows = [f'<TR><TD><FONT POINT-SIZE="14">{heading}</FONT></TD></TR>',
             f'<TR><TD WIDTH="270"><FONT POINT-SIZE="17"><B>'
-            f'{br(element["title"], 29)}</B></FONT></TD></TR>',
-            f'<TR><TD><FONT POINT-SIZE="14">'
-            f'{br(element.get("subtitle", ""), 34)}</FONT></TD></TR>']
+            f'{br(element["title"], 29)}</B></FONT></TD></TR>']
+    if element.get("subtitle"):
+        rows.append(f'<TR><TD><FONT POINT-SIZE="14">'
+                    f'{br(element["subtitle"], 34)}</FONT></TD></TR>')
     if element.get("badge"):
         rows.append(f'<TR><TD><FONT POINT-SIZE="14"><B>'
                     f'{br(element["badge"], 30)}</B></FONT></TD></TR>')
